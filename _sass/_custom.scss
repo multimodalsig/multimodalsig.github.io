@@ -18,11 +18,25 @@ html[data-theme="dark"] {
 
 // ============================================================
 // Dropdown positioning fix
+// Eliminates the hover-gap between the nav link and the
+// dropdown menu so the menu stays open while the cursor
+// travels from the toggle into the menu.
 // ============================================================
 
 .navbar .nav-item.dropdown {
   .dropdown-menu {
-    margin-top: 0;
+    margin-top: 0 !important;
+    top: 100%;
+
+    // Invisible bridge that covers any sub-pixel gap
+    &::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 0;
+      right: 0;
+      height: 10px;
+    }
   }
 }
 
