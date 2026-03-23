@@ -53,12 +53,12 @@ Calgary and a BTech from Ryerson University.
 
 ## Alumni
 
-| Name        | Degree | Year | Current Position    |
-| ----------- | ------ | ---- | ------------------- |
+| Name         | Degree | Year | Current Position    |
+| ------------ | ------ | ---- | ------------------- |
 | _Dr. J. Doe_ | PhD    | 20XX | _Lorem ipsum dolor_ |
 | _Dr. J. Doe_ | PhD    | 20XX | _Lorem ipsum dolor_ |
 | _Dr. J. Doe_ | PhD    | 20XX | _Lorem ipsum dolor_ |
-| _J. Doe_    | MSc    | 20XX | _Lorem ipsum dolor_ |
+| _J. Doe_     | MSc    | 20XX | _Lorem ipsum dolor_ |
 
 ---
 

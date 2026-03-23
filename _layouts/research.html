@@ -64,9 +64,7 @@ layout: default
       });
 
       if (current) {
-        var activeLink = tocNav.querySelector(
-          'a[href="#' + current.id + '"]',
-        );
+        var activeLink = tocNav.querySelector('a[href="#' + current.id + '"]');
         if (activeLink) {
           activeLink.classList.add("active");
         }

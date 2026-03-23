@@ -14,6 +14,7 @@ children:
 ---
 
 ## Contact
+
 {: #contact}
 
 _To be populated with lab contact details._
@@ -34,6 +35,7 @@ Calgary, AB T2N 1N4, Canada
 ---
 
 ## Available Positions
+
 {: #positions}
 
 _To be populated with current openings._
