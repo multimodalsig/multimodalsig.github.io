@@ -3,8 +3,7 @@ layout: page
 title: Teaching
 permalink: /teaching/
 description: Courses taught by MSIL lab members.
-nav: true
-nav_order: 6
+nav: false
 ---
 
 ## Undergraduate Courses

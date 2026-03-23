@@ -10,4 +10,7 @@ children:
     permalink: /research/projects/
   - title: Gallery
     permalink: /research/gallery/
+  - title: divider
+  - title: Teaching
+    permalink: /teaching/
 ---
