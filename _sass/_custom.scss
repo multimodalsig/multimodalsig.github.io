@@ -17,6 +17,63 @@ html[data-theme="dark"] {
 }
 
 // ============================================================
+// Dropdown positioning fix
+// ============================================================
+
+.navbar .nav-item.dropdown {
+  .dropdown-menu {
+    margin-top: 0;
+  }
+}
+
+// ============================================================
+// Project card expand-in-place styles
+// ============================================================
+
+.project-card-expandable {
+  cursor: pointer;
+
+  .card {
+    transition: box-shadow 0.2s ease;
+  }
+
+  &:hover .card {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  .card-expand-icon {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    color: var(--global-text-color-light, #6c757d);
+    font-size: 0.85rem;
+    transition: transform 0.3s ease;
+    z-index: 1;
+  }
+
+  &.expanded .card-expand-icon {
+    transform: rotate(180deg);
+  }
+
+  .card-detail {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 1.25rem;
+    border-top: 0 solid var(--global-divider-color, #dee2e6);
+
+    .card-detail-inner {
+      padding: 1rem 0;
+    }
+  }
+
+  &.expanded .card-detail {
+    max-height: 500px;
+    border-top-width: 1px;
+  }
+}
+
+// ============================================================
 // Sidebar TOC & research page styles
 // ============================================================
 
