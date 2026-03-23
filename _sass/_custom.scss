@@ -1,0 +1,87 @@
+@use "variables" as v;
+@use "sass:color";
+
+// ============================================================
+// University of Calgary branding
+// ============================================================
+$ucalgary-red: #b5121b;
+
+:root {
+  --global-theme-color: #{$ucalgary-red};
+  --global-hover-color: #{color.adjust($ucalgary-red, $lightness: -10%)};
+}
+
+html[data-theme="dark"] {
+  --global-theme-color: #{color.adjust($ucalgary-red, $lightness: 15%)};
+  --global-hover-color: #{color.adjust($ucalgary-red, $lightness: 20%)};
+}
+
+// ============================================================
+// Sidebar TOC & research page styles
+// ============================================================
+
+.research-sidebar {
+  position: relative;
+
+  .sticky-top {
+    top: 5rem;
+    max-height: calc(100vh - 6rem);
+    overflow-y: auto;
+  }
+
+  .sidebar-heading {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.75rem;
+    padding-left: 0.75rem;
+  }
+
+  .toc-link {
+    font-size: 0.875rem;
+    color: var(--global-text-color-light, #6c757d);
+    padding: 0.3rem 0.75rem;
+    border-left: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--global-theme-color, #b5121b);
+    }
+
+    &.active {
+      color: var(--global-theme-color, #b5121b);
+      border-left-color: var(--global-theme-color, #b5121b);
+      font-weight: 500;
+    }
+  }
+}
+
+.research-content {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+
+  h2 {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--global-divider-color, #dee2e6);
+
+    &:first-of-type {
+      border-top: none;
+      margin-top: 1.5rem;
+    }
+  }
+
+  p, li {
+    line-height: 1.8;
+  }
+}
+
+.research-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--global-theme-color, #b5121b);
+
+  h1 { margin-bottom: 0.5rem; }
+}
