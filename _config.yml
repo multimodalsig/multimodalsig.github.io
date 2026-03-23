@@ -65,6 +65,7 @@ nav_order:
   - people
   - facilities
   - news
+  - contact
 search_enabled: true
 socials_in_search: true
 posts_in_search: true
