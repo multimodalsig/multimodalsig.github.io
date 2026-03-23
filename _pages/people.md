@@ -43,22 +43,32 @@ Calgary and a BTech from Ryerson University.
 
 ## Current Students
 
-_To be populated with current graduate students._
-
-| Name           | Degree | Research Topic                  | Start Year |
-| -------------- | ------ | ------------------------------- | ---------- |
-| _Student Name_ | PhD    | _Lorem ipsum calibration topic_ | 2023       |
-| _Student Name_ | MSc    | _Lorem ipsum deformation topic_ | 2024       |
-| _Student Name_ | MSc    | _Lorem ipsum heritage topic_    | 2024       |
+| Name       | Degree | Research Topic            | Start Year |
+| ---------- | ------ | ------------------------- | ---------- |
+| _John Doe_ | PhD    | _Lorem ipsum dolor sit_   | 20XX       |
+| _Jane Doe_ | MSc    | _Consectetur adipiscing_  | 20XX       |
+| _John Doe_ | MSc    | _Ut enim ad minim veniam_ | 20XX       |
 
 ---
 
 ## Alumni
 
-_Lorem ipsum dolor sit amet, consectetur adipiscing elit. To be populated with graduated students and their current positions._
+| Name        | Degree | Year | Current Position    |
+| ----------- | ------ | ---- | ------------------- |
+| _Dr. J. Doe_ | PhD    | 20XX | _Lorem ipsum dolor_ |
+| _Dr. J. Doe_ | PhD    | 20XX | _Lorem ipsum dolor_ |
+| _Dr. J. Doe_ | PhD    | 20XX | _Lorem ipsum dolor_ |
+| _J. Doe_    | MSc    | 20XX | _Lorem ipsum dolor_ |
 
 ---
 
 ## Collaborators
 
-_Lorem ipsum dolor sit amet, consectetur adipiscing elit. To be populated with research collaborators._
+- **Dr. John Doe** — Lorem Ipsum Department, University of Lorem Ipsum
+  (lorem ipsum research area)
+- **Dr. Jane Doe** — Lorem Ipsum Department, University of Lorem Ipsum
+  (lorem ipsum research area)
+- **Dr. John Doe** — Lorem Ipsum Department, University of Lorem Ipsum
+  (lorem ipsum research area)
+- **Dr. Jane Doe** — Lorem Ipsum Department, University of Lorem Ipsum
+  (lorem ipsum research area)

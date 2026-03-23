@@ -9,14 +9,9 @@ nav_order: 6
 
 ## Undergraduate Courses
 
-### ENGO 363 — Geomatics Surveying and Adjustments
+### ENGO 3xx — Lorem Ipsum Course
 
-_Department of Geomatics Engineering, University of Calgary_
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-commodo consequat.
+_To be populated._
 
 ### ENGO 4xx — Lorem Ipsum Course
 
