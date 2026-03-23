@@ -21,6 +21,7 @@ sensors, laser scanners, thermal cameras, and sensors with different
 fields-of-view including panoramic sensors.
 
 **Key features:**
+
 - Constant temperature control for high-precision metrology
 - Controllable ambient lighting (switches and blinds)
 - Calibration targets at multiple scales
@@ -32,19 +33,23 @@ fields-of-view including panoramic sensors.
 
 ## Instrumentation
 
-*To be populated with the lab's current equipment inventory.*
+_To be populated with the lab's current equipment inventory._
 
 ### Terrestrial Laser Scanners
+
 - Lorem ipsum scanner model 1
 - Lorem ipsum scanner model 2
 
 ### Cameras & Imaging Sensors
+
 - Lorem ipsum camera system
 - Lorem ipsum range camera
 
 ### Mobile Mapping
+
 - Lorem ipsum MMS platform
 
 ### Software
+
 - MATLAB, Python, C++ development environments
 - CloudCompare, Cyclone, RealWorks

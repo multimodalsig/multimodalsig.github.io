@@ -5,7 +5,6 @@ layout: default
 <div class="research-page">
   <div class="container-fluid">
     <div class="row">
-
       <!-- Sticky sidebar TOC -->
       <nav class="col-lg-3 d-none d-lg-block research-sidebar" id="research-toc">
         <div class="sticky-top pt-4">
@@ -21,48 +20,60 @@ layout: default
         <header class="research-header">
           <h1>{{ page.title }}</h1>
           {% if page.description %}
-            <p class="lead text-muted">{{ page.description }}</p>
+          <p class="lead text-muted">{{ page.description }}</p>
           {% endif %}
         </header>
 
-        <article>
-          {{ content }}
-        </article>
+        <article>{{ content }}</article>
       </main>
-
     </div>
   </div>
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  var headings = document.querySelectorAll('.research-content h2[id]');
-  var tocNav = document.getElementById('toc-nav');
+  document.addEventListener("DOMContentLoaded", function () {
+    var headings = document.querySelectorAll(".research-content h2[id]");
+    var tocNav = document.getElementById("toc-nav");
 
-  headings.forEach(function(heading) {
-    var link = document.createElement('a');
-    link.className = 'nav-link toc-link';
-    link.href = '#' + heading.id;
-    link.textContent = heading.textContent;
-    tocNav.appendChild(link);
-  });
+    headings.forEach(function (heading) {
+      var link = document.createElement("a");
+      link.className = "nav-link toc-link";
+      link.href = "#" + heading.id;
+      link.textContent = heading.textContent;
+      tocNav.appendChild(link);
+    });
 
-  // Highlight active section on scroll
-  var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      var id = entry.target.getAttribute('id');
-      var tocLink = tocNav.querySelector('a[href="#' + id + '"]');
-      if (tocLink) {
-        if (entry.isIntersecting) {
-          tocNav.querySelectorAll('.toc-link').forEach(function(l) {
-            l.classList.remove('active');
-          });
-          tocLink.classList.add('active');
+    // Highlight active section based on scroll position
+    function updateActiveLink() {
+      var scrollPos = window.scrollY + window.innerHeight * 0.25;
+      var current = null;
+
+      headings.forEach(function (heading) {
+        if (heading.offsetTop <= scrollPos) {
+          current = heading;
+        }
+      });
+
+      // If scrolled to bottom, activate the last heading
+      if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 2) {
+        current = headings[headings.length - 1];
+      }
+
+      tocNav.querySelectorAll(".toc-link").forEach(function (l) {
+        l.classList.remove("active");
+      });
+
+      if (current) {
+        var activeLink = tocNav.querySelector(
+          'a[href="#' + current.id + '"]',
+        );
+        if (activeLink) {
+          activeLink.classList.add("active");
         }
       }
-    });
-  }, { rootMargin: '-20% 0px -80% 0px' });
+    }
 
-  headings.forEach(function(heading) { observer.observe(heading); });
-});
+    window.addEventListener("scroll", updateActiveLink);
+    updateActiveLink();
+  });
 </script>

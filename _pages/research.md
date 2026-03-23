@@ -13,6 +13,7 @@ by a common foundation in **imaging metrology** — the science of extracting
 precise, reliable geometric information from imaging sensors.
 
 ## Sensor Calibration & System Modelling
+
 {: #calibration}
 
 Imaging sensors are imperfect instruments. Terrestrial laser scanners exhibit
@@ -23,6 +24,7 @@ Our lab develops **rigorous mathematical models** of these error sources and
 requiring dedicated calibration facilities.
 
 Key contributions include:
+
 - Comprehensive additional parameter models for terrestrial laser scanners
   (angular encoder errors, rangefinder offsets, axis misalignments)
 - Correlation analysis between systematic error parameters and methods for
@@ -36,6 +38,7 @@ tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
 veniam, quis nostrud exercitation ullamco laboris.
 
 ## Structural Deformation Monitoring
+
 {: #deformation}
 
 Terrestrial laser scanners can measure millions of surface points in minutes,
@@ -46,6 +49,7 @@ shell models, polynomial surfaces — to dense point clouds, deformation can
 be measured at **6–20× better** than the raw point precision.
 
 Applications include:
+
 - Reinforced concrete beam load testing
 - Bridge deck deflection monitoring
 - Dam surface deformation
@@ -56,6 +60,7 @@ dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
 nulla pariatur.
 
 ## Cultural Heritage Documentation
+
 {: #heritage}
 
 At-risk cultural heritage sites require rapid, accurate, and complete
@@ -64,6 +69,7 @@ and close-range photogrammetry to record heritage structures across Alberta
 and internationally.
 
 Key projects include:
+
 - Digitally Preserving Alberta's Diverse Cultural Heritage (with Dr. Peter
   Dawson, Anthropology & Archaeology)
 - Herschel Island–Qikiqtaruk Territorial Park, Yukon
@@ -75,6 +81,7 @@ occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
 anim id est laborum.
 
 ## Biomedical Imaging Metrology
+
 {: #biomedical}
 
 Dual fluoroscopic imaging systems capture X-ray image pairs of human joints
@@ -84,6 +91,7 @@ kinematics. Our lab develops the **geometric calibration** and
 of these measurements.
 
 Applications:
+
 - Knee joint kinematics for orthopaedic research
 - Surgical instrument tracking (C-arm pose estimation)
 - Intramedullary nail pose recognition
@@ -92,6 +100,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis
 unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
 ## Industrial Metrology & As-Built Modelling
+
 {: #industrial}
 
 Precision dimensional control in industrial environments — refineries,
