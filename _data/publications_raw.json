@@ -5,7 +5,7 @@
       "name": "D. Lichti",
       "affiliations": [],
       "paperCount": 220,
-      "citationCount": 6756,
+      "citationCount": 6286,
       "hIndex": 44
     }
   ],
@@ -20,7 +20,11 @@
         "id": "7607a288-4181-4223-95e2-ded54771f64c",
         "name": "International Journal of Heritage Studies (IJHS)",
         "type": "journal",
-        "alternate_names": ["International Journal of Heritage Studies", "Int J Heritage Stud", "Int J Heritage Stud (IJHS"],
+        "alternate_names": [
+          "International Journal of Heritage Studies",
+          "Int J Heritage Stud",
+          "Int J Heritage Stud (IJHS"
+        ],
         "issn": "1352-7258",
         "url": "http://www.tandfonline.com/loi/rjhs20"
       },
@@ -35,7 +39,9 @@
         "license": null,
         "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1080/13527258.2026.2642610?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1080/13527258.2026.2642610, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "name": "International Journal of Heritage Studies"
       },
@@ -97,7 +103,9 @@
         "id": "4ab1e1bf-98e8-4e0c-a53a-7a00e37e44e2",
         "name": "The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences",
         "type": "journal",
-        "alternate_names": ["Int Arch Photogramm Remote Sens Spat Inf Sci"],
+        "alternate_names": [
+          "Int Arch Photogramm Remote Sens Spat Inf Sci"
+        ],
         "issn": "1682-1750",
         "url": "https://www.isprs.org/publications/archives.aspx"
       },
@@ -112,7 +120,9 @@
         "license": "CCBY",
         "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.5194/isprs-archives-xlviii-2-2024-41-2024?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.5194/isprs-archives-xlviii-2-2024-41-2024, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "name": "The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences"
       },
@@ -146,7 +156,9 @@
         "id": "e492b4b9-e702-4dfd-9fc9-fa193bf89390",
         "name": "ISPRS Open Journal of Photogrammetry and Remote Sensing",
         "type": "journal",
-        "alternate_names": ["ISPRS Open J Photogramm Remote Sens"],
+        "alternate_names": [
+          "ISPRS Open J Photogramm Remote Sens"
+        ],
         "issn": "2667-3932",
         "url": "https://www.journals.elsevier.com/isprs-open-journal-of-photogrammetry-and-remote-sensing"
       },
@@ -161,7 +173,9 @@
         "license": "CCBYNCND",
         "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1016/j.ophoto.2023.100035?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/j.ophoto.2023.100035, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "name": "ISPRS Open Journal of Photogrammetry and Remote Sensing"
       },
@@ -191,10 +205,15 @@
         "id": "cbe2e2e0-f4d3-4923-8b48-a02259e5f89c",
         "name": "Automation in Construction",
         "type": "journal",
-        "alternate_names": ["Autom Constr"],
+        "alternate_names": [
+          "Autom Constr"
+        ],
         "issn": "0926-5805",
         "url": "http://www.elsevier.com/wps/find/journaldescription.cws_home/523112/description#description",
-        "alternate_urls": ["http://www.sciencedirect.com/science/journal/09265805", "https://www.journals.elsevier.com/automation-in-construction"]
+        "alternate_urls": [
+          "http://www.sciencedirect.com/science/journal/09265805",
+          "https://www.journals.elsevier.com/automation-in-construction"
+        ]
       },
       "url": "https://www.semanticscholar.org/paper/8a154def5efb972b75e1cc27fcc10a9215b935ff",
       "title": "Object positional uncertainty modelling in 2D viewpoint planning",
@@ -207,7 +226,9 @@
         "license": null,
         "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1016/j.autcon.2023.105125?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/j.autcon.2023.105125, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "name": "Automation in Construction"
       },
@@ -245,7 +266,9 @@
         "id": "136edf8d-0f88-4c2c-830f-461c6a9b842e",
         "name": "Applied Sciences",
         "type": "journal",
-        "alternate_names": ["Appl Sci"],
+        "alternate_names": [
+          "Appl Sci"
+        ],
         "issn": "2076-3417",
         "url": "http://www.e-helvetica.nb.admin.ch/directAccess?callnumber=bel-217814",
         "alternate_urls": [
@@ -311,7 +334,9 @@
         "id": "227fb221-5e57-477c-b756-e39dd8ffd538",
         "name": "Isprs Journal of Photogrammetry and Remote Sensing",
         "type": "journal",
-        "alternate_names": ["Isprs J Photogramm Remote Sens"]
+        "alternate_names": [
+          "Isprs J Photogramm Remote Sens"
+        ]
       },
       "url": "https://www.semanticscholar.org/paper/a66027ec18694f0df97c598e81cb72f97052a192",
       "title": "Completing point clouds using structural constraints for large-scale points absence in 3D building reconstruction",
@@ -324,7 +349,9 @@
         "license": null,
         "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1016/j.isprsjprs.2023.09.008?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/j.isprsjprs.2023.09.008, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "name": "ISPRS Journal of Photogrammetry and Remote Sensing"
       },
@@ -362,7 +389,9 @@
         "id": "e492b4b9-e702-4dfd-9fc9-fa193bf89390",
         "name": "ISPRS Open Journal of Photogrammetry and Remote Sensing",
         "type": "journal",
-        "alternate_names": ["ISPRS Open J Photogramm Remote Sens"],
+        "alternate_names": [
+          "ISPRS Open J Photogramm Remote Sens"
+        ],
         "issn": "2667-3932",
         "url": "https://www.journals.elsevier.com/isprs-open-journal-of-photogrammetry-and-remote-sensing"
       },
@@ -408,9 +437,15 @@
         "id": "b13c1aa5-5899-45c8-9d9b-e8c213fdc308",
         "name": "Computational Geosciences",
         "type": "journal",
-        "alternate_names": ["Comput  Geosci", "Computers & Geosciences", "Comput Geosci"],
+        "alternate_names": [
+          "Comput  Geosci",
+          "Computers & Geosciences",
+          "Comput Geosci"
+        ],
         "issn": "1420-0597",
-        "alternate_issns": ["0098-3004"],
+        "alternate_issns": [
+          "0098-3004"
+        ],
         "url": "http://www.springer.com/west/home/computer/computer+journals?SGWID=4-40100-70-35546462-0",
         "alternate_urls": [
           "https://link.springer.com/journal/10596",
@@ -423,14 +458,17 @@
       "title": "A critical review of discontinuity plane extraction from 3D point cloud data of rock mass surfaces",
       "venue": "Computational Geosciences",
       "year": 2022,
-      "citationCount": 75,
+      "citationCount": 78,
       "openAccessPdf": {
         "url": "https://repository.tudelft.nl/islandora/object/uuid%3A11649a3a-7ca6-4a89-bbf7-3383c3b818f5/datastream/OBJ/download",
         "status": "GREEN",
         "license": "other-oa",
         "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1016/j.cageo.2022.105241?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/j.cageo.2022.105241, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle", "Review"],
+      "publicationTypes": [
+        "JournalArticle",
+        "Review"
+      ],
       "journal": {
         "volume": "169",
         "pages": "105241",
@@ -470,7 +508,9 @@
         "id": "4ab1e1bf-98e8-4e0c-a53a-7a00e37e44e2",
         "name": "The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences",
         "type": "journal",
-        "alternate_names": ["Int Arch Photogramm Remote Sens Spat Inf Sci"],
+        "alternate_names": [
+          "Int Arch Photogramm Remote Sens Spat Inf Sci"
+        ],
         "issn": "1682-1750",
         "url": "https://www.isprs.org/publications/archives.aspx"
       },
@@ -565,7 +605,7 @@
       "title": "A Practical Algorithm for the Viewpoint Planning of Terrestrial Laser Scanners",
       "venue": "",
       "year": 2022,
-      "citationCount": 10,
+      "citationCount": 11,
       "openAccessPdf": {
         "url": "",
         "status": null,
@@ -596,23 +636,30 @@
         "id": "e46002a1-d7a6-4681-aae9-36bc3a6a1f93",
         "name": "Information Sciences",
         "type": "journal",
-        "alternate_names": ["Information Scientist", "Inf Sci"],
+        "alternate_names": [
+          "Information Scientist",
+          "Inf Sci"
+        ],
         "issn": "0020-0255",
-        "alternate_issns": ["0020-0263"],
+        "alternate_issns": [
+          "0020-0263"
+        ],
         "url": "http://www.sciencedirect.com/science/journal/00200255"
       },
       "url": "https://www.semanticscholar.org/paper/cf2ff39dfb617b936832a92c1f25e2d84657199c",
       "title": "Extraction of indoor objects based on the exponential function density clustering model",
       "venue": "Information Sciences",
       "year": 2022,
-      "citationCount": 24,
+      "citationCount": 25,
       "openAccessPdf": {
         "url": "",
         "status": null,
         "license": null,
         "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1016/j.ins.2022.06.032?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/j.ins.2022.06.032, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "607",
         "pages": "1111-1135",
@@ -660,7 +707,9 @@
         "id": "f343e0ba-3d7e-455f-a323-9acb69bdf650",
         "name": "Journal of Cultural Heritage Management and Sustainable Development",
         "type": "journal",
-        "alternate_names": ["J Cult Heritage Manag Sustain Dev"],
+        "alternate_names": [
+          "J Cult Heritage Manag Sustain Dev"
+        ],
         "issn": "2044-1266",
         "url": "https://www.emerald.com/insight/publication/issn/2044-1266"
       },
@@ -675,7 +724,9 @@
         "license": null,
         "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1108/jchmsd-10-2021-0183?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1108/jchmsd-10-2021-0183, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": {
         "name": "Journal of Cultural Heritage Management and Sustainable Development"
       },
@@ -714,7 +765,9 @@
         "id": "136edf8d-0f88-4c2c-830f-461c6a9b842e",
         "name": "Applied Sciences",
         "type": "journal",
-        "alternate_names": ["Appl Sci"],
+        "alternate_names": [
+          "Appl Sci"
+        ],
         "issn": "2076-3417",
         "url": "http://www.e-helvetica.nb.admin.ch/directAccess?callnumber=bel-217814",
         "alternate_urls": [
@@ -727,7 +780,7 @@
       "title": "Automated Accuracy Assessment of a Mobile Mapping System with Lightweight Laser Scanning and MEMS Sensors",
       "venue": "Applied Sciences",
       "year": 2021,
-      "citationCount": 14,
+      "citationCount": 15,
       "openAccessPdf": {
         "url": "https://www.mdpi.com/2076-3417/11/3/1007/pdf?version=1611385663",
         "status": "GOLD",
@@ -769,9 +822,13 @@
         "id": "8e1bd4b5-d5b2-4e22-ba0a-01fe5568d472",
         "name": "Remote Sensing",
         "type": "journal",
-        "alternate_names": ["Remote Sens"],
+        "alternate_names": [
+          "Remote Sens"
+        ],
         "issn": "2315-4675",
-        "alternate_issns": ["2072-4292"],
+        "alternate_issns": [
+          "2072-4292"
+        ],
         "url": "http://www.e-helvetica.nb.admin.ch/directAccess?callnumber=bel-169233",
         "alternate_urls": [
           "https://www.mdpi.com/journal/remotesensing",
@@ -790,7 +847,9 @@
         "license": "CCBY",
         "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.3390/rs13163269?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.3390/rs13163269, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "13",
         "pages": "3269",
@@ -818,7 +877,9 @@
         "id": "d59090cf-bd8d-49fb-8d09-cc7c38efbec0",
         "name": "Photogrammetric Record",
         "type": "journal",
-        "alternate_names": ["Photogramm Rec"],
+        "alternate_names": [
+          "Photogramm Rec"
+        ],
         "issn": "0031-868X",
         "url": "https://onlinelibrary.wiley.com/journal/14779730"
       },
@@ -872,7 +933,9 @@
         "id": "3c739721-d724-4924-80f3-ceec0bbd3415",
         "name": "Journal of Geodesy",
         "type": "journal",
-        "alternate_names": ["J Geodesy"],
+        "alternate_names": [
+          "J Geodesy"
+        ],
         "issn": "0949-7714",
         "url": "http://link.springer.com/journal/40771"
       },
@@ -887,7 +950,9 @@
         "license": null,
         "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1007/s00190-021-01484-x?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1007/s00190-021-01484-x, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": {
         "volume": "95",
         "name": "Journal of Geodesy"
@@ -919,7 +984,9 @@
         "id": "227fb221-5e57-477c-b756-e39dd8ffd538",
         "name": "Isprs Journal of Photogrammetry and Remote Sensing",
         "type": "journal",
-        "alternate_names": ["Isprs J Photogramm Remote Sens"]
+        "alternate_names": [
+          "Isprs J Photogramm Remote Sens"
+        ]
       },
       "url": "https://www.semanticscholar.org/paper/ce905d9f07c36a5dffdf0e6ee370e817ca8c1c46",
       "title": "New method for first-order network design applied to TLS self-calibration networks",
@@ -963,9 +1030,13 @@
         "id": "8e1bd4b5-d5b2-4e22-ba0a-01fe5568d472",
         "name": "Remote Sensing",
         "type": "journal",
-        "alternate_names": ["Remote Sens"],
+        "alternate_names": [
+          "Remote Sens"
+        ],
         "issn": "2315-4675",
-        "alternate_issns": ["2072-4292"],
+        "alternate_issns": [
+          "2072-4292"
+        ],
         "url": "http://www.e-helvetica.nb.admin.ch/directAccess?callnumber=bel-169233",
         "alternate_urls": [
           "https://www.mdpi.com/journal/remotesensing",
@@ -977,14 +1048,16 @@
       "title": "Automated Storey Separation and Door and Window Extraction for Building Models from Complete Laser Scans",
       "venue": "Remote Sensing",
       "year": 2021,
-      "citationCount": 13,
+      "citationCount": 14,
       "openAccessPdf": {
         "url": "https://www.mdpi.com/2072-4292/13/17/3384/pdf?version=1629971213",
         "status": "GOLD",
         "license": "CCBY",
         "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.3390/rs13173384?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.3390/rs13173384, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "13",
         "pages": "3384",
@@ -1017,7 +1090,9 @@
         "id": "227fb221-5e57-477c-b756-e39dd8ffd538",
         "name": "Isprs Journal of Photogrammetry and Remote Sensing",
         "type": "journal",
-        "alternate_names": ["Isprs J Photogramm Remote Sens"]
+        "alternate_names": [
+          "Isprs J Photogramm Remote Sens"
+        ]
       },
       "url": "https://www.semanticscholar.org/paper/f9c37f26988e94a1f403312729b00d73678ffc6f",
       "title": "Simultaneous identification, modeling and registration refinement of poles using laser scanning point clouds",
@@ -1059,10 +1134,15 @@
         "id": "266f640f-003e-453b-ab76-57e4053252f8",
         "name": "Pattern Recognition",
         "type": "journal",
-        "alternate_names": ["Pattern Recognit"],
+        "alternate_names": [
+          "Pattern Recognit"
+        ],
         "issn": "0031-3203",
         "url": "http://www.elsevier.com/wps/find/journaldescription.cws_home/328/description#description",
-        "alternate_urls": ["https://www.journals.elsevier.com/pattern-recognition", "http://www.sciencedirect.com/science/journal/00313203"]
+        "alternate_urls": [
+          "https://www.journals.elsevier.com/pattern-recognition",
+          "http://www.sciencedirect.com/science/journal/00313203"
+        ]
       },
       "url": "https://www.semanticscholar.org/paper/0e124b1c8356a75931f9705a35954a8a0d983d10",
       "title": "New Confocal Hyperbola-based Ellipse Fitting with Applications to Estimating Parameters of Mechanical Pipes from Point Clouds",
@@ -1075,7 +1155,9 @@
         "license": null,
         "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2011.07606, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "116",
         "pages": "107948",
@@ -1107,10 +1189,14 @@
         "id": "e0cda45d-3074-4ac0-80b8-e5250df00b89",
         "name": "IEEE Transactions on Medical Imaging",
         "type": "journal",
-        "alternate_names": ["IEEE Trans Med Imaging"],
+        "alternate_names": [
+          "IEEE Trans Med Imaging"
+        ],
         "issn": "0278-0062",
         "url": "http://ieeexplore.ieee.org/servlet/opac?punumber=42",
-        "alternate_urls": ["https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=42"]
+        "alternate_urls": [
+          "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=42"
+        ]
       },
       "url": "https://www.semanticscholar.org/paper/122e4698196ba4a7904c3403645f55f9b716b219",
       "title": "Robust Self-Supervised Learning of Deterministic Errors in Single-Plane (Monoplanar) and Dual-Plane (Biplanar) X-Ray Fluoroscopy",
@@ -1123,7 +1209,9 @@
         "license": null,
         "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2001.00686, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "39",
         "pages": "2051-2060",
@@ -1159,7 +1247,9 @@
         "id": "227fb221-5e57-477c-b756-e39dd8ffd538",
         "name": "Isprs Journal of Photogrammetry and Remote Sensing",
         "type": "journal",
-        "alternate_names": ["Isprs J Photogramm Remote Sens"]
+        "alternate_names": [
+          "Isprs J Photogramm Remote Sens"
+        ]
       },
       "url": "https://www.semanticscholar.org/paper/1d25afb6055cdd19eaaba9f322792dafc5007dbf",
       "title": "Thanks to outgoing Associate Editor",
@@ -1283,10 +1373,15 @@
         "id": "cbe2e2e0-f4d3-4923-8b48-a02259e5f89c",
         "name": "Automation in Construction",
         "type": "journal",
-        "alternate_names": ["Autom Constr"],
+        "alternate_names": [
+          "Autom Constr"
+        ],
         "issn": "0926-5805",
         "url": "http://www.elsevier.com/wps/find/journaldescription.cws_home/523112/description#description",
-        "alternate_urls": ["http://www.sciencedirect.com/science/journal/09265805", "https://www.journals.elsevier.com/automation-in-construction"]
+        "alternate_urls": [
+          "http://www.sciencedirect.com/science/journal/09265805",
+          "https://www.journals.elsevier.com/automation-in-construction"
+        ]
       },
       "url": "https://www.semanticscholar.org/paper/5c36698de826b50350925b8d0d878f5f842589c9",
       "title": "Towards Automatic Digital Documentation and Progress Reporting of Mechanical Construction Pipes using Smartphones",
@@ -1299,7 +1394,9 @@
         "license": null,
         "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2012.10958, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "abs/2012.10958",
         "name": "ArXiv"
@@ -1333,7 +1430,9 @@
         "id": "d59090cf-bd8d-49fb-8d09-cc7c38efbec0",
         "name": "Photogrammetric Record",
         "type": "journal",
-        "alternate_names": ["Photogramm Rec"],
+        "alternate_names": [
+          "Photogramm Rec"
+        ],
         "issn": "0031-868X",
         "url": "https://onlinelibrary.wiley.com/journal/14779730"
       },
@@ -1348,7 +1447,9 @@
         "license": "CCBYNCND",
         "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2012.02899, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "36",
         "name": "The Photogrammetric Record"
@@ -1379,7 +1480,13 @@
         "id": "3dbf084c-ef47-4b74-9919-047b40704538",
         "name": "Italian National Conference on Sensors",
         "type": "conference",
-        "alternate_names": ["SENSORS", "IEEE Sens", "Ital National Conf Sens", "IEEE Sensors", "Sensors"],
+        "alternate_names": [
+          "SENSORS",
+          "IEEE Sens",
+          "Ital National Conf Sens",
+          "IEEE Sensors",
+          "Sensors"
+        ],
         "issn": "1424-8220",
         "url": "http://www.e-helvetica.nb.admin.ch/directAccess?callnumber=bel-142001",
         "alternate_urls": [
@@ -1399,7 +1506,9 @@
         "license": "CCBY",
         "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC7471979, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "20",
         "name": "Sensors (Basel, Switzerland)"
@@ -1447,7 +1556,9 @@
         "id": "d59090cf-bd8d-49fb-8d09-cc7c38efbec0",
         "name": "Photogrammetric Record",
         "type": "journal",
-        "alternate_names": ["Photogramm Rec"],
+        "alternate_names": [
+          "Photogramm Rec"
+        ],
         "issn": "0031-868X",
         "url": "https://onlinelibrary.wiley.com/journal/14779730"
       },
@@ -1503,7 +1614,9 @@
       "publicationVenue": {
         "id": "1901e811-ee72-4b20-8f7e-de08cd395a10",
         "name": "arXiv.org",
-        "alternate_names": ["ArXiv"],
+        "alternate_names": [
+          "ArXiv"
+        ],
         "issn": "2331-8422",
         "url": "https://arxiv.org"
       },
@@ -1518,7 +1631,9 @@
         "license": null,
         "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2011.13849, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "abs/2011.13849",
         "name": "ArXiv"
@@ -1547,9 +1662,13 @@
         "id": "8e1bd4b5-d5b2-4e22-ba0a-01fe5568d472",
         "name": "Remote Sensing",
         "type": "journal",
-        "alternate_names": ["Remote Sens"],
+        "alternate_names": [
+          "Remote Sens"
+        ],
         "issn": "2315-4675",
-        "alternate_issns": ["2072-4292"],
+        "alternate_issns": [
+          "2072-4292"
+        ],
         "url": "http://www.e-helvetica.nb.admin.ch/directAccess?callnumber=bel-169233",
         "alternate_urls": [
           "https://www.mdpi.com/journal/remotesensing",
@@ -1568,7 +1687,9 @@
         "license": "CCBY",
         "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.3390/rs12183002?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.3390/rs12183002, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "12",
         "pages": "3002",
@@ -1675,7 +1796,9 @@
         "id": "4ab1e1bf-98e8-4e0c-a53a-7a00e37e44e2",
         "name": "The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences",
         "type": "journal",
-        "alternate_names": ["Int Arch Photogramm Remote Sens Spat Inf Sci"],
+        "alternate_names": [
+          "Int Arch Photogramm Remote Sens Spat Inf Sci"
+        ],
         "issn": "1682-1750",
         "url": "https://www.isprs.org/publications/archives.aspx"
       },
@@ -1683,7 +1806,7 @@
       "title": "VEHICLE TRACKING AND SPEED ESTIMATION FROM UNMANNED AERIAL VIDEOS",
       "venue": "The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences",
       "year": 2020,
-      "citationCount": 2,
+      "citationCount": 3,
       "openAccessPdf": {
         "url": "https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/XLIII-B2-2020/623/2020/isprs-archives-XLIII-B2-2020-623-2020.pdf",
         "status": "GOLD",
@@ -1725,7 +1848,10 @@
         "id": "145b72a0-c608-4160-9675-9297db6c1e67",
         "name": "Journal of Surveying Engineering",
         "type": "journal",
-        "alternate_names": ["J Surv Eng", "Journal of Surveying Engineering-asce"],
+        "alternate_names": [
+          "J Surv Eng",
+          "Journal of Surveying Engineering-asce"
+        ],
         "issn": "0733-9453",
         "url": "https://ascelibrary.org/journal/jsued2"
       },
@@ -1733,7 +1859,7 @@
       "title": "New Approach for Low-Cost TLS Target Measurement",
       "venue": "Journal of Surveying Engineering",
       "year": 2019,
-      "citationCount": 17,
+      "citationCount": 18,
       "openAccessPdf": {
         "url": "https://prism.ucalgary.ca/bitstream/1880/110531/1/Lichti%20et%20al%20JSE%20Pre-print.pdf",
         "status": "GREEN",
@@ -1775,7 +1901,9 @@
         "id": "4ab1e1bf-98e8-4e0c-a53a-7a00e37e44e2",
         "name": "The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences",
         "type": "journal",
-        "alternate_names": ["Int Arch Photogramm Remote Sens Spat Inf Sci"],
+        "alternate_names": [
+          "Int Arch Photogramm Remote Sens Spat Inf Sci"
+        ],
         "issn": "1682-1750",
         "url": "https://www.isprs.org/publications/archives.aspx"
       },
@@ -1826,9 +1954,13 @@
         "id": "8e1bd4b5-d5b2-4e22-ba0a-01fe5568d472",
         "name": "Remote Sensing",
         "type": "journal",
-        "alternate_names": ["Remote Sens"],
+        "alternate_names": [
+          "Remote Sens"
+        ],
         "issn": "2315-4675",
-        "alternate_issns": ["2072-4292"],
+        "alternate_issns": [
+          "2072-4292"
+        ],
         "url": "http://www.e-helvetica.nb.admin.ch/directAccess?callnumber=bel-169233",
         "alternate_urls": [
           "https://www.mdpi.com/journal/remotesensing",
@@ -1840,14 +1972,16 @@
       "title": "A Model-Based Design System for Terrestrial Laser Scanning Networks in Complex Sites",
       "venue": "Remote Sensing",
       "year": 2019,
-      "citationCount": 48,
+      "citationCount": 49,
       "openAccessPdf": {
         "url": "https://www.mdpi.com/2072-4292/11/15/1749/pdf",
         "status": "GOLD",
         "license": "CCBY",
         "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.3390/RS11151749?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.3390/RS11151749, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "11",
         "pages": "1749",
@@ -1885,7 +2019,9 @@
         "license": "CCBY",
         "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.3390/ijgi8120585?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.3390/ijgi8120585, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "8",
         "pages": "585",
@@ -1923,9 +2059,13 @@
         "id": "8e1bd4b5-d5b2-4e22-ba0a-01fe5568d472",
         "name": "Remote Sensing",
         "type": "journal",
-        "alternate_names": ["Remote Sens"],
+        "alternate_names": [
+          "Remote Sens"
+        ],
         "issn": "2315-4675",
-        "alternate_issns": ["2072-4292"],
+        "alternate_issns": [
+          "2072-4292"
+        ],
         "url": "http://www.e-helvetica.nb.admin.ch/directAccess?callnumber=bel-169233",
         "alternate_urls": [
           "https://www.mdpi.com/journal/remotesensing",
@@ -1937,14 +2077,16 @@
       "title": "Automatic Recognition of Common Structural Elements from Point Clouds for Automated Progress Monitoring and Dimensional Quality Control in Reinforced Concrete Construction",
       "venue": "Remote Sensing",
       "year": 2019,
-      "citationCount": 107,
+      "citationCount": 109,
       "openAccessPdf": {
         "url": "https://www.mdpi.com/2072-4292/11/9/1102/pdf?version=1557329020",
         "status": "GOLD",
         "license": "CCBY",
         "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.3390/RS11091102?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.3390/RS11091102, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "11",
         "pages": "1102",
@@ -2026,7 +2168,9 @@
         "id": "c18ca9ea-c394-46d2-b458-30dcf166dabb",
         "name": "ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences",
         "type": "journal",
-        "alternate_names": ["ISPRS Ann Photogramm Remote Sens Spat Inf Sci"],
+        "alternate_names": [
+          "ISPRS Ann Photogramm Remote Sens Spat Inf Sci"
+        ],
         "issn": "2196-6346",
         "url": "https://www.isprs.org/publications/annals.aspx"
       },
@@ -2068,16 +2212,21 @@
         "id": "cbe2e2e0-f4d3-4923-8b48-a02259e5f89c",
         "name": "Automation in Construction",
         "type": "journal",
-        "alternate_names": ["Autom Constr"],
+        "alternate_names": [
+          "Autom Constr"
+        ],
         "issn": "0926-5805",
         "url": "http://www.elsevier.com/wps/find/journaldescription.cws_home/523112/description#description",
-        "alternate_urls": ["http://www.sciencedirect.com/science/journal/09265805", "https://www.journals.elsevier.com/automation-in-construction"]
+        "alternate_urls": [
+          "http://www.sciencedirect.com/science/journal/09265805",
+          "https://www.journals.elsevier.com/automation-in-construction"
+        ]
       },
       "url": "https://www.semanticscholar.org/paper/bd4b2ab63b5605f74560feca8ae0d89becc30bf2",
       "title": "Extraction of pipes and flanges from point clouds for automated verification of pre-fabricated modules in oil and gas refinery projects",
       "venue": "Automation in Construction",
       "year": 2019,
-      "citationCount": 57,
+      "citationCount": 58,
       "openAccessPdf": {
         "url": "",
         "status": "CLOSED",
@@ -2154,7 +2303,9 @@
         "id": "227fb221-5e57-477c-b756-e39dd8ffd538",
         "name": "Isprs Journal of Photogrammetry and Remote Sensing",
         "type": "journal",
-        "alternate_names": ["Isprs J Photogramm Remote Sens"]
+        "alternate_names": [
+          "Isprs J Photogramm Remote Sens"
+        ]
       },
       "url": "https://www.semanticscholar.org/paper/cce8a099c846e49ebf648a88f899ace23eb1b875",
       "title": "Explanation for the seam line discontinuity in terrestrial laser scanner point clouds",
@@ -2209,7 +2360,13 @@
         "id": "3dbf084c-ef47-4b74-9919-047b40704538",
         "name": "Italian National Conference on Sensors",
         "type": "conference",
-        "alternate_names": ["SENSORS", "IEEE Sens", "Ital National Conf Sens", "IEEE Sensors", "Sensors"],
+        "alternate_names": [
+          "SENSORS",
+          "IEEE Sens",
+          "Ital National Conf Sens",
+          "IEEE Sensors",
+          "Sensors"
+        ],
         "issn": "1424-8220",
         "url": "http://www.e-helvetica.nb.admin.ch/directAccess?callnumber=bel-142001",
         "alternate_urls": [
@@ -2229,7 +2386,10 @@
         "license": "CCBY",
         "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC6471037, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle", "Review"],
+      "publicationTypes": [
+        "JournalArticle",
+        "Review"
+      ],
       "journal": {
         "volume": "19",
         "name": "Sensors (Basel, Switzerland)"
@@ -2269,7 +2429,9 @@
         "id": "c18ca9ea-c394-46d2-b458-30dcf166dabb",
         "name": "ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences",
         "type": "journal",
-        "alternate_names": ["ISPRS Ann Photogramm Remote Sens Spat Inf Sci"],
+        "alternate_names": [
+          "ISPRS Ann Photogramm Remote Sens Spat Inf Sci"
+        ],
         "issn": "2196-6346",
         "url": "https://www.isprs.org/publications/annals.aspx"
       },
@@ -2360,7 +2522,13 @@
         "id": "3dbf084c-ef47-4b74-9919-047b40704538",
         "name": "Italian National Conference on Sensors",
         "type": "conference",
-        "alternate_names": ["SENSORS", "IEEE Sens", "Ital National Conf Sens", "IEEE Sensors", "Sensors"],
+        "alternate_names": [
+          "SENSORS",
+          "IEEE Sens",
+          "Ital National Conf Sens",
+          "IEEE Sensors",
+          "Sensors"
+        ],
         "issn": "1424-8220",
         "url": "http://www.e-helvetica.nb.admin.ch/directAccess?callnumber=bel-142001",
         "alternate_urls": [
@@ -2380,7 +2548,10 @@
         "license": "CCBY",
         "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC6111257, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle", "Review"],
+      "publicationTypes": [
+        "JournalArticle",
+        "Review"
+      ],
       "journal": {
         "volume": "18",
         "name": "Sensors (Basel, Switzerland)"
@@ -2428,10 +2599,14 @@
         "id": "5488de95-5cc3-45e7-bea5-b7f32327a5ad",
         "name": "Survey Review",
         "type": "journal",
-        "alternate_names": ["Surv Rev"],
+        "alternate_names": [
+          "Surv Rev"
+        ],
         "issn": "0039-6265",
         "url": "http://www.maneyonline.com/SRE",
-        "alternate_urls": ["http://www.tandfonline.com/toc/ysre20/current"]
+        "alternate_urls": [
+          "http://www.tandfonline.com/toc/ysre20/current"
+        ]
       },
       "url": "https://www.semanticscholar.org/paper/4704fb668da01db2926e5e48d5f99344c9346eba",
       "title": "Validation and verification procedures for defining legal 3D boundaries using terrestrial laser scanners",
@@ -2444,7 +2619,9 @@
         "license": null,
         "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1080/00396265.2018.1518800?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1080/00396265.2018.1518800, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": {
         "volume": "52",
         "pages": "69 - 75",
@@ -2477,7 +2654,9 @@
         "id": "c18ca9ea-c394-46d2-b458-30dcf166dabb",
         "name": "ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences",
         "type": "journal",
-        "alternate_names": ["ISPRS Ann Photogramm Remote Sens Spat Inf Sci"],
+        "alternate_names": [
+          "ISPRS Ann Photogramm Remote Sens Spat Inf Sci"
+        ],
         "issn": "2196-6346",
         "url": "https://www.isprs.org/publications/annals.aspx"
       },
@@ -2533,14 +2712,17 @@
       "title": "Practical In Situ Implementation of a Multicamera Multisystem Calibration",
       "venue": "J. Sensors",
       "year": 2018,
-      "citationCount": 10,
+      "citationCount": 11,
       "openAccessPdf": {
         "url": "http://downloads.hindawi.com/journals/js/2018/5351863.pdf",
         "status": "GOLD",
         "license": "CCBY",
         "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1155/2018/5351863?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1155/2018/5351863, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle", "Review"],
+      "publicationTypes": [
+        "JournalArticle",
+        "Review"
+      ],
       "journal": {
         "volume": "2018",
         "pages": "5351863:1-5351863:12",
@@ -2577,7 +2759,9 @@
         "id": "227fb221-5e57-477c-b756-e39dd8ffd538",
         "name": "Isprs Journal of Photogrammetry and Remote Sensing",
         "type": "journal",
-        "alternate_names": ["Isprs J Photogramm Remote Sens"]
+        "alternate_names": [
+          "Isprs J Photogramm Remote Sens"
+        ]
       },
       "url": "https://www.semanticscholar.org/paper/86c2f5e8d7763c473ecbf313850537708ea4e7b1",
       "title": "Message to readers",
@@ -2613,7 +2797,9 @@
         "id": "41c3b19b-0bac-418a-89dc-2fa894c12fef",
         "name": "Applied Geomatics",
         "type": "journal",
-        "alternate_names": ["Appl Geomatics"],
+        "alternate_names": [
+          "Appl Geomatics"
+        ],
         "issn": "1866-928X",
         "url": "https://link.springer.com/journal/12518"
       },
@@ -2669,7 +2855,9 @@
         "id": "227fb221-5e57-477c-b756-e39dd8ffd538",
         "name": "Isprs Journal of Photogrammetry and Remote Sensing",
         "type": "journal",
-        "alternate_names": ["Isprs J Photogramm Remote Sens"]
+        "alternate_names": [
+          "Isprs J Photogramm Remote Sens"
+        ]
       },
       "url": "https://www.semanticscholar.org/paper/9fb67d2eb4726d801b5f25dbd91a4ce1713a0019",
       "title": "Thanks to outgoing Associate Editors",
@@ -2709,7 +2897,9 @@
         "id": "c18ca9ea-c394-46d2-b458-30dcf166dabb",
         "name": "ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences",
         "type": "journal",
-        "alternate_names": ["ISPRS Ann Photogramm Remote Sens Spat Inf Sci"],
+        "alternate_names": [
+          "ISPRS Ann Photogramm Remote Sens Spat Inf Sci"
+        ],
         "issn": "2196-6346",
         "url": "https://www.isprs.org/publications/annals.aspx"
       },
@@ -2754,7 +2944,13 @@
         "id": "3dbf084c-ef47-4b74-9919-047b40704538",
         "name": "Italian National Conference on Sensors",
         "type": "conference",
-        "alternate_names": ["SENSORS", "IEEE Sens", "Ital National Conf Sens", "IEEE Sensors", "Sensors"],
+        "alternate_names": [
+          "SENSORS",
+          "IEEE Sens",
+          "Ital National Conf Sens",
+          "IEEE Sensors",
+          "Sensors"
+        ],
         "issn": "1424-8220",
         "url": "http://www.e-helvetica.nb.admin.ch/directAccess?callnumber=bel-142001",
         "alternate_urls": [
@@ -2767,14 +2963,16 @@
       "title": "Robust Segmentation of Planar and Linear Features of Terrestrial Laser Scanner Point Clouds Acquired from Construction Sites",
       "venue": "Italian National Conference on Sensors",
       "year": 2018,
-      "citationCount": 58,
+      "citationCount": 61,
       "openAccessPdf": {
         "url": "https://www.mdpi.com/1424-8220/18/3/819/pdf?version=1520674291",
         "status": "GOLD",
         "license": "CCBY",
         "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC5876591, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "18",
         "name": "Sensors (Basel, Switzerland)"
@@ -2808,7 +3006,9 @@
         "id": "4ab1e1bf-98e8-4e0c-a53a-7a00e37e44e2",
         "name": "The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences",
         "type": "journal",
-        "alternate_names": ["Int Arch Photogramm Remote Sens Spat Inf Sci"],
+        "alternate_names": [
+          "Int Arch Photogramm Remote Sens Spat Inf Sci"
+        ],
         "issn": "1682-1750",
         "url": "https://www.isprs.org/publications/archives.aspx"
       },
@@ -2823,7 +3023,9 @@
         "license": "CCBY",
         "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1810.00138, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "abs/1810.00138",
         "name": "ArXiv"
@@ -2876,7 +3078,9 @@
         "license": null,
         "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/PLANS.2018.8373394?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/PLANS.2018.8373394, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "pages": "294-300",
         "name": "2018 IEEE/ION Position, Location and Navigation Symposium (PLANS)"
@@ -2911,13 +3115,15 @@
         "id": "227fb221-5e57-477c-b756-e39dd8ffd538",
         "name": "Isprs Journal of Photogrammetry and Remote Sensing",
         "type": "journal",
-        "alternate_names": ["Isprs J Photogramm Remote Sens"]
+        "alternate_names": [
+          "Isprs J Photogramm Remote Sens"
+        ]
       },
       "url": "https://www.semanticscholar.org/paper/ff3434d3be4a1070c7057d4a36722d4f6eec79a8",
       "title": "The U. V. Helava Award \u2013 Best Paper Volumes 123-134 (2017)",
       "venue": "Isprs Journal of Photogrammetry and Remote Sensing",
       "year": 2018,
-      "citationCount": 1,
+      "citationCount": 2,
       "openAccessPdf": {
         "url": "",
         "status": "CLOSED",
@@ -2947,10 +3153,14 @@
       "publicationVenue": {
         "id": "994dcad9-4d42-4a9b-af8b-0afbd879a2dd",
         "name": "Proceedings of the Institution of mechanical engineers. Part H, journal of engineering in medicine",
-        "alternate_names": ["Proc Inst mech eng Part H j eng med"],
+        "alternate_names": [
+          "Proc Inst mech eng Part H j eng med"
+        ],
         "issn": "0954-4119",
         "url": "https://journals.sagepub.com/home/pih",
-        "alternate_urls": ["http://www.uk.sagepub.com/journals/Journal202022"]
+        "alternate_urls": [
+          "http://www.uk.sagepub.com/journals/Journal202022"
+        ]
       },
       "url": "https://www.semanticscholar.org/paper/114b41b56a6ceb2fe0aa06442d574c63e8694130",
       "title": "Single-camera visual odometry to track a surgical X-ray C-arm base",
@@ -2963,7 +3173,9 @@
         "license": null,
         "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1177/0954411917735556?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1177/0954411917735556, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "231",
         "pages": "1140 - 1151",
@@ -3004,7 +3216,9 @@
         "license": null,
         "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1117/12.2270115?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1117/12.2270115, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": {
         "volume": "10332"
       },
@@ -3261,10 +3475,15 @@
         "id": "eb4f826e-70fb-420c-980d-d63532cff232",
         "name": "International Journal of Computer Assisted Radiology and Surgery",
         "type": "journal",
-        "alternate_names": ["Int J Comput Assist Radiol Surg"],
+        "alternate_names": [
+          "Int J Comput Assist Radiol Surg"
+        ],
         "issn": "1861-6410",
         "url": "https://www.springer.com/medicine/radiology/journal/11548",
-        "alternate_urls": ["https://link.springer.com/journal/11548", "http://www.springer.com/medicine/radiology/journal/11548"]
+        "alternate_urls": [
+          "https://link.springer.com/journal/11548",
+          "http://www.springer.com/medicine/radiology/journal/11548"
+        ]
       },
       "url": "https://www.semanticscholar.org/paper/4ae97f6d8de7a3588233ae208d5b15d265c11cd1",
       "title": "A fast, accurate and closed-form method for pose recognition of an intramedullary nail using a tracked C-arm",
@@ -3277,7 +3496,9 @@
         "license": null,
         "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1007/s11548-015-1294-y?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1007/s11548-015-1294-y, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "11",
         "pages": "621-633",
@@ -3460,7 +3681,9 @@
         "license": null,
         "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1127/PFG/2016/0294?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1127/PFG/2016/0294, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": {
         "volume": "10",
         "pages": "153-165",
@@ -3669,7 +3892,9 @@
         "status": null,
         "license": null
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": {
         "volume": "",
         "name": ""
@@ -3832,9 +4057,13 @@
         "id": "8e1bd4b5-d5b2-4e22-ba0a-01fe5568d472",
         "name": "Remote Sensing",
         "type": "journal",
-        "alternate_names": ["Remote Sens"],
+        "alternate_names": [
+          "Remote Sens"
+        ],
         "issn": "2315-4675",
-        "alternate_issns": ["2072-4292"],
+        "alternate_issns": [
+          "2072-4292"
+        ],
         "url": "http://www.e-helvetica.nb.admin.ch/directAccess?callnumber=bel-169233",
         "alternate_urls": [
           "https://www.mdpi.com/journal/remotesensing",
@@ -3853,7 +4082,9 @@
         "license": "CCBY",
         "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.3390/rs71115605?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.3390/rs71115605, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "7",
         "pages": "15605-15629",
@@ -3950,10 +4181,14 @@
         "id": "e0cda45d-3074-4ac0-80b8-e5250df00b89",
         "name": "IEEE Transactions on Medical Imaging",
         "type": "journal",
-        "alternate_names": ["IEEE Trans Med Imaging"],
+        "alternate_names": [
+          "IEEE Trans Med Imaging"
+        ],
         "issn": "0278-0062",
         "url": "http://ieeexplore.ieee.org/servlet/opac?punumber=42",
-        "alternate_urls": ["https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=42"]
+        "alternate_urls": [
+          "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=42"
+        ]
       },
       "url": "https://www.semanticscholar.org/paper/c2ef0c689e2bd0b7139c811e0a37e3a2cd8c6685",
       "title": "Rigorous Geometric Self-Calibrating Bundle Adjustment for a Dual Fluoroscopic Imaging System",
@@ -3966,7 +4201,9 @@
         "license": null,
         "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/TMI.2014.2362993?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/TMI.2014.2362993, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "34",
         "pages": "589-598",
@@ -4092,9 +4329,13 @@
         "id": "8e1bd4b5-d5b2-4e22-ba0a-01fe5568d472",
         "name": "Remote Sensing",
         "type": "journal",
-        "alternate_names": ["Remote Sens"],
+        "alternate_names": [
+          "Remote Sens"
+        ],
         "issn": "2315-4675",
-        "alternate_issns": ["2072-4292"],
+        "alternate_issns": [
+          "2072-4292"
+        ],
         "url": "http://www.e-helvetica.nb.admin.ch/directAccess?callnumber=bel-169233",
         "alternate_urls": [
           "https://www.mdpi.com/journal/remotesensing",
@@ -4113,7 +4354,9 @@
         "license": "CCBY",
         "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.3390/rs70810480?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.3390/rs70810480, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "7",
         "pages": "10480-10500",
@@ -4147,7 +4390,9 @@
         "status": null,
         "license": null
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": null,
       "authors": [
         {
@@ -4536,7 +4781,9 @@
         "name": "Robotics",
         "type": "journal",
         "issn": "0167-8493",
-        "alternate_issns": ["2218-6581"],
+        "alternate_issns": [
+          "2218-6581"
+        ],
         "url": "http://www.sciencedirect.com/science/journal/01678493",
         "alternate_urls": [
           "http://nbn-resolving.de/urn/resolver.pl?urn=urn:nbn:ch:bel-283039",
@@ -4555,7 +4802,9 @@
         "license": "CCBY",
         "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.3390/robotics3030247?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.3390/robotics3030247, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "3",
         "pages": "247-280",
@@ -4697,7 +4946,13 @@
         "id": "3dbf084c-ef47-4b74-9919-047b40704538",
         "name": "Italian National Conference on Sensors",
         "type": "conference",
-        "alternate_names": ["SENSORS", "IEEE Sens", "Ital National Conf Sens", "IEEE Sensors", "Sensors"],
+        "alternate_names": [
+          "SENSORS",
+          "IEEE Sens",
+          "Ital National Conf Sens",
+          "IEEE Sensors",
+          "Sensors"
+        ],
         "issn": "1424-8220",
         "url": "http://www.e-helvetica.nb.admin.ch/directAccess?callnumber=bel-142001",
         "alternate_urls": [
@@ -4717,7 +4972,9 @@
         "license": "CCBY",
         "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC3958284, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "14",
         "pages": "3293 - 3307",
@@ -4848,7 +5105,9 @@
         "type": "journal",
         "issn": "2169-3536",
         "url": "http://www.ieee.org/publications_standards/publications/ieee_access.html",
-        "alternate_urls": ["http://ieeexplore.ieee.org/servlet/opac?punumber=6287639"]
+        "alternate_urls": [
+          "http://ieeexplore.ieee.org/servlet/opac?punumber=6287639"
+        ]
       },
       "url": "https://www.semanticscholar.org/paper/21b40282715ef69dbf9556f0c77d5fa245013937",
       "title": "Photogrammetric Bundle Adjustment With Self-Calibration of the PrimeSense 3D Camera Technology: Microsoft Kinect",
@@ -4861,7 +5120,9 @@
         "license": "CCBYNCND",
         "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ACCESS.2013.2271860?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ACCESS.2013.2271860, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "1",
         "pages": "465-474",
@@ -4890,7 +5151,10 @@
         "id": "afb7e8b6-fefe-4d4d-9ce6-9e73c4a2ec7f",
         "name": "IEEE Business Engineering and Industrial Applications Colloquium",
         "type": "conference",
-        "alternate_names": ["BEIAC", "IEEE Bus Eng Ind Appl Colloq"]
+        "alternate_names": [
+          "BEIAC",
+          "IEEE Bus Eng Ind Appl Colloq"
+        ]
       },
       "url": "https://www.semanticscholar.org/paper/2386535029124a2264ceb46bcf8511682f775bbd",
       "title": "A self-calibration of the Leica ScanStation C10 scanner",
@@ -4903,7 +5167,9 @@
         "license": null,
         "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/BEIAC.2013.6560128?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/BEIAC.2013.6560128, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": {
         "pages": "262-266",
         "name": "2013 IEEE Business Engineering and Industrial Applications Colloquium (BEIAC)"
@@ -5089,7 +5355,13 @@
         "id": "3dbf084c-ef47-4b74-9919-047b40704538",
         "name": "Italian National Conference on Sensors",
         "type": "conference",
-        "alternate_names": ["SENSORS", "IEEE Sens", "Ital National Conf Sens", "IEEE Sensors", "Sensors"],
+        "alternate_names": [
+          "SENSORS",
+          "IEEE Sens",
+          "Ital National Conf Sens",
+          "IEEE Sensors",
+          "Sensors"
+        ],
         "issn": "1424-8220",
         "url": "http://www.e-helvetica.nb.admin.ch/directAccess?callnumber=bel-142001",
         "alternate_urls": [
@@ -5109,7 +5381,9 @@
         "license": "CCBY",
         "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC3715238, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "13",
         "pages": "7224 - 7249",
@@ -5184,14 +5458,16 @@
       "title": "Multi-feature based boresight self-calibration of a terrestrial mobile mapping system",
       "venue": "",
       "year": 2013,
-      "citationCount": 44,
+      "citationCount": 43,
       "openAccessPdf": {
         "url": "",
         "status": "CLOSED",
         "license": null,
         "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1016/J.ISPRSJPRS.2013.04.005?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/J.ISPRSJPRS.2013.04.005, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": {
         "volume": "82",
         "pages": "112-124",
@@ -5277,7 +5553,9 @@
         "license": "CCBY",
         "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.5194/ISPRSANNALS-II-5-W2-61-2013?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.5194/ISPRSANNALS-II-5-W2-61-2013, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": {
         "volume": "",
         "pages": "61-66",
@@ -5318,7 +5596,9 @@
         "license": "CCBY",
         "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.5194/ISPRSARCHIVES-XXXVIII-5-W12-259-2011?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.5194/ISPRSARCHIVES-XXXVIII-5-W12-259-2011, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": {
         "volume": "3812",
         "pages": "259-264",
@@ -5350,7 +5630,13 @@
         "id": "3dbf084c-ef47-4b74-9919-047b40704538",
         "name": "Italian National Conference on Sensors",
         "type": "conference",
-        "alternate_names": ["SENSORS", "IEEE Sens", "Ital National Conf Sens", "IEEE Sensors", "Sensors"],
+        "alternate_names": [
+          "SENSORS",
+          "IEEE Sens",
+          "Ital National Conf Sens",
+          "IEEE Sensors",
+          "Sensors"
+        ],
         "issn": "1424-8220",
         "url": "http://www.e-helvetica.nb.admin.ch/directAccess?callnumber=bel-142001",
         "alternate_urls": [
@@ -5370,7 +5656,9 @@
         "license": "CCBY",
         "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC3522921, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "12",
         "pages": "14416 - 14441",
@@ -5407,7 +5695,9 @@
         "license": "CCBY",
         "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.5194/ISPRSARCHIVES-XXXIX-B5-169-2012?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.5194/ISPRSARCHIVES-XXXIX-B5-169-2012, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": {
         "volume": "",
         "pages": "169-174",
@@ -5437,21 +5727,26 @@
         "id": "0f303c64-a818-43c2-a533-c36ddafa565e",
         "name": "International Conference on Image Analysis and Recognition",
         "type": "conference",
-        "alternate_names": ["ICIAR", "Int Conf Image Anal Recognit"],
+        "alternate_names": [
+          "ICIAR",
+          "Int Conf Image Anal Recognit"
+        ],
         "url": "http://www.wikicfp.com/cfp/program?id=1381"
       },
       "url": "https://www.semanticscholar.org/paper/37d080ebe24b1f7da178e33df6621017794284ca",
       "title": "Heuristic and Voxel-Based Signature for Hand Posture Recognition Using a Range Camera",
       "venue": "International Conference on Image Analysis and Recognition",
       "year": 2012,
-      "citationCount": 2,
+      "citationCount": 1,
       "openAccessPdf": {
         "url": "",
         "status": "CLOSED",
         "license": null,
         "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1007/978-3-642-31298-4_14?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1007/978-3-642-31298-4_14, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "pages": "114-121"
       },
@@ -5520,7 +5815,7 @@
       "title": "PERFORMANCE ANALYSIS OF A LOW-COST TRIANGULATION-BASED 3D CAMERA: MICROSOFT KINECT SYSTEM",
       "venue": "",
       "year": 2012,
-      "citationCount": 43,
+      "citationCount": 44,
       "openAccessPdf": {
         "url": "https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/XXXIX-B5/175/2012/isprsarchives-XXXIX-B5-175-2012.pdf",
         "status": "GOLD",
@@ -5564,13 +5859,15 @@
       "title": "Accuracy assessment of the FARO Focus 3D and Leica HDS6100 panoramic- type terrestrial laser scanners through point-based and plane-based user self-calibration",
       "venue": "",
       "year": 2012,
-      "citationCount": 35,
+      "citationCount": 36,
       "openAccessPdf": {
         "url": "",
         "status": null,
         "license": null
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": {
         "volume": "",
         "name": ""
@@ -5770,7 +6067,7 @@
       "title": "DETECTION OF ROAD CURB FROM MOBILE TERRESTRIAL LASER SCANNER POINT CLOUD",
       "venue": "",
       "year": 2012,
-      "citationCount": 53,
+      "citationCount": 54,
       "openAccessPdf": {
         "url": "https://doi.org/10.5194/isprsarchives-xxxviii-5-w12-109-2011",
         "status": "GOLD",
@@ -5816,10 +6113,16 @@
         "id": "d9f11dd6-6e86-41bb-bf59-d58c0cbfcebf",
         "name": "Bone & Joint Research",
         "type": "journal",
-        "alternate_names": ["Bone  Jt Res", "Bone Jt Res", "Bone and Joint Research"],
+        "alternate_names": [
+          "Bone  Jt Res",
+          "Bone Jt Res",
+          "Bone and Joint Research"
+        ],
         "issn": "2046-3758",
         "url": "http://www.bjr.boneandjoint.org.uk/",
-        "alternate_urls": ["https://online.boneandjoint.org.uk/journal/bjr"]
+        "alternate_urls": [
+          "https://online.boneandjoint.org.uk/journal/bjr"
+        ]
       },
       "url": "https://www.semanticscholar.org/paper/bb5147fe9cebb9eaaf419de4d490f8b0c1df11e1",
       "title": "Radiological method for measuring patellofemoral tracking and tibiofemoral kinematics before and after total knee replacement",
@@ -5832,7 +6135,9 @@
         "license": "CCBYNCND",
         "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC3626255, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "1",
         "pages": "263 - 271",
@@ -6113,7 +6418,7 @@
       "title": "Accuracy analysis of kinect depth data",
       "venue": "",
       "year": 2012,
-      "citationCount": 501,
+      "citationCount": 500,
       "openAccessPdf": {
         "url": "https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/XXXVIII-5-W12/133/2011/isprsarchives-XXXVIII-5-W12-133-2011.pdf",
         "status": "GOLD",
@@ -6266,9 +6571,13 @@
         "id": "8e1bd4b5-d5b2-4e22-ba0a-01fe5568d472",
         "name": "Remote Sensing",
         "type": "journal",
-        "alternate_names": ["Remote Sens"],
+        "alternate_names": [
+          "Remote Sens"
+        ],
         "issn": "2315-4675",
-        "alternate_issns": ["2072-4292"],
+        "alternate_issns": [
+          "2072-4292"
+        ],
         "url": "http://www.e-helvetica.nb.admin.ch/directAccess?callnumber=bel-169233",
         "alternate_urls": [
           "https://www.mdpi.com/journal/remotesensing",
@@ -6280,14 +6589,16 @@
       "title": "Temporal Stability of the Velodyne HDL-64E S2 Scanner for High Accuracy Scanning Applications",
       "venue": "Remote Sensing",
       "year": 2011,
-      "citationCount": 48,
+      "citationCount": 47,
       "openAccessPdf": {
         "url": "https://www.mdpi.com/2072-4292/3/3/539/pdf?version=1403129251",
         "status": "GOLD",
         "license": "CCBY",
         "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.3390/rs3030539?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.3390/rs3030539, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "3",
         "pages": "539-553",
@@ -6317,9 +6628,13 @@
         "id": "8e1bd4b5-d5b2-4e22-ba0a-01fe5568d472",
         "name": "Remote Sensing",
         "type": "journal",
-        "alternate_names": ["Remote Sens"],
+        "alternate_names": [
+          "Remote Sens"
+        ],
         "issn": "2315-4675",
-        "alternate_issns": ["2072-4292"],
+        "alternate_issns": [
+          "2072-4292"
+        ],
         "url": "http://www.e-helvetica.nb.admin.ch/directAccess?callnumber=bel-169233",
         "alternate_urls": [
           "https://www.mdpi.com/journal/remotesensing",
@@ -6338,7 +6653,10 @@
         "license": "CCBY",
         "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.3390/rs3051014?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.3390/rs3051014, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle", "Review"],
+      "publicationTypes": [
+        "JournalArticle",
+        "Review"
+      ],
       "journal": {
         "volume": "3",
         "pages": "1014-1028",
@@ -6410,7 +6728,9 @@
         "license": null,
         "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1111/j.1477-9730.2011.00662.x?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1111/j.1477-9730.2011.00662.x, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": {
         "volume": "26",
         "name": "The Photogrammetric Record"
@@ -6492,7 +6812,9 @@
         "status": null,
         "license": null
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": null,
       "authors": [
         {
@@ -6538,7 +6860,10 @@
         "license": null,
         "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ICSMC.2011.6083974?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ICSMC.2011.6083974, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle", "Conference"],
+      "publicationTypes": [
+        "JournalArticle",
+        "Conference"
+      ],
       "journal": {
         "pages": "2051-2055",
         "name": "2011 IEEE International Conference on Systems, Man, and Cybernetics"
@@ -6611,9 +6936,13 @@
         "id": "8e1bd4b5-d5b2-4e22-ba0a-01fe5568d472",
         "name": "Remote Sensing",
         "type": "journal",
-        "alternate_names": ["Remote Sens"],
+        "alternate_names": [
+          "Remote Sens"
+        ],
         "issn": "2315-4675",
-        "alternate_issns": ["2072-4292"],
+        "alternate_issns": [
+          "2072-4292"
+        ],
         "url": "http://www.e-helvetica.nb.admin.ch/directAccess?callnumber=bel-169233",
         "alternate_urls": [
           "https://www.mdpi.com/journal/remotesensing",
@@ -6632,7 +6961,9 @@
         "license": "CCBY",
         "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.3390/rs2061610?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.3390/rs2061610, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "2",
         "pages": "1610-1624",
@@ -6767,7 +7098,9 @@
         "license": null,
         "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.5380/BCG.V16I1.17242?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.5380/BCG.V16I1.17242, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": {
         "volume": "16",
         "pages": "3-19",
@@ -6948,7 +7281,7 @@
       "title": "Terrestrial laser scanner self-calibration: Correlation sources and their mitigation",
       "venue": "",
       "year": 2010,
-      "citationCount": 121,
+      "citationCount": 122,
       "openAccessPdf": {
         "url": "",
         "status": "CLOSED",
@@ -6986,7 +7319,9 @@
         "status": null,
         "license": null
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": {
         "volume": "",
         "name": ""
@@ -7061,10 +7396,15 @@
         "id": "25248f80-fe99-48e5-9b8e-9baef3b8e23b",
         "name": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
         "type": "journal",
-        "alternate_names": ["IEEE Trans Pattern Anal Mach Intell"],
+        "alternate_names": [
+          "IEEE Trans Pattern Anal Mach Intell"
+        ],
         "issn": "0162-8828",
         "url": "http://www.computer.org/tpami/",
-        "alternate_urls": ["http://www.computer.org/portal/web/tpami", "http://ieeexplore.ieee.org/servlet/opac?punumber=34"]
+        "alternate_urls": [
+          "http://www.computer.org/portal/web/tpami",
+          "http://ieeexplore.ieee.org/servlet/opac?punumber=34"
+        ]
       },
       "url": "https://www.semanticscholar.org/paper/21c86e8085507ec1e573e7a624dc8929d9cea2cf",
       "title": "A Closed-Form Expression of the Positional Uncertainty for 3D Point Clouds",
@@ -7077,7 +7417,9 @@
         "license": null,
         "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/TPAMI.2008.116?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/TPAMI.2008.116, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "31",
         "pages": "577-590",
@@ -7118,7 +7460,9 @@
         "license": null,
         "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1111/j.1477-9730.2009.00518.x?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1111/j.1477-9730.2009.00518.x, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": {
         "volume": "24",
         "name": "The Photogrammetric Record"
@@ -7185,7 +7529,11 @@
         "id": "d068a5ed-de42-4f73-8312-51d07ecc19b7",
         "name": "Electronic imaging",
         "type": "journal",
-        "alternate_names": ["Electron imaging", "electron imaging", "electronic imaging"],
+        "alternate_names": [
+          "Electron imaging",
+          "electron imaging",
+          "electronic imaging"
+        ],
         "issn": "0737-6553"
       },
       "url": "https://www.semanticscholar.org/paper/9cf2199a2cc421b2bfdcfdc93faa3c659105182b",
@@ -7333,7 +7681,9 @@
         "status": null,
         "license": null
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": null,
       "authors": [
         {
@@ -7367,14 +7717,16 @@
       "title": "A method for automated registration of unorganised point clouds",
       "venue": "",
       "year": 2008,
-      "citationCount": 206,
+      "citationCount": 207,
       "openAccessPdf": {
         "url": "",
         "status": "CLOSED",
         "license": null,
         "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1016/J.ISPRSJPRS.2007.05.012?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/J.ISPRSJPRS.2007.05.012, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": {
         "volume": "63",
         "pages": "36-54",
@@ -7408,7 +7760,9 @@
         "status": null,
         "license": null
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": null,
       "authors": [
         {
@@ -7505,7 +7859,7 @@
       "title": "A method to test differences between additional parameter sets with a case study in terrestrial laser scanner self-calibration stability analysis",
       "venue": "",
       "year": 2008,
-      "citationCount": 27,
+      "citationCount": 26,
       "openAccessPdf": {
         "url": "",
         "status": "CLOSED",
@@ -7646,7 +8000,7 @@
       "title": "Error modelling, calibration and analysis of an AM\u2013CW terrestrial laser scanner system",
       "venue": "",
       "year": 2007,
-      "citationCount": 258,
+      "citationCount": 259,
       "openAccessPdf": {
         "url": "",
         "status": "CLOSED",
@@ -7880,8 +8234,8 @@
           "name": "D. Lichti"
         },
         {
-          "authorId": "95021891",
-          "name": "M. Licht"
+          "authorId": "113837626",
+          "name": "Marie Licht"
         }
       ],
       "abstract": null
@@ -7896,13 +8250,15 @@
       "title": "CLASSIFICATION AND SEGMENTATION OF TERRESTRIAL LASER SCANNER POINT CLOUDS USING LOCAL VARIANCE INFORMATION",
       "venue": "",
       "year": 2006,
-      "citationCount": 119,
+      "citationCount": 120,
       "openAccessPdf": {
         "url": "",
         "status": null,
         "license": null
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": null,
       "authors": [
         {
@@ -7974,7 +8330,9 @@
         "license": null,
         "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1080/14498596.2005.9635039?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1080/14498596.2005.9635039, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": {
         "volume": "50",
         "pages": "75 - 89",
@@ -8012,14 +8370,16 @@
       "title": "Error Models and Propagation in Directly Georeferenced Terrestrial Laser Scanner Networks",
       "venue": "",
       "year": 2005,
-      "citationCount": 175,
+      "citationCount": 176,
       "openAccessPdf": {
         "url": "",
         "status": "CLOSED",
         "license": null,
         "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1061/(ASCE)0733-9453(2005)131:4(135)?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1061/(ASCE)0733-9453(2005)131:4(135), which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": {
         "volume": "131",
         "pages": "135-142",
@@ -8037,45 +8397,6 @@
         {
           "authorId": "2398630",
           "name": "T. Tipdecho"
-        }
-      ],
-      "abstract": null
-    },
-    {
-      "paperId": "4e64f020f905117727be55a30d5de657e9ce87fe",
-      "externalIds": {
-        "DOI": "10.1111/j.1477-9730.2005.00336_1.x",
-        "CorpusId": 912968
-      },
-      "publicationVenue": null,
-      "url": "https://www.semanticscholar.org/paper/4e64f020f905117727be55a30d5de657e9ce87fe",
-      "title": "Authors\u2019 Addresses",
-      "venue": "",
-      "year": 2005,
-      "citationCount": 502,
-      "openAccessPdf": {
-        "url": "",
-        "status": "CLOSED",
-        "license": null,
-        "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1111/j.1477-9730.2005.00336_1.x?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1111/j.1477-9730.2005.00336_1.x, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
-      },
-      "publicationTypes": null,
-      "journal": {
-        "volume": "20",
-        "name": "The Photogrammetric Record"
-      },
-      "authors": [
-        {
-          "authorId": "38053549",
-          "name": "C. Fraser"
-        },
-        {
-          "authorId": "2245053",
-          "name": "D. Lichti"
-        },
-        {
-          "authorId": "2160042533",
-          "name": "Yongjun Zhang"
         }
       ],
       "abstract": null
@@ -8320,6 +8641,45 @@
       "abstract": null
     },
     {
+      "paperId": "d9511bd46f07c668c9ad2c217a39ae0abfd06e09",
+      "externalIds": {
+        "DOI": "10.1111/j.1477-9730.2005.00336_1.x",
+        "CorpusId": 287793338
+      },
+      "publicationVenue": null,
+      "url": "https://www.semanticscholar.org/paper/d9511bd46f07c668c9ad2c217a39ae0abfd06e09",
+      "title": "Authors\u2019 Addresses",
+      "venue": "",
+      "year": 2005,
+      "citationCount": 0,
+      "openAccessPdf": {
+        "url": "",
+        "status": "CLOSED",
+        "license": null,
+        "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1111/j.1477-9730.2005.00336_1.x?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1111/j.1477-9730.2005.00336_1.x, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "publicationTypes": null,
+      "journal": {
+        "volume": "20",
+        "name": "The Photogrammetric Record"
+      },
+      "authors": [
+        {
+          "authorId": "2244055721",
+          "name": "Clive S. Fraser"
+        },
+        {
+          "authorId": "2245053",
+          "name": "D. Lichti"
+        },
+        {
+          "authorId": "2160042533",
+          "name": "Yongjun Zhang"
+        }
+      ],
+      "abstract": null
+    },
+    {
       "paperId": "dba7475ea589b77f15ecdb046e77c88d6207145d",
       "externalIds": {
         "DOI": "10.1111/j.1477-9730.2005.00336_5.x",
@@ -8369,13 +8729,15 @@
       "title": "Error Propagation in Directly Georeferenced Terrestrial Laser Scanner Point Clouds for Cultural Heritage Recording",
       "venue": "",
       "year": 2004,
-      "citationCount": 138,
+      "citationCount": 139,
       "openAccessPdf": {
         "url": "",
         "status": null,
         "license": null
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": {
         "volume": "",
         "name": ""
@@ -8506,7 +8868,9 @@
         "license": null,
         "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1080/14498596.2004.9635014?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1080/14498596.2004.9635014, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": {
         "volume": "49",
         "pages": "144 - 150",
@@ -8729,7 +9093,9 @@
         "status": null,
         "license": null
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": {
         "volume": "",
         "name": ""
@@ -8772,7 +9138,9 @@
         "license": null,
         "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1080/00690805.2003.9714257?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1080/00690805.2003.9714257, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": {
         "volume": "32",
         "pages": "82 - 84",
@@ -8859,7 +9227,10 @@
         "license": null,
         "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/IGARSS.2002.1026757?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/IGARSS.2002.1026757, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle", "Review"],
+      "publicationTypes": [
+        "JournalArticle",
+        "Review"
+      ],
       "journal": {
         "volume": "5",
         "pages": "2732-2734 vol.5",
@@ -8899,7 +9270,9 @@
         "license": null,
         "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1111/0031-868x.00205?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1111/0031-868x.00205, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": {
         "volume": "17",
         "name": "The Photogrammetric Record"
@@ -9003,7 +9376,9 @@
         "status": null,
         "license": null
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": {
         "volume": "56",
         "pages": "21-33",
@@ -9042,7 +9417,9 @@
         "status": null,
         "license": null
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": {
         "volume": "",
         "name": ""
@@ -9074,7 +9451,11 @@
         "id": "616a154a-0ecb-46c4-bcd7-998f39f3bae3",
         "name": "GPS Solutions",
         "type": "journal",
-        "alternate_names": ["Gps Solut", "Gps Solutions", "GPS Solut"],
+        "alternate_names": [
+          "Gps Solut",
+          "Gps Solutions",
+          "GPS Solut"
+        ],
         "issn": "1080-5370",
         "url": "https://link.springer.com/journal/10291"
       },
@@ -9089,7 +9470,9 @@
         "license": null,
         "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1007/PL00012842?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1007/PL00012842, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["Review"],
+      "publicationTypes": [
+        "Review"
+      ],
       "journal": {
         "volume": "4",
         "pages": "54-62",
@@ -9164,7 +9547,7 @@
       "title": "Metric performance of a high-resolution laser scanner",
       "venue": "IS&T/SPIE Electronic Imaging",
       "year": 2000,
-      "citationCount": 37,
+      "citationCount": 38,
       "openAccessPdf": {
         "url": "",
         "status": "CLOSED",
@@ -9249,7 +9632,9 @@
         "id": "19e47693-2094-42c1-b333-786ddeaef505",
         "name": "Journal of Biomechanical Engineering",
         "type": "journal",
-        "alternate_names": ["J Biomech Eng"],
+        "alternate_names": [
+          "J Biomech Eng"
+        ],
         "issn": "0148-0731",
         "url": "http://www.efluids.com/efluids/pages/j_midpages/journal_of_bio_engin.htm"
       },
@@ -9264,7 +9649,9 @@
         "license": "other-oa",
         "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1115/1.2835104?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1115/1.2835104, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "121 2",
         "pages": "\n          196-205\n        ",
@@ -9306,7 +9693,9 @@
         "id": "19e47693-2094-42c1-b333-786ddeaef505",
         "name": "Journal of Biomechanical Engineering",
         "type": "journal",
-        "alternate_names": ["J Biomech Eng"],
+        "alternate_names": [
+          "J Biomech Eng"
+        ],
         "issn": "0148-0731",
         "url": "http://www.efluids.com/efluids/pages/j_midpages/journal_of_bio_engin.htm"
       },
@@ -9321,7 +9710,9 @@
         "license": "other-oa",
         "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1115/1.2835083?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1115/1.2835083, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["JournalArticle"],
+      "publicationTypes": [
+        "JournalArticle"
+      ],
       "journal": {
         "volume": "121 5",
         "pages": "\n          525-32\n        ",
@@ -9469,7 +9860,9 @@
         "license": null,
         "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1117/12.220911?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1117/12.220911, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
       },
-      "publicationTypes": ["Conference"],
+      "publicationTypes": [
+        "Conference"
+      ],
       "journal": {
         "volume": "2598"
       },
