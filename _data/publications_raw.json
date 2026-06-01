@@ -4,8 +4,8 @@
       "authorId": "2245053",
       "name": "D. Lichti",
       "affiliations": [],
-      "paperCount": 220,
-      "citationCount": 6286,
+      "paperCount": 222,
+      "citationCount": 6314,
       "hIndex": 44
     }
   ],
@@ -94,6 +94,47 @@
       "abstract": null
     },
     {
+      "paperId": "f6a36de642405c7592826e21b27d98adde40733f",
+      "externalIds": {
+        "DOI": "10.1088/1873-4030/ae6cfd",
+        "CorpusId": 288242163
+      },
+      "publicationVenue": null,
+      "url": "https://www.semanticscholar.org/paper/f6a36de642405c7592826e21b27d98adde40733f",
+      "title": "Using a monoplane stereoscopic videoradiography configuration to accurately measure skeletal positions: a proof-of-concept study",
+      "venue": "Medical Engineering &amp; Physics",
+      "year": 2026,
+      "citationCount": 0,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1088/1873-4030/ae6cfd?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1088/1873-4030/ae6cfd, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "publicationTypes": [
+        "JournalArticle"
+      ],
+      "journal": {
+        "volume": "147",
+        "name": "Medical Engineering & Physics"
+      },
+      "authors": [
+        {
+          "authorId": "38127648",
+          "name": "Tomasz Bugajski"
+        },
+        {
+          "authorId": "2245053",
+          "name": "D. Lichti"
+        },
+        {
+          "authorId": "3484939",
+          "name": "Payam Zandiyeh"
+        }
+      ],
+      "abstract": "Biplanar videoradiography is a validated method for measuring skeletal kinematics. However, using two x-ray source-detector pairs introduces geometric constraints that can compromise image quality. The spatial configuration of the two pairs often requires a larger object-to-image distance (OID), leading to greater magnification and geometric blur. Consequently, increased magnification can limit the effective field of view, restricting multi-joint analyses. Additionally, geometric blur degrades image quality, potentially compromising subsequent bone registrations. To address this limitation, this proof-of-concept study evaluated a monoplane stereoscopic videoradiography (MSV) configuration. MSV uses two x-ray sources captured by a single detector, enabling a smaller OID. A pseudo-dynamic experiment was conducted to assess whether MSV would achieve accurate calibration and subsequent three-dimensional (3D) bone positions. A cube and pelvis phantom were rotated 360\u00b0 on a turntable in 15\u00b0 increments. At each increment, positions were recorded using both conventional motion capture (MOCAP) and MSV, with MOCAP acting as the reference standard. During MSV image acquisition, a lead barrier alternately blocked one x-ray source, allowing the other to project onto the detector. Calibration was performed using a bundle adjustment technique, and 3D bone positions were calculated using radiostereometric analysis and model-based tracking and compared against MOCAP. Overall, MSV achieved sub-millimeter and sub-degree accuracy. The calibration yielded a mean residual of 0.22 mm, while rotational and translational biases ranged from 0.36\u20131.16\u00b0 and 0.22\u20131.23 mm, respectively, with precisions of 0.09\u20130.59\u00b0 and 0.18\u20130.58 mm. These results support the feasibility of using MSV to accurately calculate skeletal positions. This approach reduces magnification and, by extension, geometric blur, opening avenues for multi-joint analyses and improved imaging of deeper joints. Future work will focus on implementing a true asynchronous MSV acquisition to extend this approach to dynamic, in vivo kinematic studies."
+    },
+    {
       "paperId": "0da20448c9e858055643d1d436a0986eda0c926f",
       "externalIds": {
         "DOI": "10.5194/isprs-archives-xlviii-2-2024-41-2024",
@@ -113,7 +154,7 @@
       "title": "Validation of Camera Networks Used for the Assessment of Speech Movements",
       "venue": "The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences",
       "year": 2024,
-      "citationCount": 0,
+      "citationCount": 1,
       "openAccessPdf": {
         "url": "https://isprs-archives.copernicus.org/articles/XLVIII-2-2024/41/2024/isprs-archives-XLVIII-2-2024-41-2024.pdf",
         "status": "GOLD",
@@ -166,7 +207,7 @@
       "title": "Precision estimation of 3D objects using an observation distribution model in support of terrestrial laser scanner network design",
       "venue": "ISPRS Open Journal of Photogrammetry and Remote Sensing",
       "year": 2023,
-      "citationCount": 1,
+      "citationCount": 2,
       "openAccessPdf": {
         "url": "https://doi.org/10.1016/j.ophoto.2023.100035",
         "status": "GOLD",
@@ -458,7 +499,7 @@
       "title": "A critical review of discontinuity plane extraction from 3D point cloud data of rock mass surfaces",
       "venue": "Computational Geosciences",
       "year": 2022,
-      "citationCount": 78,
+      "citationCount": 83,
       "openAccessPdf": {
         "url": "https://repository.tudelft.nl/islandora/object/uuid%3A11649a3a-7ca6-4a89-bbf7-3383c3b818f5/datastream/OBJ/download",
         "status": "GREEN",
@@ -780,7 +821,7 @@
       "title": "Automated Accuracy Assessment of a Mobile Mapping System with Lightweight Laser Scanning and MEMS Sensors",
       "venue": "Applied Sciences",
       "year": 2021,
-      "citationCount": 15,
+      "citationCount": 16,
       "openAccessPdf": {
         "url": "https://www.mdpi.com/2076-3417/11/3/1007/pdf?version=1611385663",
         "status": "GOLD",
@@ -943,7 +984,7 @@
       "title": "Linear regression with an observation distribution model",
       "venue": "Journal of Geodesy",
       "year": 2021,
-      "citationCount": 8,
+      "citationCount": 9,
       "openAccessPdf": {
         "url": "https://prism.ucalgary.ca/bitstreams/e04d796c-f7c6-4f68-b1a2-bac888bddbae/download",
         "status": "GREEN",
@@ -1048,7 +1089,7 @@
       "title": "Automated Storey Separation and Door and Window Extraction for Building Models from Complete Laser Scans",
       "venue": "Remote Sensing",
       "year": 2021,
-      "citationCount": 14,
+      "citationCount": 15,
       "openAccessPdf": {
         "url": "https://www.mdpi.com/2072-4292/13/17/3384/pdf?version=1629971213",
         "status": "GOLD",
@@ -1624,7 +1665,7 @@
       "title": "Robust Detection of Non-overlapping Ellipses from Points with Applications to Circular Target Extraction in Images and Cylinder Detection in Point Clouds",
       "venue": "arXiv.org",
       "year": 2020,
-      "citationCount": 23,
+      "citationCount": 24,
       "openAccessPdf": {
         "url": "https://prism.ucalgary.ca/bitstreams/95198b18-6589-4473-981c-e12ef8cb76f5/download",
         "status": "GREEN",
@@ -2077,7 +2118,7 @@
       "title": "Automatic Recognition of Common Structural Elements from Point Clouds for Automated Progress Monitoring and Dimensional Quality Control in Reinforced Concrete Construction",
       "venue": "Remote Sensing",
       "year": 2019,
-      "citationCount": 109,
+      "citationCount": 110,
       "openAccessPdf": {
         "url": "https://www.mdpi.com/2072-4292/11/9/1102/pdf?version=1557329020",
         "status": "GOLD",
@@ -2226,7 +2267,7 @@
       "title": "Extraction of pipes and flanges from point clouds for automated verification of pre-fabricated modules in oil and gas refinery projects",
       "venue": "Automation in Construction",
       "year": 2019,
-      "citationCount": 58,
+      "citationCount": 59,
       "openAccessPdf": {
         "url": "",
         "status": "CLOSED",
@@ -3254,7 +3295,7 @@
       "title": "Improvements to the accuracy of prototype ship models measurement method using terrestrial laser scanner",
       "venue": "",
       "year": 2017,
-      "citationCount": 41,
+      "citationCount": 42,
       "openAccessPdf": {
         "url": "",
         "status": "CLOSED",
@@ -4016,7 +4057,7 @@
       "title": "A rigorous cylinder-based self-calibration approach for terrestrial laser scanners",
       "venue": "",
       "year": 2015,
-      "citationCount": 47,
+      "citationCount": 48,
       "openAccessPdf": {
         "url": "",
         "status": "CLOSED",
@@ -4194,7 +4235,7 @@
       "title": "Rigorous Geometric Self-Calibrating Bundle Adjustment for a Dual Fluoroscopic Imaging System",
       "venue": "IEEE Transactions on Medical Imaging",
       "year": 2015,
-      "citationCount": 35,
+      "citationCount": 36,
       "openAccessPdf": {
         "url": "",
         "status": "CLOSED",
@@ -4515,7 +4556,7 @@
       "title": "An on-site approach for the self-calibration of terrestrial laser scanner",
       "venue": "",
       "year": 2014,
-      "citationCount": 43,
+      "citationCount": 44,
       "openAccessPdf": {
         "url": "",
         "status": "CLOSED",
@@ -5374,7 +5415,7 @@
       "title": "Improvements to and Comparison of Static Terrestrial LiDAR Self-Calibration Methods",
       "venue": "Italian National Conference on Sensors",
       "year": 2013,
-      "citationCount": 44,
+      "citationCount": 45,
       "openAccessPdf": {
         "url": "https://www.mdpi.com/1424-8220/13/6/7224/pdf?version=1403328034",
         "status": "GOLD",
@@ -5900,7 +5941,7 @@
       "title": "Point-Based Versus Plane-Based Self-Calibration of Static Terrestrial Laser Scanners",
       "venue": "",
       "year": 2012,
-      "citationCount": 22,
+      "citationCount": 21,
       "openAccessPdf": {
         "url": "https://isprs-archives.copernicus.org/articles/XXXVIII-5-W12/121/2011/isprsarchives-XXXVIII-5-W12-121-2011.pdf",
         "status": "GOLD",
@@ -6418,7 +6459,7 @@
       "title": "Accuracy analysis of kinect depth data",
       "venue": "",
       "year": 2012,
-      "citationCount": 500,
+      "citationCount": 502,
       "openAccessPdf": {
         "url": "https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/XXXVIII-5-W12/133/2011/isprsarchives-XXXVIII-5-W12-133-2011.pdf",
         "status": "GOLD",
@@ -6954,7 +6995,7 @@
       "title": "Static Calibration and Analysis of the Velodyne HDL-64E S2 for High Accuracy Mobile Scanning",
       "venue": "Remote Sensing",
       "year": 2010,
-      "citationCount": 195,
+      "citationCount": 196,
       "openAccessPdf": {
         "url": "https://www.mdpi.com/2072-4292/2/6/1610/pdf?version=1403129182",
         "status": "GOLD",
@@ -7313,7 +7354,7 @@
       "title": "Self-calibration and evaluation of the Trimble GX terrestrial laser scanner",
       "venue": "",
       "year": 2010,
-      "citationCount": 3,
+      "citationCount": 2,
       "openAccessPdf": {
         "url": "",
         "status": null,
@@ -8000,7 +8041,7 @@
       "title": "Error modelling, calibration and analysis of an AM\u2013CW terrestrial laser scanner system",
       "venue": "",
       "year": 2007,
-      "citationCount": 259,
+      "citationCount": 260,
       "openAccessPdf": {
         "url": "",
         "status": "CLOSED",
@@ -8181,7 +8222,7 @@
       "title": "Rigorous approach to bore-sight self-calibration in airborne laser scanning",
       "venue": "",
       "year": 2006,
-      "citationCount": 255,
+      "citationCount": 256,
       "openAccessPdf": {
         "url": "https://infoscience.epfl.ch/record/90832/files/Rigorous%20approach.pdf",
         "status": "GREEN",
@@ -8217,7 +8258,7 @@
       "title": "EXPERIENCES WITH TERRESTRIAL LASER SCANNER MODELLING AND ACCURACY ASSESSMENT",
       "venue": "",
       "year": 2006,
-      "citationCount": 90,
+      "citationCount": 91,
       "openAccessPdf": {
         "url": "",
         "status": null,
@@ -8250,7 +8291,7 @@
       "title": "CLASSIFICATION AND SEGMENTATION OF TERRESTRIAL LASER SCANNER POINT CLOUDS USING LOCAL VARIANCE INFORMATION",
       "venue": "",
       "year": 2006,
-      "citationCount": 120,
+      "citationCount": 121,
       "openAccessPdf": {
         "url": "",
         "status": null,
@@ -8306,6 +8347,45 @@
         },
         {
           "authorId": "2160042533",
+          "name": "Yongjun Zhang"
+        }
+      ],
+      "abstract": null
+    },
+    {
+      "paperId": "281120477f48c75dcb546356cb66b8e41f7a099d",
+      "externalIds": {
+        "DOI": "10.1111/j.1477-9730.2005.00336_1.x",
+        "CorpusId": 912968
+      },
+      "publicationVenue": null,
+      "url": "https://www.semanticscholar.org/paper/281120477f48c75dcb546356cb66b8e41f7a099d",
+      "title": "Authors\u2019 Addresses",
+      "venue": "",
+      "year": 2005,
+      "citationCount": 512,
+      "openAccessPdf": {
+        "url": "",
+        "status": "CLOSED",
+        "license": null,
+        "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1111/j.1477-9730.2005.00336_1.x?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1111/j.1477-9730.2005.00336_1.x, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "publicationTypes": null,
+      "journal": {
+        "volume": "20",
+        "name": "The Photogrammetric Record"
+      },
+      "authors": [
+        {
+          "authorId": "2244055721",
+          "name": "Clive S. Fraser"
+        },
+        {
+          "authorId": "2245053",
+          "name": "D. Lichti"
+        },
+        {
+          "authorId": "2284028844",
           "name": "Yongjun Zhang"
         }
       ],
@@ -8641,45 +8721,6 @@
       "abstract": null
     },
     {
-      "paperId": "d9511bd46f07c668c9ad2c217a39ae0abfd06e09",
-      "externalIds": {
-        "DOI": "10.1111/j.1477-9730.2005.00336_1.x",
-        "CorpusId": 287793338
-      },
-      "publicationVenue": null,
-      "url": "https://www.semanticscholar.org/paper/d9511bd46f07c668c9ad2c217a39ae0abfd06e09",
-      "title": "Authors\u2019 Addresses",
-      "venue": "",
-      "year": 2005,
-      "citationCount": 0,
-      "openAccessPdf": {
-        "url": "",
-        "status": "CLOSED",
-        "license": null,
-        "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1111/j.1477-9730.2005.00336_1.x?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1111/j.1477-9730.2005.00336_1.x, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
-      },
-      "publicationTypes": null,
-      "journal": {
-        "volume": "20",
-        "name": "The Photogrammetric Record"
-      },
-      "authors": [
-        {
-          "authorId": "2244055721",
-          "name": "Clive S. Fraser"
-        },
-        {
-          "authorId": "2245053",
-          "name": "D. Lichti"
-        },
-        {
-          "authorId": "2160042533",
-          "name": "Yongjun Zhang"
-        }
-      ],
-      "abstract": null
-    },
-    {
       "paperId": "dba7475ea589b77f15ecdb046e77c88d6207145d",
       "externalIds": {
         "DOI": "10.1111/j.1477-9730.2005.00336_5.x",
@@ -8729,7 +8770,7 @@
       "title": "Error Propagation in Directly Georeferenced Terrestrial Laser Scanner Point Clouds for Cultural Heritage Recording",
       "venue": "",
       "year": 2004,
-      "citationCount": 139,
+      "citationCount": 140,
       "openAccessPdf": {
         "url": "",
         "status": null,
@@ -9304,7 +9345,7 @@
       "title": "THE EFFECTS OF REFLECTING SURFACE MATERIAL PROPERTIES ON TIME-OF-FLIGHT LASER SCANNER MEASUREMENTS",
       "venue": "",
       "year": 2002,
-      "citationCount": 98,
+      "citationCount": 99,
       "openAccessPdf": {
         "url": "",
         "status": null,
@@ -9805,6 +9846,39 @@
         {
           "authorId": "145261912",
           "name": "M. Chapman"
+        }
+      ],
+      "abstract": null
+    },
+    {
+      "paperId": "449eb0e5a7b4e2430694214382dbd26e47b26918",
+      "externalIds": {
+        "MAG": "282277147",
+        "DOI": "10.1007/BF03016130",
+        "CorpusId": 282506551
+      },
+      "publicationVenue": null,
+      "url": "https://www.semanticscholar.org/paper/449eb0e5a7b4e2430694214382dbd26e47b26918",
+      "title": "International Society for Photogrammetry and Remote Sensing (ISPRS) XVIII Congress Held in Vienna from July 9\u201319, 1996 \u2014 A Report",
+      "venue": "",
+      "year": 1996,
+      "citationCount": 1,
+      "openAccessPdf": {
+        "url": "",
+        "status": "CLOSED",
+        "license": null,
+        "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1007/BF03016130?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1007/BF03016130, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "publicationTypes": null,
+      "journal": {
+        "volume": "24",
+        "pages": "vi-viii",
+        "name": "Journal of the Indian Society of Remote Sensing"
+      },
+      "authors": [
+        {
+          "authorId": "2245053",
+          "name": "D. Lichti"
         }
       ],
       "abstract": null
