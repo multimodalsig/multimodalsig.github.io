@@ -1,0 +1,19 @@
+# Specific open positions, shown as cards on the Contact page (under the general
+# "Get Involved" message). PhD/MSc are not advertised as specific roles right
+# now; the undergraduate research opportunity is kept for recruiting.
+#
+# To add a role, copy an entry:
+#   - level: PhD              # short badge label
+#     color: red             # red | cyan | blue | green | purple | grey
+#     title: PhD Student, Sensor Calibration & 3D Reconstruction
+#     desc: One short paragraph describing the role.
+# Set the list to [] when you are not advertising any specific positions.
+
+- level: Undergraduate
+  color: cyan
+  title: Undergraduate Research Assistant
+  desc: >-
+    Support field capture and data processing across our imaging and 3D
+    reconstruction projects. Open to UCalgary undergraduates with strong
+    programming skills and an interest in geomatics, computer vision, or 3D
+    reality capture.

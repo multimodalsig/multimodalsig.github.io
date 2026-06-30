@@ -1,41 +1,33 @@
-source 'https://rubygems.org'
+# MSIG website — Ruby dependencies.
+#
+# GitHub Pages builds this site natively from these gems; you do NOT need a
+# GitHub Action. To preview locally (optional): install Ruby, then run
+#   bundle install
+#   bundle exec jekyll serve
+# and open http://localhost:4000.
 
-gem 'jekyll'
+source "https://rubygems.org"
 
-# Core plugins that directly affect site building
+# The github-pages gem pins Jekyll and every allowed plugin to exactly the
+# versions GitHub Pages runs, so "works locally" == "works when deployed".
+gem "github-pages", group: :jekyll_plugins
+
+# Plugins used by the site (also bundled in github-pages, listed for clarity).
 group :jekyll_plugins do
-    gem 'jekyll-3rd-party-libraries'
-    gem 'jekyll-archives-v2'
-    gem 'jekyll-cache-bust'
-    gem 'jekyll-email-protect'
-    gem 'jekyll-feed'
-    gem 'jekyll-get-json'
-    gem 'jekyll-imagemagick'
-    gem 'jekyll-jupyter-notebook'
-    gem 'jekyll-link-attributes'
-    gem 'jekyll-minifier'
-    gem 'jekyll-paginate-v2'
-    gem 'jekyll-regex-replace'
-    gem 'jekyll-scholar'
-    gem 'jekyll-sitemap'
-    gem 'jekyll-socials'
-    gem 'jekyll-tabs'
-    gem 'jekyll-terser', :git => "https://github.com/RobertoJBeltran/jekyll-terser.git"
-    gem 'jekyll-toc'
-    gem 'jekyll-twitter-plugin'
-    gem 'jemoji'
-
-    gem 'classifier-reborn'  # used for content categorization during the build
+  gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
+  gem "jekyll-feed"
 end
 
-# Gems for development or external data fetching (outside :jekyll_plugins)
-group :other_plugins do
-    gem 'css_parser'
-    gem 'feedjira'
-    gem 'httparty'
-    gem 'observer'       # used by jekyll-scholar
-    gem 'ostruct'        # used by jekyll-twitter-plugin
-    # gem 'terser'         # used by jekyll-terser
-    # gem 'unicode_utils' -- should be already installed by jekyll
-    # gem 'webrick' -- should be already installed by jekyll
+# Timezone database for Windows / JRuby (those platforms don't ship one).
+platforms :windows, :jruby do
+  gem "tzinfo", ">= 1", "< 3"
+  gem "tzinfo-data"
 end
+
+# webrick is no longer bundled with Ruby 3+, but `jekyll serve` needs it.
+gem "webrick", "~> 1.8"
+
+# NOTE: `wdm` (a native Windows file-watcher) is intentionally NOT included —
+# its old release fails to compile on Ruby 3.x. Jekyll's `--watch` falls back to
+# polling on Windows, which is perfectly fine for a site this size.

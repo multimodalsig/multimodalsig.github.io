@@ -1,15 +1,15 @@
-_site
-.bundle
-.DS_store
-.idea
-.jekyll-cache
+# Jekyll build output & caches
+_site/
+.jekyll-cache/
 .jekyll-metadata
-.ruby-version
-.sass-cache
-.tweet-cache
-.venv
-assets/libs/
-assets/rendercv/rendercv_output/*.typ
+.sass-cache/
+
+# Ruby / Bundler
 Gemfile.lock
-node_modules/
-vendor
+vendor/
+.bundle/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp

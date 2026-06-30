@@ -1,0 +1,45 @@
+{%- comment -%}
+  Expandable project card (Research → Projects).
+  Usage: {% include project-card.html project=p index=forloop.index0 %}
+{%- endcomment -%}
+{%- assign p = include.project -%}
+{%- assign leadclean = p.lead | remove: "Dr. " | remove: "Prof. " | strip -%}
+{%- assign leadparts = leadclean | split: " " -%}
+<article class="card card--hover ex-card" data-expandable>
+  <button class="expand-toggle" type="button" data-expand aria-expanded="false">
+    <div class="ex-card__media">
+      <div class="card__media"><img src="{{ p.images[0] | relative_url }}" alt="{{ p.title }}"></div>
+    </div>
+    <div class="ex-card__meta">
+      <div class="ex-card__metarow">
+        <span class="tag">{{ p.tag }}</span>
+        <span class="ex-card__more"><span class="more-closed">Details</span><span class="more-open">Hide</span><i class="fa-solid fa-chevron-down ex-card__more-icon" aria-hidden="true"></i></span>
+      </div>
+      <div class="ex-card__title">{{ p.title }}</div>
+      <div class="ex-card__lead">{{ p.lead_in }}</div>
+    </div>
+  </button>
+  <div class="expand-panel">
+    <div class="ex-card__panel-inner">
+      {%- for para in p.body -%}<p>{{ para }}</p>{%- endfor -%}
+      {%- if p.metric -%}
+        <div class="metric">
+          <span class="metric__value">{{ p.metric.value }}</span>
+          <span class="metric__label">{{ p.metric.label }}</span>
+        </div>
+      {%- endif -%}
+      {%- if p.methods and p.methods.size > 0 -%}
+        <div class="tag-row">
+          {%- for mth in p.methods -%}<span class="tag">{{ mth }}</span>{%- endfor -%}
+        </div>
+      {%- endif -%}
+      <div class="lead-row">
+        <span class="avatar avatar--xs">
+          {%- if p.lead_photo -%}<img src="{{ p.lead_photo | relative_url }}" alt="{{ p.lead }}">
+          {%- else -%}{{ leadparts.first | slice: 0 }}{{ leadparts.last | slice: 0 }}{%- endif -%}
+        </span>
+        <div class="lead-row__name"><strong>{{ p.lead }}</strong><span class="lead-row__role"> &middot; {{ p.lead_role }}</span></div>
+      </div>
+    </div>
+  </div>
+</article>

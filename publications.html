@@ -1,0 +1,25 @@
+---
+layout: default
+nav: publications
+title: Publications
+description: Peer-reviewed publications from the Multimodal Spatial Imaging Group, sourced from ORCID.
+---
+
+<div class="container page">
+  {% include section-heading.html eyebrow="Publications" title="Publications" as="h1" subtitle="Peer-reviewed work from the group, sourced live from the PI's ORCID record and grouped by year." %}
+
+  <!-- The list is populated at load time from the public ORCID API (see
+       assets/js/site.js → initPublications). To point it at a different
+       researcher, change the data-orcid value below. -->
+  <div data-orcid="0000-0001-7038-073X">
+    <div class="pub-controls">
+      <span class="pub-controls__count" data-pub-count>Loading from ORCID...</span>
+      <a class="btn btn--sm btn--outline" href="https://orcid.org/0000-0001-7038-073X" target="_blank" rel="noopener" style="margin-left:auto;">
+        <i class="fa-brands fa-orcid" aria-hidden="true"></i> ORCID profile
+      </a>
+    </div>
+    <div data-pub-list>
+      <p class="muted" data-pub-status>Fetching the latest publications...</p>
+    </div>
+  </div>
+</div>

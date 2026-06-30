@@ -1,58 +1,226 @@
-/******************************************************************************
- * Content
- ******************************************************************************/
+/* =============================================================================
+   LAYOUT — page-specific compositions built from the components.
+   ============================================================================= */
 
-@use "variables" as v;
+/* ---- Generic expand/collapse (project cards, people cards, PI details) ------
+   JS toggles `.is-open` on the container and animates `.expand-panel`. The
+   "Details ⇄ Hide" label and chevron rotation are driven purely by CSS. */
+.expand-panel { max-height: 0; overflow: hidden; transition: max-height var(--dur-slow) var(--ease); }
+.expand-toggle {
+  display: block; width: 100%; text-align: left;
+  background: transparent; border: 0; padding: 0; margin: 0;
+  cursor: pointer; color: inherit; font: inherit;
+}
+.more-open { display: none; }
+.is-open .more-open { display: inline; }
+.is-open .more-closed { display: none; }
 
-body {
-  padding-bottom: 70px;
-  color: var(--global-text-color);
-  background-color: var(--global-bg-color);
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    scroll-margin-top: 66px;
-  }
+.eyebrow-label {
+  font-size: var(--fs-xs); text-transform: uppercase;
+  letter-spacing: var(--ls-eyebrow); color: var(--text-muted);
 }
 
-body.fixed-top-nav {
-  // Add some padding for the nav-bar.
-  padding-top: 57px;
+/* ---- About / Home ---------------------------------------------------------- */
+.hero { display: grid; grid-template-columns: 1fr 280px; gap: 2.5rem; align-items: start; }
+.hero__name { font-size: var(--fs-h1); margin: 0 0 0.25rem; }
+.hero__sub { color: var(--text-muted); font-size: var(--fs-lead); margin: 0 0 1.5rem; }
+.hero p { line-height: var(--lh-relaxed); }
+.hero__actions { display: flex; gap: 0.75rem; margin-top: 1.25rem; flex-wrap: wrap; }
+
+.profile-card__body { padding: 0.9rem 1rem; }
+.profile-card__title { font-weight: var(--fw-medium); font-size: var(--fs-sm); }
+.profile-card__addr { color: var(--text-muted); font-size: var(--fs-sm); }
+.profile-card__links { display: flex; gap: 6px; margin-top: 10px; }
+
+.section-block { margin-top: 3rem; }
+
+.theme-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.theme-card { display: flex; gap: 0.9rem; align-items: flex-start; }
+.theme-card__icon { color: var(--theme); font-size: 22px; width: 28px; text-align: center; flex: none; }
+.theme-card__title { margin: 0 0 0.25rem; font-size: var(--fs-h5); }
+.theme-card__body { margin: 0; color: var(--text-muted); font-size: var(--fs-sm); line-height: var(--lh-body); }
+
+.news-list { display: flex; flex-direction: column; }
+.news-item { display: flex; gap: 1.25rem; padding: 0.6rem 0; border-bottom: var(--border); }
+.news-item__date { color: var(--text-muted); font-family: var(--font-mono); font-size: var(--fs-sm); width: 80px; flex: none; }
+.news-item__text { font-size: var(--fs-sm); }
+
+/* ---- Research: themes list ------------------------------------------------- */
+.theme-row { margin-bottom: 1.5rem; }
+.theme-row h3 { margin: 0 0 0.4rem; font-size: var(--fs-h4); }
+.theme-row p { margin: 0; line-height: var(--lh-relaxed); }
+
+/* ---- Project cards (Research → Projects) ----------------------------------- */
+.hint { color: var(--text-muted); font-size: var(--fs-sm); margin: 0 0 1rem; }
+.project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; align-items: start; }
+
+/* ---- Gallery (masonry grid + lightbox) ------------------------------------
+   CSS columns keep every image at its natural shape (no cropping). */
+.gallery-grid { columns: 260px; column-gap: 1rem; }
+.gallery-item {
+  break-inside: avoid; -webkit-column-break-inside: avoid;
+  display: block; width: 100%; margin: 0 0 1rem; padding: 0;
+  border: 0; text-align: left; cursor: zoom-in;
+  background: var(--surface-card); border-radius: var(--radius);
+  overflow: hidden; box-shadow: var(--shadow-1);
+  transition: box-shadow var(--dur-fast) var(--ease);
+}
+.gallery-item:hover { box-shadow: var(--shadow-hover); }
+.gallery-item img { width: 100%; height: auto; display: block; }
+.gallery-item__cap {
+  display: block; padding: 0.6rem 0.8rem;
+  font-size: var(--fs-sm); color: var(--text-muted); line-height: var(--lh-snug);
 }
 
-body.sticky-bottom-footer {
-  // Remove padding below footer.
-  padding-bottom: 0;
+.lightbox {
+  position: fixed; inset: 0; z-index: 100;
+  display: none; align-items: center; justify-content: center;
+  background: rgba(0, 0, 0, 0.85); padding: 2rem;
 }
-
-.container {
-  max-width: v.$max-content-width;
+.lightbox.is-open { display: flex; }
+.lightbox__fig { margin: 0; display: flex; flex-direction: column; align-items: center; max-width: 1100px; }
+.lightbox__img { max-width: 100%; max-height: 82vh; object-fit: contain; border-radius: var(--radius); background: var(--grey-light); }
+.lightbox__cap { color: #fff; margin-top: 0.85rem; font-size: var(--fs-sm); text-align: center; max-width: 60ch; }
+.lightbox__close {
+  position: absolute; top: 1rem; right: 1.25rem;
+  width: 44px; height: 44px; border: 0; border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12); color: #fff;
+  font-size: 1.6rem; line-height: 1; cursor: pointer;
+  transition: background-color var(--dur-fast) var(--ease);
 }
+.lightbox__close:hover { background: rgba(255, 255, 255, 0.25); }
 
-// Profile
-.profile {
-  img {
-    width: 100%;
-  }
+.ex-card { align-self: start; }
+.ex-card__media { position: relative; }
+/* Project figures vary in shape (wide diagrams, portrait photos), so show them
+   whole (contain) rather than cropping to fill. The card surface backs the
+   letterbox so it reads as intentional matting. */
+.ex-card__media .card__media { aspect-ratio: 16 / 9; background: var(--surface-card); }
+.ex-card__media .card__media img { object-fit: contain; }
+.ex-card__meta { padding: 0.85rem 1rem; }
+.ex-card__metarow { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.ex-card__num { color: var(--text-muted); font-family: var(--font-mono); font-size: var(--fs-xs); }
+.ex-card__more { display: inline-flex; align-items: center; gap: 5px; color: var(--text-muted); font-size: var(--fs-xs); margin-left: auto; }
+.ex-card__more-icon { font-size: 10px; transition: transform var(--dur) var(--ease); }
+.is-open .ex-card__more-icon { transform: rotate(180deg); }
+.ex-card__title { font-weight: var(--fw-medium); font-size: var(--fs-body); margin-bottom: 4px; }
+.ex-card__lead { color: var(--text-muted); font-size: var(--fs-sm); line-height: var(--lh-snug); }
+.ex-card__panel-inner { padding: 0 1rem 1rem; border-top: var(--border); }
+.ex-card__panel-inner p { margin: 0.8rem 0 0; font-size: var(--fs-sm); line-height: var(--lh-body); }
+.metric { display: flex; align-items: baseline; gap: 8px; margin-top: 0.7rem; }
+.metric__value { font-family: var(--font-serif); font-size: var(--fs-h4); color: var(--theme); font-weight: var(--fw-medium); }
+.metric__label { color: var(--text-muted); font-size: var(--fs-xs); }
+.tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 0.8rem 0; }
+.lead-row { display: flex; align-items: center; gap: 10px; padding-top: 0.7rem; border-top: var(--border); }
+.lead-row__name { font-size: var(--fs-sm); }
+.lead-row__role { color: var(--text-muted); }
+.lead-row__partners { color: var(--text-muted); font-size: var(--fs-xs); margin-left: auto; }
+
+/* ---- People ---------------------------------------------------------------- */
+.pi-card__grid { display: grid; grid-template-columns: 120px 1fr; gap: 1.5rem; align-items: start; }
+.pi-card__trigger { cursor: pointer; }
+.pi-card__name { margin: 0 0 0.1rem; font-size: var(--fs-h4); }
+.pi-card__role { color: var(--text-muted); margin-bottom: 0.75rem; }
+.pi-card__bio { margin: 0 0 0.75rem; line-height: var(--lh-body); font-size: var(--fs-sm); }
+.pi-card__badges { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem; }
+.pi-card__actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.pi-card__detail { padding-top: 1rem; margin-top: 1rem; border-top: var(--border); }
+.pi-card__columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.pi-card__col-head { font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--ls-eyebrow); color: var(--text-muted); margin-bottom: 0.5rem; }
+.kv-row { display: grid; grid-template-columns: auto 1fr; gap: 10px; padding: 0.4rem 0; border-bottom: var(--border); }
+.kv-row__k { color: var(--text-muted); font-family: var(--font-mono); font-size: var(--fs-xs); }
+.kv-row__v { font-size: var(--fs-sm); }
+
+.people-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; align-items: start; }
+
+.member__head { display: flex; gap: 14px; align-items: flex-start; padding: 1rem; }
+.member__info { flex: 1; }
+.member__top { display: flex; align-items: baseline; gap: 8px; }
+.member__name { font-weight: var(--fw-medium); font-size: var(--fs-sm); flex: 1; }
+.member__more { color: var(--text-muted); font-size: var(--fs-xs); }
+.member__role { color: var(--text-muted); font-size: var(--fs-xs); margin-bottom: 4px; }
+.member__short { font-size: var(--fs-xs); line-height: var(--lh-body); }
+.member__panel-inner { padding: 0 1rem 1rem; border-top: var(--border); }
+.member__bio { margin: 0.8rem 0 0; font-size: var(--fs-sm); line-height: var(--lh-body); }
+.member__label { font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--ls-eyebrow); color: var(--text-muted); margin: 0.9rem 0 0.4rem; }
+.member__projects { margin: 0; padding-left: 1.1rem; font-size: var(--fs-sm); line-height: var(--lh-body); color: var(--text-muted); }
+.member__links { display: flex; gap: 8px; margin-top: 0.9rem; flex-wrap: wrap; }
+
+.collab-list { line-height: var(--lh-relaxed); margin: 0; padding-left: 1.2rem; }
+
+.alumni-row { display: grid; grid-template-columns: auto 1fr; gap: 0.4rem 1rem; padding: 0.7rem 0; border-bottom: var(--border); }
+.alumni-row__year { color: var(--text-muted); font-family: var(--font-mono); font-size: var(--fs-xs); padding-top: 3px; }
+.alumni-row__name { font-weight: var(--fw-medium); font-size: var(--fs-sm); }
+.alumni-row__thesis { color: var(--text-muted); font-size: var(--fs-sm); font-style: italic; line-height: var(--lh-snug); }
+.alumni-row__pos { font-size: var(--fs-xs); color: var(--text-muted); margin-top: 2px; }
+
+/* ---- Detailed project layout (optional full-width list, kept for reference) - */
+.project-full__grid { display: grid; grid-template-columns: minmax(0, 320px) 1fr; gap: 0; }
+.project-full__media { background: var(--grey-light); display: flex; flex-direction: column; }
+.project-full__media img { width: 100%; height: 100%; min-height: 150px; object-fit: cover; display: block; }
+.project-full__body { padding: 1.4rem 1.5rem; }
+
+/* ---- Publications ---------------------------------------------------------- */
+.pub-controls { display: flex; gap: 10px; align-items: center; margin-bottom: 1.25rem; flex-wrap: wrap; }
+.pub-controls__count { color: var(--text-muted); font-size: var(--fs-sm); margin-left: auto; }
+.pub-year { font-family: var(--font-serif); font-size: var(--fs-h3); color: var(--text-muted); margin: 1.25rem 0 0.5rem; }
+.pub-item { padding: 0.85rem 0; border-bottom: var(--border); }
+.pub-item__title { font-weight: var(--fw-medium); margin-bottom: 2px; }
+.pub-item__authors { color: var(--text-muted); font-size: var(--fs-sm); }
+.pub-item__venue { font-size: var(--fs-sm); font-style: italic; color: var(--text); }
+.pub-item__actions { display: flex; gap: 6px; margin-top: 8px; align-items: center; flex-wrap: wrap; }
+.pub-item.is-hidden { display: none; }
+
+/* ---- Facilities ------------------------------------------------------------ */
+.lab-feature__grid { display: grid; grid-template-columns: minmax(0, 300px) 1fr; }
+.lab-feature__media { background: var(--grey-light); }
+.lab-feature__media img { width: 100%; height: 100%; min-height: 220px; object-fit: cover; display: block; }
+.lab-feature__body { padding: 1.5rem 1.6rem; }
+.lab-feature__title { margin: 0 0 0.5rem; font-size: var(--fs-h4); }
+.lab-feature__desc { margin: 0 0 1rem; font-size: var(--fs-sm); line-height: var(--lh-body); }
+.lab-stats { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.lab-stat__value { font-family: var(--font-serif); font-size: var(--fs-h3); color: var(--theme); font-weight: var(--fw-medium); line-height: 1; }
+.lab-stat__label { color: var(--text-muted); font-size: var(--fs-xs); margin-top: 4px; }
+.feature-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.5rem; }
+.feature-card { display: flex; gap: 12px; align-items: center; }
+.feature-card__icon { color: var(--theme); font-size: 18px; width: 24px; text-align: center; flex: none; }
+.feature-card__text { font-size: var(--fs-sm); }
+.instruments-heading { font-size: var(--fs-h4); margin: 2.5rem 0 1rem; }
+.instrument-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.instrument-card { display: flex; gap: 12px; align-items: flex-start; }
+.instrument-card__icon { color: var(--theme); font-size: 20px; width: 26px; text-align: center; flex: none; }
+.instrument-card__title { margin: 0 0 0.5rem; font-size: var(--fs-h5); }
+.instrument-card__list { margin: 0; padding-left: 1.1rem; line-height: var(--lh-body); font-size: var(--fs-sm); color: var(--text-muted); }
+.facilities-note { color: var(--text-muted); font-size: var(--fs-xs); margin-top: 1.25rem; }
+
+/* ---- Contact --------------------------------------------------------------- */
+.contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 2rem; align-items: start; }
+.contact-list__head { font-size: var(--fs-h5); margin: 0 0 1rem; }
+.contact-row { display: flex; gap: 12px; align-items: flex-start; padding: 0.7rem 0; border-bottom: var(--border); }
+.contact-row__icon { color: var(--theme); font-size: 16px; width: 22px; text-align: center; flex: none; margin-top: 2px; }
+.contact-row__label { font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--ls-eyebrow); color: var(--text-muted); }
+.contact-row__value { font-size: var(--fs-sm); }
+.map-card__head { padding: 1.25rem 1.25rem 0.75rem; }
+.map-card__title { font-size: var(--fs-h5); margin: 0; }
+.map-card__sub { color: var(--text-muted); font-size: var(--fs-sm); margin: 0.35rem 0 0; }
+.map-card__frame { width: 100%; height: 340px; border: 0; display: block; }
+.map-card__foot { padding: 0.75rem 1.25rem; border-top: var(--border); display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+.map-card__addr { color: var(--text-muted); font-size: var(--fs-xs); }
+.map-card__addr i { color: var(--theme); margin-right: 6px; }
+
+.position-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.25rem; }
+.position-card { display: flex; gap: 1rem; align-items: flex-start; }
+.position-card__main { flex: 1; }
+.position-card__meta { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.position-card__open { color: var(--text-muted); font-size: var(--fs-xs); }
+.position-card__title { font-weight: var(--fw-medium); font-size: var(--fs-body); margin-bottom: 4px; }
+.position-card__desc { color: var(--text-muted); font-size: var(--fs-sm); line-height: var(--lh-body); }
+
+/* ---- Footer ---------------------------------------------------------------- */
+.site-footer { background: var(--footer-bg); color: var(--footer-text); margin-top: 2rem; }
+.site-footer a { color: var(--footer-link); }
+.site-footer__inner {
+  max-width: var(--max-content-width); margin: 0 auto;
+  padding: 1.5rem 1.25rem; font-size: var(--fs-sm);
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
 }
-
-// Content layout uses Bootstrap's grid system with responsive columns
-// Main content flows naturally through container-mt-5 and Bootstrap grid classes
-// See _layouts/default.liquid and _includes/projects.liquid for examples
-
-/******************************************************************************
- * Publications
- ******************************************************************************/
-
-// Publications layout is defined in _includes/bib_search.liquid
-// Uses jekyll-scholar for BibTeX parsing and Bootstrap cards for display
-
-/*****************************************************************************
-* Projects
-*****************************************************************************/
-
-// TODO: redefine projects layout.

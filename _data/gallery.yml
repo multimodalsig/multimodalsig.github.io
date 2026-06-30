@@ -1,0 +1,34 @@
+# Research gallery, shown as a grid on the Research page (Gallery tab).
+# Add an image to assets/img/gallery/ then add a { src, caption } entry here.
+# Images display at their natural shape (no cropping); click opens a lightbox.
+
+- src: assets/img/gallery/field-scanner-river.jpg
+  caption: A terrestrial laser scanner captures terrain beside a mountain reservoir.
+- src: assets/img/gallery/uc3d-digital-twin.png
+  caption: UC3D digital twin, HBIM, and structural model from a single smartphone capture.
+- src: assets/img/gallery/dual-fluoroscopy-system.jpg
+  caption: A dual-fluoroscopy X-ray imaging system used for joint-motion studies.
+- src: assets/img/gallery/reindeer-rig.jpg
+  caption: Multi-camera optical rig for non-invasive reindeer antler capture.
+- src: assets/img/gallery/field-scanner-bridge.jpg
+  caption: Terrestrial laser scanning beside a river beneath a pedestrian bridge.
+- src: assets/img/gallery/uc3d-pointcloud.png
+  caption: UC3D point cloud compared against GeoSLAM and Polycam reconstructions.
+- src: assets/img/gallery/ct-pet-synthesis.png
+  caption: Deep-learning synthesis of whole-body PET images from CT.
+- src: assets/img/gallery/calibration-rig.jpg
+  caption: A custom target frame used for sensor calibration experiments.
+- src: assets/img/gallery/indoor-survey.jpg
+  caption: Setting up a survey instrument for indoor mobile mapping.
+- src: assets/img/gallery/antler-pointcloud.jpg
+  caption: Reconstructed antler point cloud from the multi-camera rig.
+- src: assets/img/gallery/uc3d-hbim.png
+  caption: Heritage building information model (HBIM) derived from the captured point cloud.
+- src: assets/img/gallery/reindeer-field-1.jpg
+  caption: Field capture of reindeer antlers during multi-season collection.
+- src: assets/img/gallery/antler-phantom.jpg
+  caption: Antler phantom used to verify reconstruction accuracy.
+- src: assets/img/gallery/reindeer-field-2.jpg
+  caption: Field deployment of the capture rig in natural conditions.
+- src: assets/img/gallery/reindeer-field-3.jpg
+  caption: Non-invasive antler measurement in the field.

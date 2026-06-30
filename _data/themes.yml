@@ -1,0 +1,53 @@
+# Research themes, shown as a grid on the Home page and as a list on the
+# Research page (Themes tab). `icon` is any Font Awesome 6 class.
+# Browse icons at https://fontawesome.com/search (use the free ones).
+
+- icon: fa-solid fa-ruler-combined
+  title: Imaging metrology and sensor calibration
+  body: >-
+    Rigorous geometric modelling, self-calibration, and systematic-error
+    characterization of terrestrial laser scanners, digital and range cameras,
+    and X-ray imaging systems. This work also develops the estimation theory and
+    optimal measurement-network design that underpin precise 3D reconstruction.
+
+- icon: fa-solid fa-draw-polygon
+  title: Point cloud processing and geometric feature extraction
+  body: >-
+    Registration, segmentation, and robust fitting of geometric primitives such
+    as planes, cylinders, and ellipses from laser-scanning point clouds,
+    including object and target recognition under noise and occlusion.
+
+- icon: fa-solid fa-industry
+  title: As-built and industrial reality capture
+  body: >-
+    Automated 3D documentation, dimensional verification, progress monitoring,
+    and condition assessment of industrial and construction environments, with
+    applications to mechanical piping and structural elements.
+
+- icon: fa-solid fa-building
+  title: Building and indoor 3D reconstruction
+  body: >-
+    Automated extraction of architectural and interior structure, including
+    storey separation, openings, and indoor objects, from complete laser scans
+    for building modelling.
+
+- icon: fa-solid fa-plane-up
+  title: Learning-based airborne LiDAR analysis
+  body: >-
+    Statistical and deep-learning methods, including maximum-entropy approaches,
+    for classification, outlier removal, and quality enhancement of
+    multispectral airborne LiDAR point clouds.
+
+- icon: fa-solid fa-bone
+  title: Biomedical and biomechanical imaging
+  body: >-
+    Calibration and modelling of multimodal imaging systems, such as
+    dual-fluoroscopic X-ray and range or RGB-D cameras, for human motion capture
+    and biological measurement.
+
+- icon: fa-solid fa-landmark
+  title: Cultural heritage and geological surface documentation
+  body: >-
+    3D recording and digital preservation of at-risk cultural-heritage sites,
+    and the extraction and analysis of geological surfaces such as rock-mass
+    discontinuities from point-cloud and photogrammetric data.

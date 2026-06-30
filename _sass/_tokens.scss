@@ -1,0 +1,146 @@
+/* =============================================================================
+   DESIGN TOKENS — the single source of truth for colour, type, spacing, motion.
+   Ported verbatim from the MSIL Design System. Change a value here and it
+   cascades across the whole site. Everything below is a CSS custom property, so
+   you can tweak these in the browser dev-tools to experiment before committing.
+   ============================================================================= */
+
+:root {
+  /* ---- Brand ------------------------------------------------------------- */
+  --uc-red: #b5121b;          /* University of Calgary red — primary brand */
+  --uc-red-hover: #8a0e15;    /* red darkened 10% — hover/pressed */
+  --uc-red-bright: #e23744;   /* red lightened 15% — dark-mode theme accent */
+  --uc-gold: #f29105;         /* warm secondary (al-folio orange) */
+
+  /* ---- Accent / data-viz palette ---------------------------------------- */
+  --c-red: #ff3636;
+  --c-red-dark: #b71c1c;
+  --c-orange: #f29105;
+  --c-blue: #0076df;
+  --c-blue-dark: #00369f;
+  --c-cyan: #2698ba;          /* secondary accent + dark-mode theme */
+  --c-cyan-light: #7fc4d9;
+  --c-green: #00ab37;
+  --c-green-dark: #009f06;
+  --c-green-bright: #11d68b;
+  --c-lime: #b7d12a;
+  --c-purple: #b509ac;
+  --c-pink: #f92080;
+  --c-yellow: #efcc00;
+
+  /* ---- Neutrals --------------------------------------------------------- */
+  --grey: #828282;
+  --grey-light: #e8e8e8;
+  --grey-dark: #1c1c1d;
+  --grey-900: #212529;
+  --white: #ffffff;
+  --black: #000000;
+
+  /* ---- Semantic (light theme — default) --------------------------------- */
+  --bg: var(--white);
+  --surface-card: var(--white);
+  --text: var(--black);
+  --text-muted: var(--grey);
+  --theme: var(--uc-red);             /* links, active nav, accents */
+  --hover: var(--uc-red-hover);
+  --hover-text: var(--white);
+  --divider: rgba(0, 0, 0, 0.1);
+  --code-bg: rgba(181, 9, 172, 0.05);
+  --highlight: var(--c-red-dark);
+  --footer-bg: var(--grey-dark);
+  --footer-text: var(--grey-light);
+  --footer-link: var(--white);
+
+  /* ---- Status blocks ---------------------------------------------------- */
+  --tip: #42b983;       --tip-bg: #e2f5ec;     --tip-text: #215d42;
+  --warning: #e7c000;   --warning-bg: #fff8d8; --warning-text: #6b5900;
+  --danger: #cc0000;    --danger-bg: #ffe0e0;  --danger-text: #660000;
+
+  /* ---- Typography ------------------------------------------------------- */
+  --font-sans: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-serif: "Roboto Slab", "Times New Roman", Georgia, serif;
+  --font-mono: "Roboto Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --fw-thin: 100;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  --fs-display: 3rem;     /* 48px */
+  --fs-h1: 2.5rem;        /* 40px */
+  --fs-h2: 2rem;          /* 32px */
+  --fs-h3: 1.75rem;       /* 28px */
+  --fs-h4: 1.5rem;        /* 24px */
+  --fs-h5: 1.25rem;       /* 20px */
+  --fs-h6: 1rem;          /* 16px */
+  --fs-lead: 1.2rem;      /* 19px */
+  --fs-body: 1rem;        /* 16px */
+  --fs-sm: 0.875rem;      /* 14px */
+  --fs-xs: 0.75rem;       /* 12px */
+
+  --lh-tight: 1.2;
+  --lh-snug: 1.4;
+  --lh-body: 1.6;
+  --lh-relaxed: 1.8;
+
+  --ls-eyebrow: 0.08em;
+  --ls-tight: -0.01em;
+
+  /* ---- Spacing & layout ------------------------------------------------- */
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 3rem;
+  --space-6: 4.5rem;
+
+  --max-content-width: 930px;
+  --navbar-height: 57px;
+  --gutter: 1.5rem;
+
+  /* ---- Radii ------------------------------------------------------------ */
+  --radius-sm: 3px;
+  --radius: 0.375rem;
+  --radius-btn: 0.3rem;
+  --radius-pill: 999px;
+
+  /* ---- Borders ---------------------------------------------------------- */
+  --border-width: 1px;
+  --border: 1px solid var(--divider);
+  --border-accent: 2px solid var(--theme);
+  --blockquote-rule: 5px solid var(--theme);
+
+  /* ---- Shadows (MDB z-depth) -------------------------------------------- */
+  --shadow-1: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  --shadow-2: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  --shadow-hover: 0 4px 15px rgba(0, 0, 0, 0.15);
+  --shadow-input: rgba(0, 0, 0, 0.05) 0px 1px 2px;
+
+  /* ---- Motion ----------------------------------------------------------- */
+  --ease: ease;
+  --dur-fast: 0.2s;
+  --dur: 0.3s;
+  --dur-slow: 0.4s;
+  --dur-theme: 750ms;
+}
+
+/* ---- Dark theme — applied when <html data-theme="dark"> --------------------
+   The theme toggle (assets/js/site.js) flips this attribute and remembers the
+   choice in localStorage. */
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: var(--grey-dark);
+  --surface-card: var(--grey-900);
+  --text: var(--grey-light);
+  --text-muted: var(--grey);
+  --theme: var(--uc-red-bright);
+  --hover: #e85560;
+  --hover-text: var(--white);
+  --divider: #424246;
+  --code-bg: #2c3237;
+  --footer-bg: var(--grey-light);
+  --footer-text: var(--grey-dark);
+  --footer-link: var(--black);
+}

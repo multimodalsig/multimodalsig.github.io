@@ -1,0 +1,85 @@
+---
+layout: default
+nav: facilities
+title: Facilities
+description: >-
+  The Geo-Spatial Vision Metrology (GeoVM) laboratory and instrumentation of the
+  Multimodal Spatial Imaging Group.
+---
+
+{%- assign f = site.data.facilities -%}
+
+<div class="container page">
+  {% include section-heading.html eyebrow="Facilities" title="Equipment &amp; facilities" as="h1" subtitle="A multi-purpose imaging-metrology laboratory supporting research and teaching across diverse sensors." %}
+
+  <!-- ===== Feature: core lab ===== -->
+  <div class="card">
+    <div class="lab-feature__grid">
+      <div class="lab-feature__media">
+        <img src="{{ f.lab.image | relative_url }}" alt="{{ f.lab.name }}">
+      </div>
+      <div class="lab-feature__body">
+        <div style="margin-bottom: 8px;"><span class="tag">{{ f.lab.tag }}</span></div>
+        <h3 class="lab-feature__title">{{ f.lab.name }}</h3>
+        <p class="lab-feature__desc">{{ f.lab.description }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Facility gallery ===== -->
+  {%- if f.gallery and f.gallery.size > 0 -%}
+    <h3 class="instruments-heading" style="margin-top: 2rem;">Inside the lab</h3>
+    <div class="carousel" data-carousel tabindex="0" role="group" aria-label="Facility gallery">
+      <div class="carousel__stage">
+        {%- for img in f.gallery -%}
+          <div class="carousel__slide{% if forloop.first %} is-active{% endif %}" data-caption="{{ img.caption | escape }}">
+            <img src="{{ img.src | relative_url }}" alt="{{ img.caption | escape }}">
+          </div>
+        {%- endfor -%}
+        <button class="carousel__arrow carousel__arrow--prev" type="button" data-carousel-prev aria-label="Previous image">&lsaquo;</button>
+        <button class="carousel__arrow carousel__arrow--next" type="button" data-carousel-next aria-label="Next image">&rsaquo;</button>
+        <div class="carousel__counter">1 / {{ f.gallery.size }}</div>
+      </div>
+      <div class="carousel__caption">{{ f.gallery[0].caption }}</div>
+      <div class="carousel__thumbs">
+        {%- for img in f.gallery -%}
+          <button class="carousel__thumb{% if forloop.first %} is-active{% endif %}" type="button" data-index="{{ forloop.index0 }}" aria-label="Show image {{ forloop.index }}">
+            <img src="{{ img.src | relative_url }}" alt="">
+          </button>
+        {%- endfor -%}
+      </div>
+    </div>
+  {%- endif -%}
+
+  <!-- ===== Feature cards ===== -->
+  <div class="feature-grid">
+    {%- for ft in f.features -%}
+      <div class="card">
+        <div class="card__body feature-card">
+          <span class="feature-card__icon"><i class="{{ ft.icon }}" aria-hidden="true"></i></span>
+          <span class="feature-card__text">{{ ft.text }}</span>
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+
+  <!-- ===== Instrumentation ===== -->
+  <h3 class="instruments-heading">Instrumentation</h3>
+  <div class="instrument-grid">
+    {%- for g in f.instruments -%}
+      <div class="card">
+        <div class="card__body instrument-card">
+          <span class="instrument-card__icon"><i class="{{ g.icon }}" aria-hidden="true"></i></span>
+          <div>
+            <h4 class="instrument-card__title">{{ g.title }}</h4>
+            <ul class="instrument-card__list">
+              {%- for it in g.items -%}<li>{{ it }}</li>{%- endfor -%}
+            </ul>
+          </div>
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+
+  <p class="facilities-note"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> {{ f.note }}</p>
+</div>

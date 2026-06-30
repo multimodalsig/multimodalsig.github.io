@@ -1,0 +1,20 @@
+# Group contact details. Used on the Contact page, the Home profile card, and
+# the footer. Edit once here and it updates everywhere.
+
+email: ddlichti@ucalgary.ca
+department: Department of Geomatics Engineering
+
+# Address (Department of Geomatics Engineering).
+mailing_address: ENE 231, 2500 University Drive NW, Calgary, AB T2N 1N4
+street_address: 622 Collegiate Place NW, Calgary, AB T2N 4V8
+campus_location: CNRL Engineering Complex (ENE), Room ENE 231
+
+# Google Scholar profile for the group / PI.
+scholar_name: Derek D. Lichti
+scholar_url: "https://scholar.google.com/citations?user=rzfKJOIAAAAJ&hl=en"
+github_url: "https://github.com/multimodalsig"
+
+# Map centre (CNRL Engineering Complex, University of Calgary). To re-centre,
+# look up the lat/lon on openstreetmap.org and update both values.
+map_lat: "51.0810"
+map_lon: "-114.1333"

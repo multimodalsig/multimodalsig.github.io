@@ -1,0 +1,54 @@
+---
+layout: default
+nav: research
+title: Research
+description: >-
+  MSIG research themes, projects, and gallery: imaging metrology, sensor
+  calibration, and 3D spatial data analysis.
+---
+
+<div class="container page">
+  {% include section-heading.html eyebrow="Research" title="Themes, projects &amp; gallery" as="h1" subtitle="Our work spans imaging metrology, sensor calibration, and 3D spatial data analysis." %}
+
+  <div class="tabs" data-tabs>
+    <div class="tabs__list" role="tablist" aria-label="Research sections">
+      <button class="tabs__tab tabs__tab--active" type="button" data-tab="themes" role="tab" aria-selected="true">Themes</button>
+      <button class="tabs__tab" type="button" data-tab="projects" role="tab" aria-selected="false">Projects</button>
+      <button class="tabs__tab" type="button" data-tab="gallery" role="tab" aria-selected="false">Gallery</button>
+    </div>
+
+    <!-- ===== Themes ===== -->
+    <div class="tabs__panel" data-panel="themes" role="tabpanel">
+      {%- for t in site.data.themes -%}
+        <div class="theme-row">
+          <h3>{{ t.title }}</h3>
+          <p>{{ t.body }}</p>
+        </div>
+      {%- endfor -%}
+    </div>
+
+    <!-- ===== Projects ===== -->
+    <div class="tabs__panel" data-panel="projects" role="tabpanel" hidden>
+      <p class="hint">Click a project to expand its full description, methods, and lead researcher.</p>
+      <div class="project-grid">
+        {%- for p in site.data.projects -%}
+          {% include project-card.html project=p %}
+        {%- endfor -%}
+      </div>
+    </div>
+
+    <!-- ===== Gallery ===== -->
+    <div class="tabs__panel" data-panel="gallery" role="tabpanel" hidden>
+      <p class="hint">Click any image to view it full size.</p>
+      <div class="gallery-grid">
+        {%- for img in site.data.gallery -%}
+          <button class="gallery-item" type="button" data-lightbox
+                  data-full="{{ img.src | relative_url }}" data-caption="{{ img.caption | escape }}">
+            <img src="{{ img.src | relative_url }}" alt="{{ img.caption | escape }}" loading="lazy">
+            <span class="gallery-item__cap">{{ img.caption }}</span>
+          </button>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>

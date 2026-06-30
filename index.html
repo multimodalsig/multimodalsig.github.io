@@ -1,0 +1,84 @@
+---
+layout: default
+nav: home
+title: Multimodal Spatial Imaging Group
+description: >-
+  Precision measurement methods and rigorous mathematical models for 3D reality
+  capture using diverse imaging sensors, at the University of Calgary.
+---
+
+<div class="container page">
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div>
+      <h1 class="hero__name">Multimodal Spatial Imaging Group</h1>
+      <p class="hero__sub">Department of Geomatics Engineering &middot; Schulich School of Engineering &middot; University of Calgary</p>
+      <p>
+        The <strong>Multimodal Spatial Imaging Group (MSIG)</strong> develops precision measurement
+        methods and rigorous mathematical models for 3D reality capture using diverse imaging
+        sensors: terrestrial laser scanners, digital cameras, range cameras, LiDAR systems,
+        and fluoroscopic imagers.
+      </p>
+      <p>
+        Led by <a href="{{ '/people/' | relative_url }}">Dr. Derek Lichti</a>, our program sits at the
+        intersection of <strong>imaging metrology</strong>, <strong>sensor calibration</strong>, and
+        <strong>3D spatial data analysis</strong>. We build the geometric and stochastic models that
+        let sensors deliver trustworthy measurements.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="{{ '/research/' | relative_url }}">Explore research <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        <a class="btn btn--outline" href="{{ '/contact/' | relative_url }}">Contact us</a>
+      </div>
+    </div>
+
+    <div class="hero__media">
+      <div class="card">
+        <div class="card__media" style="aspect-ratio: 3 / 4;">
+          <img src="{{ '/assets/img/gallery/field-scanner-bridge.jpg' | relative_url }}" alt="Terrestrial laser scanning beside a river beneath a pedestrian bridge">
+        </div>
+        <div class="profile-card__body">
+          <div class="profile-card__title">{{ site.data.contact.campus_location }}</div>
+          <div class="profile-card__addr">{{ site.data.contact.mailing_address }}</div>
+          <div class="profile-card__links">
+            <a class="icon-btn" href="mailto:{{ site.data.contact.email }}" aria-label="Email" title="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+            <a class="icon-btn" href="{{ site.data.contact.scholar_url }}" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></a>
+            <a class="icon-btn" href="{{ site.data.contact.github_url }}" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Research themes ===== -->
+  <section class="section-block">
+    {% include section-heading.html eyebrow="What we do" title="Research themes" %}
+    <div class="theme-grid">
+      {%- for t in site.data.themes -%}
+        <div class="card">
+          <div class="card__body theme-card">
+            <span class="theme-card__icon"><i class="{{ t.icon }}" aria-hidden="true"></i></span>
+            <div>
+              <h4 class="theme-card__title">{{ t.title }}</h4>
+              <p class="theme-card__body">{{ t.body }}</p>
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </section>
+
+  <!-- ===== News ===== -->
+  <section class="section-block">
+    {% include section-heading.html eyebrow="Latest" title="MSIG News" %}
+    <div class="news-list">
+      {%- for item in site.data.news -%}
+        <div class="news-item">
+          <span class="news-item__date">{{ item.date }}</span>
+          <span class="news-item__text">{{ item.text }}</span>
+        </div>
+      {%- endfor -%}
+    </div>
+  </section>
+
+</div>

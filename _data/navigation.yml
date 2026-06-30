@@ -1,0 +1,21 @@
+# Top navigation bar. `id` must match the `nav:` value in each page's front
+# matter (that's how the active link is highlighted). `url` is relative to the
+# site root. Reorder or add items here and they appear in the navbar everywhere.
+- id: home
+  label: Home
+  url: /
+- id: research
+  label: Research
+  url: /research/
+- id: publications
+  label: Publications
+  url: /publications/
+- id: people
+  label: People
+  url: /people/
+- id: facilities
+  label: Facilities
+  url: /facilities/
+- id: contact
+  label: Contact
+  url: /contact/

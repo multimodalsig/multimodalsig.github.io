@@ -1,0 +1,11 @@
+{%- comment -%}
+  Page/section heading with the brand red underline.
+  Usage: {% include section-heading.html eyebrow="Research" title="…" subtitle="…" as="h1" %}
+  `eyebrow` and `subtitle` are optional; `as` defaults to h2.
+{%- endcomment -%}
+{%- assign htag = include.as | default: "h2" -%}
+<header class="section-heading{% if include.subtitle %} section-heading--has-sub{% endif %}">
+  {%- if include.eyebrow -%}<div class="section-heading__eyebrow">{{ include.eyebrow }}</div>{%- endif -%}
+  <{{ htag }} class="section-heading__title">{{ include.title }}</{{ htag }}>
+  {%- if include.subtitle -%}<p class="section-heading__subtitle">{{ include.subtitle }}</p>{%- endif -%}
+</header>

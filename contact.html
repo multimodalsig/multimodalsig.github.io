@@ -1,0 +1,136 @@
+---
+layout: default
+nav: contact
+title: Contact
+description: >-
+  Reach the Multimodal Spatial Imaging Group, visit the lab, or get in touch
+  about joining the group.
+---
+
+{%- assign c = site.data.contact -%}
+
+<!-- Leaflet (map library) and CARTO light tiles, loaded only on this page. -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+<div class="container page">
+  {% include section-heading.html eyebrow="Contact" title="Contact us" as="h1" subtitle="Reach the group, visit the lab, or get in touch about joining. We are always glad to hear from prospective students and collaborators." %}
+
+  <div class="contact-grid">
+    <!-- ===== Get in touch ===== -->
+    <div>
+      <h3 class="contact-list__head">Get in touch</h3>
+
+      <div class="contact-row">
+        <span class="contact-row__icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
+        <div>
+          <div class="contact-row__label">Email</div>
+          <a class="contact-row__value" href="mailto:{{ c.email }}">{{ c.email }}</a>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <span class="contact-row__icon"><i class="fa-solid fa-building-columns" aria-hidden="true"></i></span>
+        <div>
+          <div class="contact-row__label">Department</div>
+          <div class="contact-row__value">{{ c.department }}</div>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <span class="contact-row__icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+        <div>
+          <div class="contact-row__label">Campus location</div>
+          <div class="contact-row__value">{{ c.campus_location }}</div>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <span class="contact-row__icon"><i class="fa-solid fa-envelopes-bulk" aria-hidden="true"></i></span>
+        <div>
+          <div class="contact-row__label">Mailing address</div>
+          <div class="contact-row__value">{{ c.mailing_address }}</div>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <span class="contact-row__icon"><i class="fa-solid fa-map-pin" aria-hidden="true"></i></span>
+        <div>
+          <div class="contact-row__label">Street address</div>
+          <div class="contact-row__value">{{ c.street_address }}</div>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <span class="contact-row__icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></span>
+        <div>
+          <div class="contact-row__label">Google Scholar</div>
+          <a class="contact-row__value" href="{{ c.scholar_url }}" target="_blank" rel="noopener">{{ c.scholar_name }}</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Map ===== -->
+    <div class="card">
+      <div class="map-card__head">
+        <h3 class="map-card__title">Find us</h3>
+        <p class="map-card__sub">{{ c.department }}, {{ site.faculty }}, {{ site.institution }}.</p>
+      </div>
+      <div class="map-card__frame" id="contact-map" data-lat="{{ c.map_lat }}" data-lon="{{ c.map_lon }}"
+           role="img" aria-label="Map showing the {{ c.campus_location }} at the University of Calgary"></div>
+      <div class="map-card__foot">
+        <span class="map-card__addr"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>{{ c.campus_location }}</span>
+        <a class="btn btn--sm btn--ghost" href="https://www.openstreetmap.org/?mlat={{ c.map_lat }}&amp;mlon={{ c.map_lon }}#map=17/{{ c.map_lat }}/{{ c.map_lon }}" target="_blank" rel="noopener">Open map <i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Get involved ===== -->
+  <div class="divider-labeled" style="margin: 2.5rem 0;"><span class="divider-labeled__label">Get Involved</span></div>
+  <div class="callout callout--tip">
+    <div class="callout__title">We welcome your interest</div>
+    <div class="callout__body">
+      The group welcomes general interest from prospective students, researchers, and collaborators with
+      backgrounds in geomatics engineering, surveying, computer science, or related fields. If our research
+      sounds like a fit, please reach out. Email Dr. Lichti with a short note about your interests, along with
+      your CV and transcripts.
+    </div>
+  </div>
+  <div style="margin-top: 1.25rem;">
+    <a class="btn btn--primary" href="mailto:{{ c.email }}"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email Dr. Lichti</a>
+  </div>
+
+  {%- if site.data.positions and site.data.positions.size > 0 -%}
+    <h3 class="instruments-heading">Open positions</h3>
+    <div class="position-list">
+      {%- for p in site.data.positions -%}
+        <div class="card card--hover">
+          <div class="card__body position-card">
+            <div class="position-card__main">
+              <div class="position-card__meta">
+                <span class="badge badge--{{ p.color }}">{{ p.level }}</span>
+                <span class="position-card__open">Open &middot; rolling</span>
+              </div>
+              <div class="position-card__title">{{ p.title }}</div>
+              <div class="position-card__desc">{{ p.desc }}</div>
+            </div>
+            <a class="btn btn--sm btn--outline" href="mailto:{{ c.email }}">Apply <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+</div>
+
+<!-- Render the map with a clean, light CARTO basemap and no attribution overlay. -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  (function () {
+    var el = document.getElementById("contact-map");
+    if (!el || !window.L) return;
+    var lat = parseFloat(el.getAttribute("data-lat"));
+    var lon = parseFloat(el.getAttribute("data-lon"));
+    var map = L.map(el, { scrollWheelZoom: false, attributionControl: false }).setView([lat, lon], 16);
+    L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", { maxZoom: 19 }).addTo(map);
+    L.marker([lat, lon]).addTo(map);
+  })();
+</script>

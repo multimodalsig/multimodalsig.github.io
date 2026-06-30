@@ -1,0 +1,71 @@
+/* =============================================================================
+   RESPONSIVE — the design system is desktop-first (930px content column).
+   These queries gracefully collapse the multi-column grids and switch the
+   navbar to a hamburger menu on tablet / phone widths.
+   ============================================================================= */
+
+/* ---- Tablet and below: collapse two-column grids to one ---- */
+@media (max-width: 820px) {
+  .hero { grid-template-columns: 1fr; gap: 1.75rem; }
+  .hero__media { max-width: 320px; }
+
+  .theme-grid,
+  .project-grid,
+  .people-grid,
+  .feature-grid,
+  .instrument-grid,
+  .contact-grid,
+  .pi-card__columns { grid-template-columns: 1fr; }
+
+  .pi-card__grid { grid-template-columns: 88px 1fr; gap: 1.1rem; }
+  .pi-card__grid .avatar--xl { --avatar-size: 88px; }
+
+  .project-full__grid,
+  .lab-feature__grid { grid-template-columns: 1fr; }
+  .project-full__media img,
+  .lab-feature__media img { min-height: 180px; }
+}
+
+/* ---- Hamburger navigation (kicks in before the full group name crowds the
+   links — keeps the wordmark intact on smaller laptops/tablets). ---- */
+@media (max-width: 900px) {
+  .navbar__toggle { display: inline-flex; }
+
+  .navbar__links {
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--bg);
+    border-bottom: var(--border);
+    box-shadow: var(--shadow-1);
+    padding: 0.5rem 1.25rem 1rem;
+    display: none;
+  }
+  .navbar__links.is-open { display: flex; }
+  .navbar__link {
+    padding: 0.7rem 0;
+    border-bottom: var(--border);
+    font-size: var(--fs-lead);
+  }
+  .navbar__link:last-child { border-bottom: 0; }
+}
+
+/* ---- Small phone: tighten spacing and stack remaining rows ---- */
+@media (max-width: 540px) {
+  :root { --fs-h1: 2rem; --fs-h2: 1.6rem; --fs-display: 2.25rem; }
+
+  .container { padding: 0 1rem; }
+  .page { padding-top: 1.75rem; padding-bottom: 2rem; }
+
+  .position-card { flex-direction: column; }
+  .position-card .btn { align-self: flex-start; }
+
+  .lead-row { flex-wrap: wrap; }
+  .lead-row__partners { margin-left: 0; flex-basis: 100%; }
+
+  .site-footer__inner { flex-direction: column; gap: 0.5rem; }
+
+  .map-card__foot { flex-direction: column; align-items: flex-start; }
+}

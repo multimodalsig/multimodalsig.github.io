@@ -1,0 +1,359 @@
+# =============================================================================
+#  PEOPLE, the file you'll edit most often.
+#
+#  HOW TO ADD A STUDENT / RESEARCHER:
+#    1. Drop their headshot in  assets/img/team/  (square images look best).
+#    2. Copy one entry under `team:` below, paste it, and fill in the fields.
+#    3. Remove any optional field you don't have (photo, projects, links...).
+#    Order = display order. To "graduate" someone, move their entry to `alumni`.
+#
+#  Fields:
+#    name      required   Full name.
+#    role      required   e.g. "PhD Student", "MSc Student", "Postdoc".
+#    photo     optional   Path under assets/img/. Omit -> coloured initials.
+#    short     required   One line shown on the collapsed card.
+#    bio       optional   Full paragraph shown when the card is expanded.
+#    interests optional   List of keyword tags.
+#    projects  optional   List of project blurbs (plain text).
+#    links     optional   List of { label, href, icon } (Font Awesome class).
+# =============================================================================
+
+# ---- Principal Investigator -------------------------------------------------
+pi:
+  name: Dr. Derek D. Lichti
+  role: Professor, Department of Geomatics Engineering
+  photo: assets/img/team/derek.jpg
+  email: ddlichti@ucalgary.ca
+  scholar_url: "https://scholar.google.com/citations?user=rzfKJOIAAAAJ&hl=en"
+  ucalgary_url: "https://contacts.ucalgary.ca/info/geomatics/profiles/derek-lichti"
+  bio: >-
+    Derek Lichti is Professor in the Department of Geomatics Engineering at the
+    University of Calgary, which he joined in 2008. He served as Head of the
+    Department for the period 2013-2018. Following the completion of his PhD in
+    1999, he worked as an academic at Curtin University in Perth, Australia, until
+    2007. His research program focuses on imaging metrology, which is concerned
+    with precision 3D reality capture from imaging sensors, principally
+    terrestrial laser scanners and digital cameras. Some of his research projects
+    include documentation of at-risk cultural heritage sites, as-built modelling
+    of industrial environments, wear and damage assessment in structures and
+    industrial machinery, and dimensional control.
+  bio_more: >-
+    He is currently a Director of the Canadian Remote Sensing Society / Société
+    canadienne de télédétection (CRSS-SCT) and a member of the Council of the
+    International Society for Photogrammetry and Remote Sensing (ISPRS). He has
+    served the ISPRS in a number of capacities over the past two decades. This
+    includes two terms (2004-2008; 2008-2012) as Chair of the ISPRS Working Group
+    on Terrestrial Laser Scanning. Between 2013 and 2020, he served as
+    Editor-in-Chief of the ISPRS Journal of Photogrammetry and Remote Sensing. He
+    is currently ISPRS Congress Director, responsible for organization of the
+    2026 ISPRS Congress in Toronto.
+  badges:
+    - Carl Pulfrich Award 2025
+    - Schwidefsky Medal 2022
+    - UCalgary Peak Scholar
+  appointments:
+    - years: "2024-2029"
+      text: UCalgary Research Excellence Chair, University of Calgary
+    - years: "2025-2028"
+      text: Adjunct Professor, Geodesy and Geomatics Engineering, University of New Brunswick
+    - years: "2022-2027"
+      text: Adjunct Professor, Earth and Planetary Sciences, Curtin University
+  awards:
+    - year: "2025"
+      text: Carl Pulfrich Award, Leica Geosystems
+    - year: "2022"
+      text: Schwidefsky Medal, ISPRS
+    - year: "2022"
+      text: APEGA Research Excellence Summit Award
+    - year: "2019"
+      text: Peak Scholar, University of Calgary
+
+# ---- Adjunct & Affiliated Faculty -------------------------------------------
+# (These two affiliated faculty are not in content/team; verify or remove.)
+faculty:
+  - name: Dr. Jacky C. K. Chow
+    role: Adjunct Associate Professor, Diagnostic Radiologist (AHS)
+    photo: assets/img/team/jacky.jpg
+    short: Bridging geomatics and medicine, sensor fusion, SLAM, and biomedical imaging.
+    bio: >-
+      Jacky C. K. Chow, P.Eng., is a diagnostic radiologist with Alberta Health
+      Services and an Adjunct Associate Professor in Geomatics Engineering at the
+      University of Calgary. He completed his BSc (2009) and PhD (2014) in
+      geomatics engineering at the University of Calgary, the latter under Derek
+      Lichti and William Teskey. He then held postdoctoral fellowships in the
+      Netherlands and Sweden on inertial human-motion tracking, earned an MBA
+      from Aston University (2017), and worked as a sensor-fusion engineer at
+      Leica Geosystems developing laser-guided autonomous drones, before
+      returning to the University of Calgary to complete an MD (2020) and a
+      diagnostic-imaging residency. His work bridges geomatics and medicine,
+      spanning sensor fusion and error modelling, photogrammetry, SLAM, inertial
+      motion capture, and machine learning for biomedical and radiological
+      imaging. He is the founder of Vusion Technologies and a former NSERC,
+      Alberta Innovates, Killam, and Marie Skłodowska-Curie scholar.
+    interests:
+      - Sensor Error Modelling
+      - Photogrammetry
+      - Mobile Mapping
+      - LiDAR
+      - SLAM
+      - Biomedical Imaging
+    links:
+      - label: LinkedIn
+        href: "https://ca.linkedin.com/in/jackyckchow"
+        icon: fa-brands fa-linkedin
+      - label: Scholar
+        href: "https://scholar.google.com/citations?user=ZQvSJPYAAAAJ&hl=en"
+        icon: fa-solid fa-graduation-cap
+
+  - name: Dr. Ivan Detchev
+    role: Associate Professor (Teaching), Associate Head (Undergraduate)
+    photo: assets/img/team/ivan.jpg
+    short: >-
+      Digital photogrammetry and optical metrology for biomedical and civil
+      applications; engineering education.
+    bio: >-
+      Dr. Ivan Detchev is an Associate Professor (Teaching) in Geomatics
+      Engineering at the University of Calgary, where he also serves as Associate
+      Head (Undergraduate). He earned his BScE in geomatics engineering from the
+      University of New Brunswick (2007) and his MSc (2010) and PhD (2016) in
+      digital imaging systems from the University of Calgary, with graduate
+      research in digital photogrammetry and optical metrology for biomedical and
+      civil engineering, including 3D reconstruction of scoliotic torsos and
+      close-range photogrammetry for fine-scale infrastructure monitoring. His
+      technical work spans multi-camera system calibration and structural
+      deformation monitoring, while as an instructor his focus has shifted toward
+      engineering education, including active learning and threshold concepts in
+      geomatics. He is a recipient of Schulich's 2024 Undergraduate Teaching
+      Excellence and Training Excellence Awards and contributes to geomatics
+      education and outreach internationally through the ISPRS Student Consortium
+      and a working group on promoting the profession.
+    interests:
+      - Digital Photogrammetry
+      - Optical Metrology
+      - Multi-camera Calibration
+      - Deformation Monitoring
+      - Engineering Education
+    links:
+      - label: LinkedIn
+        href: "https://www.linkedin.com/in/iv-detchev-ba946454/"
+        icon: fa-brands fa-linkedin
+      - label: UCalgary
+        href: "https://profiles.ucalgary.ca/ivan-detchev"
+        icon: fa-solid fa-up-right-from-square
+
+# ---- Researchers & Students -------------------------------------------------
+team:
+  - name: Akshay Bharadwaj
+    role: Postdoctoral Researcher
+    photo: assets/img/team/akshay.jpeg
+    short: Sensor calibration, neural implicit representation, SLAM, and state estimation.
+    bio: >-
+      Akshay Bharadwaj is a robotics and SLAM researcher with roughly 8 years of
+      combined research and production experience in autonomous perception
+      systems. He holds a PhD from the University of Calgary, where his research
+      focused on neural implicit SLAM with IMU-assisted odometry, and an MS from
+      Ohio University's Avionics Engineering Center, where he developed custom
+      multirotor UAV platforms. At LocusLabs Inc., he deployed 3D mapping and
+      localization systems across 180+ airports worldwide, and his work spans
+      LiDAR-inertial SLAM, visual-inertial odometry, and sensor fusion. He holds
+      a U.S. patent and has co-authored peer-reviewed publications at ION and
+      IEEE/ION PLANS.
+    interests:
+      - 2D/3D Sensor Calibration
+      - Neural Implicit Representation
+      - SLAM
+      - State Estimation
+      - Physical AI
+    projects:
+      - Beyond Checkerboards
+    links:
+      - label: Portfolio
+        href: "https://bharadwajakshay.github.io/"
+        icon: fa-solid fa-globe
+
+  - name: Abdelrahman Abdelghany
+    role: PhD Student
+    photo: assets/img/team/abdel.jpeg
+    short: Low-cost 3D mapping, smartphone photogrammetry and LiDAR, and heritage documentation (UC3D).
+    bio: >-
+      A PhD student in Geomatics Engineering at the University of Calgary. His
+      research focuses on low-cost 3D mapping, smartphone-based photogrammetry and
+      LiDAR integration, AI-assisted depth estimation, and heritage
+      documentation. He is currently developing UC3D, a smartphone-based mapping
+      platform for accessible and scalable 3D reality capture.
+    interests:
+      - Low-cost 3D Mapping
+      - Smartphone Photogrammetry
+      - LiDAR
+      - AI Depth Estimation
+      - Heritage / HBIM
+    projects:
+      - UC3D, low-cost 3D mapping and heritage (with Parks Canada)
+      - Point-cloud change detection and deterioration analysis
+    links:
+      - label: LinkedIn
+        href: "https://www.linkedin.com/in/abdelrahmanalaa95/"
+        icon: fa-brands fa-linkedin
+
+  - name: Abdoul Karim Ouangre
+    role: PhD Student
+    photo: assets/img/team/karim.png
+    short: Mobile mapping, indoor 3D acquisition, and LiDAR-constrained Gaussian Splatting for BIM/HBIM.
+    bio: >-
+      Holds a master's degree in civil engineering with a concentration in BIM,
+      and is focused on research and development in mobile mapping, indoor spatial
+      data acquisition, computer vision, and applications of Gaussian Splatting.
+      He is particularly interested in developing accessible, smartphone-based
+      solutions for accurate 3D mapping and digital-twin generation. Current
+      research direction: "LiDAR-Constrained Gaussian Splatting for reconstruction
+      of HBIM and BIM 3D models."
+    interests:
+      - Mobile LiDAR
+      - RTLS
+      - 3D Reconstruction
+      - Gaussian Splatting
+      - BIM / HBIM
+      - AI Workflows
+    projects:
+      - Mobile mapping network design for indoor scanning
+      - RTLS and mobile LiDAR sensor fusion
+      - LiDAR-constrained Gaussian Splatting for BIM/HBIM
+    links:
+      - label: LinkedIn
+        href: "https://www.linkedin.com/in/abdoul-karim-ouangre-87797a8a/"
+        icon: fa-brands fa-linkedin
+      - label: MSc Thesis
+        href: "https://digitalcommons.georgiasouthern.edu/etd/2525"
+        icon: fa-solid fa-file-lines
+
+  - name: Julian Cramb
+    role: MSc Student
+    photo: assets/img/team/julian.jpg
+    short: Capture-system development; automated 3D reconstruction of reindeer antlers via Gaussian Splatting.
+    bio: >-
+      Julian grew up in Calgary and loves working with new technologies and the
+      outdoors. He completed his undergraduate degree in Geomatics Engineering at
+      the University of Calgary with a minor in energy and environment. His
+      research interests are in capture-system development, both hardware
+      configuration and software implementation. His thesis develops an
+      automated, non-invasive pipeline that pairs a multi-camera optical setup
+      with Gaussian Splatting to measure reindeer antlers, achieving 3.4 to 3.7 mm
+      mean cloud-to-cloud accuracy against reference laser scans; the rig is now
+      deployed for multi-season field collection supporting biodiversity,
+      environmental monitoring, and regenerative-medicine research.
+    interests:
+      - Capture-system Development
+      - Multi-camera Rigs
+      - Gaussian Splatting
+      - Field Reconstruction
+    projects:
+      - Non-invasive reindeer antler reconstruction
+    links:
+      - label: LinkedIn
+        href: "https://www.linkedin.com/in/julian-cramb-a7568b200"
+        icon: fa-brands fa-linkedin
+
+  - name: Srijan Thapa
+    role: MSc Student
+    photo: assets/img/team/srijan.jpeg
+    short: Dual-fluoroscopy calibration and 3D motion tracking for musculoskeletal biomechanics.
+    bio: >-
+      Srijan Thapa is a graduate student in Geomatics Engineering at the
+      University of Calgary and a member of Dr. Derek Lichti's research group,
+      co-supervised by Dr. Koren E. Roach. He completed his Bachelor of
+      Engineering in Geomatics Engineering from Kathmandu University, Nepal, in
+      Spring 2023. His research focuses on dual fluoroscopy systems, including
+      system calibration, 3D motion tracking, and the application of imaging
+      technologies to musculoskeletal biomechanics and osteoarthritis research.
+    interests:
+      - Photogrammetry
+      - Dual Fluoroscopy
+      - Geometric Calibration
+      - Medical Imaging
+      - Machine Learning
+      - Computer Vision
+    projects:
+      - Dual-fluoroscopy calibration and motion tracking
+    links:
+      - label: LinkedIn
+        href: "https://np.linkedin.com/in/srijan-thapa-80040a1ab"
+        icon: fa-brands fa-linkedin
+
+  - name: Jackson Cooper
+    role: MSc Student
+    photo: assets/img/team/jackson.jpg
+    short: Medical image synthesis and photogrammetric measurement; rectified-flow CT-to-PET synthesis (MedFlow).
+    bio: >-
+      Jackson Cooper is an MSc student in geomatics engineering at the University
+      of Calgary, working in Prof. Derek Lichti's Multimodal Spatial Imaging Lab
+      on medical image synthesis and photogrammetric measurement. His current
+      thesis project, MedFlow, uses rectified-flow generative models to synthesize
+      pseudo-PET images from CT, building on his earlier first-author work on
+      self-calibrating bundle adjustment for fluoroscopic distortion correction
+      (Diagnostics, 2024). He brings a strong geomatics foundation in estimation
+      theory, photogrammetry, and sensor calibration, with broader interests in
+      3D reconstruction, neural rendering (Gaussian splatting), and
+      high-performance GPU computing, and has previously worked at the Canadian
+      Space Agency on satellite-imagery pipelines.
+    interests:
+      - Medical Image Synthesis
+      - Photogrammetry
+      - Estimation Theory
+      - Sensor Calibration
+      - 3D Reconstruction
+      - Gaussian Splatting
+      - GPU Computing
+    projects:
+      - "MedFlow: CT-to-PET image synthesis"
+    links:
+      - label: LinkedIn
+        href: "https://www.linkedin.com/in/jackjcoop/"
+        icon: fa-brands fa-linkedin
+      - label: GitHub
+        href: "https://github.com/jackjcoop"
+        icon: fa-brands fa-github
+      - label: ORCID
+        href: "https://orcid.org/0009-0007-3784-5292"
+        icon: fa-brands fa-orcid
+
+# ---- Collaborators ----------------------------------------------------------
+collaborators:
+  - name: Dr. Koren E. Roach
+    affiliation: University of Calgary
+    note: dual-fluoroscopy biomechanics; co-supervision
+  - name: Dr. Peter Dawson
+    affiliation: Anthropology and Archaeology, University of Calgary
+    note: cultural heritage
+
+# ---- Alumni -----------------------------------------------------------------
+# Grouped accordions. `id` must be unique. Add `open: true` to a group to make it
+# start expanded (none are expanded by default).
+alumni:
+  - id: ucphd
+    title: University of Calgary, PhD
+    members:
+      - { name: "Sherif El-Halawany", year: "2013", thesis: "Detection of road furniture from mobile terrestrial laser scanning point clouds" }
+      - { name: "Hervé Lahamy", year: "2013", thesis: "Real-time hand posture recognition using a range camera" }
+      - { name: "Jacky C. K. Chow", year: "2014", thesis: "Multi-sensor integration for indoor 3D reconstruction", position: "Adjunct Assoc. Professor, University of Calgary (radiology)" }
+      - { name: "Ting On Chan", year: "2015", thesis: "Cylindrical and polygonal object modelling for LiDAR calibration and registration", position: "Sun Yat-sen University" }
+      - { name: "Mostafa Arastounia", year: "2017", thesis: "Automated recognition of electrical substation components from 3D LiDAR" }
+      - { name: "Reza Maalek", year: "2018", thesis: "Construction point-cloud analysis", position: "Chair of Digital Engineering and Construction, KIT" }
+      - { name: "Zahra Hadavandsiri", year: "2020", thesis: "Concrete damage inspection by classification of TLS point clouds" }
+      - { name: "Fengman Jia", year: "2021", thesis: "Optimal terrestrial laser scanning network design and viewpoint planning" }
+  - id: ucmsc
+    title: University of Calgary, MSc
+    members:
+      - { name: "Sonam Jamtsho", year: "2010", thesis: "Geometric modelling of 3-D range cameras for structural deformation measurement" }
+      - { name: "Xiaojuan Qi", year: "2013", thesis: "Dynamic structural deflection measurement with range cameras" }
+      - { name: "Hooman Esfandiari", year: "2014", thesis: "Photogrammetric advances to C-arm use in surgery" }
+      - { name: "Adam Jahraus", year: "2017", thesis: "3D documentation technologies in archaeological applications" }
+      - { name: "Samuel Rondeel", year: "2017", thesis: "Calibration and verification of static TLS for surveying of 3D boundaries" }
+      - { name: "Jeremy Steward", year: "2017", thesis: "Range-camera motion capture from human motion point clouds" }
+      - { name: "David M. Jarron", year: "2020", thesis: "Wide-angle lens camera calibration using automatic target recognition" }
+      - { name: "Kate Pexman", year: "2021", thesis: "Automated floor-plan and building-model creation for heritage buildings", position: "PhD student, University College London" }
+  - id: curtinphd
+    title: Curtin University, PhD
+    members:
+      - { name: "Stuart J. Gordon", year: "2005", thesis: "Structural deformation measurement using terrestrial laser scanners", position: "Laser-scanning specialist, Perth" }
+      - { name: "Kwang-Ho Bae", year: "2006", thesis: "Automated registration of unorganised terrestrial laser scanner point clouds", position: "Aerial remote-sensing data analyst" }
+      - { name: "David Belton", year: "2008", thesis: "Classification and segmentation of 3D terrestrial laser scanner data" }

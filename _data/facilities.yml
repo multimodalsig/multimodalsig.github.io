@@ -1,0 +1,76 @@
+# =============================================================================
+#  FACILITIES, the Facilities page.
+# =============================================================================
+
+# ---- Feature: the core lab --------------------------------------------------
+lab:
+  tag: Core facility
+  name: Geo-Spatial Vision Metrology (GeoVM) Laboratory
+  image: assets/img/facilities/geovm-primary.jpg
+  description: >-
+    The walls and ceiling contain some 500 signalized targets of different sizes
+    used for instrument calibration, orientation, and performance evaluation.
+    Several sizes of targets have been placed throughout the room to allow
+    experiments to be performed with a wide range of imaging sensors such as
+    passive cameras, time-of-flight range cameras, gaming sensors, laser
+    scanners, and thermal cameras, and sensors with different fields of view,
+    frame imaging cameras, and panoramic sensors. The constant temperature
+    control in the room and the ability to control ambient light with light
+    switches and blinds allow us to conduct high-precision metrology experiments.
+
+# ---- Facility gallery (carousel) --------------------------------------------
+# Add more lab photos to assets/img/facilities/ and list them here.
+gallery:
+  - src: assets/img/facilities/geovm-lab.jpg
+    caption: The GeoVM laboratory, with roughly 500 signalized targets across the walls and ceiling.
+  - src: assets/img/facilities/geovm-walls.jpg
+    caption: Dense signalized targets covering the laboratory walls and ceiling.
+  - src: assets/img/facilities/geovm-room.jpg
+    caption: Targets of varying size distributed throughout the room for multi-scale calibration.
+  - src: assets/img/facilities/geovm-calibration.jpg
+    caption: Instrument stands and a calibration board set up among the reference targets.
+  - src: assets/img/facilities/geovm-experiment.jpg
+    caption: Setting up a multi-instrument experiment in the laboratory.
+
+# ---- Lab features (small icon cards) ----------------------------------------
+features:
+  - icon: fa-solid fa-temperature-half
+    text: Constant temperature control for high-precision metrology
+  - icon: fa-solid fa-lightbulb
+    text: Controllable ambient lighting (switches and blinds)
+  - icon: fa-solid fa-bullseye
+    text: Roughly 500 signalized targets at multiple scales
+  - icon: fa-solid fa-vials
+    text: Open space for multi-instrument experiments
+
+# ---- Instrumentation groups -------------------------------------------------
+instruments:
+  - icon: fa-solid fa-satellite-dish
+    title: Terrestrial Laser Scanners
+    items:
+      - Survey-grade TLS
+      - Time-of-flight long-range scanner
+      - Reference target sets & tribrachs
+  - icon: fa-solid fa-camera
+    title: Cameras & Imaging Sensors
+    items:
+      - Passive and metric cameras
+      - Time-of-flight range cameras
+      - Thermal & panoramic sensors
+  - icon: fa-solid fa-mobile-screen
+    title: Mobile & Smartphone Capture
+    items:
+      - LiDAR-equipped smartphones
+      - Handheld SLAM scanner
+      - Multi-camera optical rigs
+  - icon: fa-solid fa-code
+    title: Software & Compute
+    items:
+      - MATLAB, Python, C++ (Eigen)
+      - CloudCompare, Cyclone, RealWorks
+      - Bundle-adjustment & ML toolchains
+
+# Footnote shown under the instrumentation grid.
+note: >-
+  Engineering Building, University of Calgary. Inventory is representative;
+  contact the group for current equipment availability.

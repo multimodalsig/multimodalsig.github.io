@@ -1,0 +1,246 @@
+# =============================================================================
+#  PROJECTS, shown on the Research page (Projects tab) as expandable cards.
+#  Descriptions are taken from the team members' own write-ups (content/team).
+#
+#  To add a project: copy a block, fill it in, drop any images in
+#  assets/img/projects/ and reference them under `images`.
+#
+#  Fields:
+#    id        required, unique slug (lowercase, no spaces).
+#    title     required.
+#    tag       required, short category label (the pill on the card).
+#    lead      required, lead researcher's name.
+#    lead_role required, e.g. "PhD Student".
+#    lead_photo optional, path under assets/img/ for the lead's avatar.
+#    images    required, list of image paths under assets/img/.
+#    lead_in   required, one-sentence hook (shown collapsed).
+#    body      required, list of paragraphs (shown expanded).
+#    methods   optional, list of keyword tags.
+#    metric    optional, { value, label } headline figure.
+# =============================================================================
+
+- id: uc3d
+  title: "UC3D: Low-Cost 3D Mapping and Heritage Documentation"
+  tag: Heritage
+  lead: Abdelrahman Abdelghany
+  lead_role: PhD Student
+  lead_photo: assets/img/team/abdel.jpeg
+  images:
+    - assets/img/projects/uc3d_1.png
+  lead_in: A smartphone-based platform that makes accurate 3D reality capture accessible and scalable.
+  body:
+    - >-
+      UC3D is a smartphone-based 3D mapping platform that combines mobile
+      sensors, LiDAR, and AI methods to generate accurate 3D models. The system
+      is being applied to document and preserve heritage assets in collaboration
+      with Parks Canada, supporting digital archiving, condition assessment, and
+      disaster preparedness.
+    - >-
+      The project aims to provide a practical, low-cost alternative to
+      traditional reality capture systems.
+  methods:
+    - Smartphone LiDAR
+    - Photogrammetry
+    - AI depth estimation
+    - HBIM
+
+- id: change-detection
+  title: Point Cloud Change Detection and Deterioration Analysis
+  tag: Monitoring
+  lead: Abdelrahman Abdelghany
+  lead_role: PhD Student
+  lead_photo: assets/img/team/abdel.jpeg
+  images:
+    - assets/img/projects/uc3d_2.png
+  lead_in: Detecting structural change and surface deterioration across time.
+  body:
+    - >-
+      This project develops methods for detecting structural changes and surface
+      deterioration from multi-temporal point clouds. By combining geometric
+      analysis with AI-based feature extraction, the research supports heritage
+      conservation, infrastructure monitoring, and damage assessment.
+  methods:
+    - Multi-temporal point clouds
+    - Geometric analysis
+    - AI feature extraction
+
+- id: beyond-checkerboards
+  title: Beyond Checkerboards
+  tag: Calibration
+  lead: Akshay Bharadwaj
+  lead_role: Postdoctoral Researcher
+  lead_photo: assets/img/team/akshay.jpeg
+  images:
+    - assets/img/projects/checker.jpg
+  lead_in: Re-examining camera calibration by measuring what actually matters downstream.
+  body:
+    - >-
+      Photogrammetric self-calibration is compared against checkerboard-based
+      closed-form calibration across downstream tasks, including
+      structure-from-motion reconstruction, monocular visual odometry, and novel
+      view synthesis.
+    - >-
+      The evaluation is further extended to benchmark datasets, where
+      photogrammetric self-calibration is compared against manufacturer-provided
+      calibration parameters.
+  methods:
+    - Self-calibration
+    - Structure-from-Motion
+    - Visual Odometry
+    - Novel View Synthesis
+
+- id: reindeer
+  title: Non-Invasive Reindeer Antler Reconstruction
+  tag: 3D Reconstruction
+  lead: Julian Cramb
+  lead_role: MSc Student
+  lead_photo: assets/img/team/julian.jpg
+  images:
+    - assets/img/gallery/antler-pointcloud.jpg
+  lead_in: An automated optical pipeline that measures antlers in the field, without contact.
+  body:
+    - >-
+      This thesis project develops an automated, non-invasive 3D reconstruction
+      pipeline to measure reindeer antlers, addressing the limitations of
+      previous measurement methods. By combining a multi-camera optical setup
+      with Gaussian Splatting, the system overcomes data-quality challenges
+      caused by animal movement and inconsistent lighting.
+    - >-
+      Initial laboratory testing yielded a mean cloud-to-cloud distance of 3.4 to
+      3.7 mm compared to reference laser scans, and the system is now deployed in
+      the field for multi-season collection. Ultimately, this scalable pipeline
+      will provide high-quality 3D datasets to advance interdisciplinary research
+      across biodiversity, environmental monitoring, and regenerative medicine.
+  methods:
+    - Multi-camera capture
+    - Gaussian Splatting
+    - Point-cloud comparison
+  metric:
+    value: 3.4 to 3.7 mm
+    label: mean cloud-to-cloud vs. laser scan
+
+- id: dual-fluoroscopy
+  title: Dual-Fluoroscopy Calibration and Motion Tracking
+  tag: Biomedical
+  lead: Srijan Thapa
+  lead_role: MSc Student
+  lead_photo: assets/img/team/srijan.jpeg
+  images:
+    - assets/img/projects/dual-fluoroscopy.jpg
+  lead_in: Calibrating dual fluoroscopy for trustworthy musculoskeletal biomechanics.
+  body:
+    - >-
+      This project develops dual fluoroscopy systems for musculoskeletal
+      biomechanics and osteoarthritis research, focusing on system calibration,
+      3D motion tracking, and the application of imaging technologies to capture
+      human joint motion.
+    - "Co-supervised with Dr. Koren E. Roach."
+  methods:
+    - Geometric calibration
+    - Dual fluoroscopy
+    - 3D motion tracking
+    - Medical imaging
+
+- id: medflow
+  title: "MedFlow: CT-to-PET Image Synthesis"
+  tag: Biomedical
+  lead: Jackson Cooper
+  lead_role: MSc Student
+  lead_photo: assets/img/team/jackson.jpg
+  images:
+    - assets/img/gallery/ct-pet-synthesis.png
+  lead_in: Synthesizing whole-body PET images from CT, and finding the limits of what CT can reveal.
+  body:
+    - >-
+      MedFlow investigates whether a plausible whole-body FDG-PET image can be
+      synthesised from a routine CT scan alone, and where that synthesis is
+      limited by CT itself rather than by the model. FDG-PET reveals metabolic
+      activity decisive for cancer detection, staging, and treatment monitoring,
+      yet remains scarce relative to the near-ubiquitous CT.
+    - >-
+      A 2.5D rectified flow model trained on the whole-body AutoPET cohort
+      reproduces normal anatomy with high fidelity but systematically
+      under-predicts per-lesion tumour uptake (SUV), which proves largely
+      unrecoverable from CT appearance. Formalised through the data processing
+      inequality, this establishes an information-theoretic ceiling on CT-only
+      quantitative PET synthesis, reframing the shortfall not as a model failure
+      but as a measurable limit of the modality.
+  methods:
+    - Rectified-flow generative models
+    - 2.5D synthesis
+    - AutoPET cohort
+    - Information theory
+
+- id: mobile-mapping-network
+  title: Mobile Mapping Network Design for Indoor Scanning
+  tag: Mobile Mapping
+  lead: Abdoul Karim Ouangre
+  lead_role: PhD Student
+  lead_photo: assets/img/team/karim.png
+  images:
+    - assets/img/projects/vp_plan.png
+  lead_in: Optimizing where and how a mobile scanner moves through indoor spaces.
+  body:
+    - >-
+      This project develops network design methodologies for mobile scanning
+      systems used in indoor mapping applications. It focuses on optimizing data
+      acquisition workflows, viewpoint planning, and spatial coverage and
+      uncertainty to improve the quality and efficiency of indoor geospatial data
+      collection.
+    - >-
+      The goal is to support more reliable and accurate indoor mapping solutions
+      for a variety of built-environment applications.
+  methods:
+    - Network design
+    - Viewpoint planning
+    - Indoor mapping
+
+- id: rtls-lidar-fusion
+  title: RTLS and Mobile LiDAR Sensor Fusion
+  tag: Sensor Fusion
+  lead: Abdoul Karim Ouangre
+  lead_role: PhD Student
+  lead_photo: assets/img/team/karim.png
+  images:
+    - assets/img/gallery/field-scanner-river.jpg
+  lead_in: Fusing real-time location systems with mobile LiDAR to tame drift.
+  body:
+    - >-
+      This project investigates the integration of Real-Time Location Systems
+      (RTLS) with mobile LiDAR platforms to improve positioning accuracy and
+      overall point cloud quality. By combining complementary sensor
+      technologies, the research aims to reduce drift and enhance the geometric
+      reliability of mobile mapping datasets.
+    - >-
+      The work supports the development of more robust indoor and complex
+      environment mapping workflows.
+  methods:
+    - RTLS
+    - Mobile LiDAR
+    - Sensor fusion
+
+- id: lidar-gaussian-splatting
+  title: LiDAR-Constrained Gaussian Splatting for BIM and HBIM
+  tag: 3D Reconstruction
+  lead: Abdoul Karim Ouangre
+  lead_role: PhD Student
+  lead_photo: assets/img/team/karim.png
+  images:
+    - assets/img/projects/lidar_gauss.png
+  lead_in: Constraining Gaussian Splatting with LiDAR for accurate, scalable digital twins.
+  body:
+    - >-
+      This research direction integrates LiDAR point clouds with Gaussian
+      Splatting workflows to improve the geometric accuracy of 3D scene
+      reconstruction. The objective is to leverage LiDAR-derived constraints
+      during Gaussian generation, creating more accurate and scalable digital
+      representations that can be captured using consumer devices such as
+      smartphones.
+    - >-
+      Future applications include BIM and HBIM workflows, semantic scene
+      understanding, and automated extraction of architectural elements through
+      computer vision and segmentation techniques.
+  methods:
+    - Gaussian Splatting
+    - Mobile LiDAR
+    - BIM / HBIM
