@@ -36,12 +36,12 @@ jobs:
         env:
           JEKYLL_ENV: production
 
-      - name: Disable Jekyll reprocessing on Pages
-        run: touch _site/.nojekyll
-
       - name: Deploy to gh-pages
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          branch: gh-pages
-          folder: _site
-          clean: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: gh-pages
+          # enable_jekyll defaults to false, so a .nojekyll file is added and
+          # GitHub Pages serves the pre-built output as-is (no second Jekyll
+          # pass, which was dropping files and causing 404s).
