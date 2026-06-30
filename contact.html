@@ -67,6 +67,14 @@ description: >-
           <a class="contact-row__value" href="{{ c.scholar_url }}" target="_blank" rel="noopener">{{ c.scholar_name }}</a>
         </div>
       </div>
+
+      <div class="contact-row">
+        <span class="contact-row__icon"><i class="fa-brands fa-github" aria-hidden="true"></i></span>
+        <div>
+          <div class="contact-row__label">GitHub</div>
+          <a class="contact-row__value" href="{{ c.github_url }}" target="_blank" rel="noopener">{{ c.github_url | remove: "https://" }}</a>
+        </div>
+      </div>
     </div>
 
     <!-- ===== Map ===== -->
