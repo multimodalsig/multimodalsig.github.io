@@ -129,17 +129,21 @@ interactivity on top — nothing depends on it to read the page.
 
 ## 🚀 Deploying to GitHub Pages
 
-This site uses only GitHub-Pages-approved plugins, so **GitHub builds it for you
-— no GitHub Action required.**
+Deployment is **fully automatic**. The repo's Pages source is set to "GitHub
+Actions", and [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)
+builds the Jekyll site and publishes it on every push to `main`.
 
-1. Put these files at the root of the **`multimodalsig.github.io`** repository
-   (for a user/org page the repo must be named `<org>.github.io`).
-2. In the repo: **Settings → Pages → Build and deployment → Source:**
-   *Deploy from a branch*, branch `main`, folder `/ (root)`.
-3. Push. The site goes live at <https://multimodalsig.github.io> within ~1 min.
+**To update the live site: edit a file, commit, and push to `main`.** The Action
+builds and deploys to <https://multimodalsig.github.io> in ~2 minutes. You can
+watch progress under the repo's **Actions** tab.
 
-> If you'd rather keep the site in a subfolder or a different repo, set `baseurl`
-> in `_config.yml` accordingly (e.g. `baseurl: "/repo-name"`).
+There is nothing to configure, but for reference the one-time setting is
+**Settings → Pages → Build and deployment → Source: GitHub Actions**.
+
+Notes:
+- The previous al-folio site is preserved on the **`al-folio-backup`** branch.
+- The `gh-pages` branch is unused now (Pages deploys via the workflow artifact,
+  not from a branch).
 
 ---
 
