@@ -334,10 +334,10 @@ alumni:
     members:
       - { name: "Sherif El-Halawany", year: "2013", thesis: "Detection of road furniture from mobile terrestrial laser scanning point clouds" }
       - { name: "Hervé Lahamy", year: "2013", thesis: "Real-time hand posture recognition using a range camera" }
-      - { name: "Jacky C. K. Chow", year: "2014", thesis: "Multi-sensor integration for indoor 3D reconstruction", position: "Adjunct Assoc. Professor, University of Calgary (radiology)" }
-      - { name: "Ting On Chan", year: "2015", thesis: "Cylindrical and polygonal object modelling for LiDAR calibration and registration", position: "Sun Yat-sen University" }
+      - { name: "Jacky C. K. Chow", year: "2014", thesis: "Multi-sensor integration for indoor 3D reconstruction" }
+      - { name: "Ting On Chan", year: "2015", thesis: "Cylindrical and polygonal object modelling for LiDAR calibration and registration" }
       - { name: "Mostafa Arastounia", year: "2017", thesis: "Automated recognition of electrical substation components from 3D LiDAR" }
-      - { name: "Reza Maalek", year: "2018", thesis: "Construction point-cloud analysis", position: "Chair of Digital Engineering and Construction, KIT" }
+      - { name: "Reza Maalek", year: "2018", thesis: "Construction point-cloud analysis" }
       - { name: "Zahra Hadavandsiri", year: "2020", thesis: "Concrete damage inspection by classification of TLS point clouds" }
       - { name: "Fengman Jia", year: "2021", thesis: "Optimal terrestrial laser scanning network design and viewpoint planning" }
   - id: ucmsc
@@ -350,10 +350,10 @@ alumni:
       - { name: "Samuel Rondeel", year: "2017", thesis: "Calibration and verification of static TLS for surveying of 3D boundaries" }
       - { name: "Jeremy Steward", year: "2017", thesis: "Range-camera motion capture from human motion point clouds" }
       - { name: "David M. Jarron", year: "2020", thesis: "Wide-angle lens camera calibration using automatic target recognition" }
-      - { name: "Kate Pexman", year: "2021", thesis: "Automated floor-plan and building-model creation for heritage buildings", position: "PhD student, University College London" }
+      - { name: "Kate Pexman", year: "2021", thesis: "Automated floor-plan and building-model creation for heritage buildings" }
   - id: curtinphd
     title: Curtin University, PhD
     members:
-      - { name: "Stuart J. Gordon", year: "2005", thesis: "Structural deformation measurement using terrestrial laser scanners", position: "Laser-scanning specialist, Perth" }
-      - { name: "Kwang-Ho Bae", year: "2006", thesis: "Automated registration of unorganised terrestrial laser scanner point clouds", position: "Aerial remote-sensing data analyst" }
+      - { name: "Stuart J. Gordon", year: "2005", thesis: "Structural deformation measurement using terrestrial laser scanners" }
+      - { name: "Kwang-Ho Bae", year: "2006", thesis: "Automated registration of unorganised terrestrial laser scanner point clouds" }
       - { name: "David Belton", year: "2008", thesis: "Classification and segmentation of 3D terrestrial laser scanner data" }
