@@ -1,9 +1,9 @@
 name: Deploy site
 
-# Build the Jekyll site on every push to main and publish the result to the
-# gh-pages branch, which GitHub Pages serves at https://multimodalsig.github.io.
-# (No Pages setting changes needed: the source stays "Deploy from a branch:
-# gh-pages / root".)
+# Build the Jekyll site and deploy it to GitHub Pages using the official Pages
+# deployment (actions/deploy-pages). This repo's Pages is configured with
+# build_type "workflow", so this is the mechanism that actually goes live at
+# https://multimodalsig.github.io.
 
 on:
   push:
@@ -11,15 +11,17 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
-# Only one deploy at a time; newer pushes cancel in-flight runs.
+# Allow one concurrent deployment; let in-progress runs finish.
 concurrency:
-  group: deploy-pages
-  cancel-in-progress: true
+  group: pages
+  cancel-in-progress: false
 
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -36,12 +38,18 @@ jobs:
         env:
           JEKYLL_ENV: production
 
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
-          publish_branch: gh-pages
-          # enable_jekyll defaults to false, so a .nojekyll file is added and
-          # GitHub Pages serves the pre-built output as-is (no second Jekyll
-          # pass, which was dropping files and causing 404s).
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
