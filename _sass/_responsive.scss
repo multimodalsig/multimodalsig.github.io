@@ -31,6 +31,21 @@
 @media (max-width: 900px) {
   .navbar__toggle { display: inline-flex; }
 
+  /* Let the full group name stack onto multiple lines instead of forcing the
+     bar wider than the viewport — the long wordmark used to push the menu
+     button off-screen and require a horizontal scroll to reach it. The bar
+     grows to fit the wrapped name; the theme/menu buttons stay put on the
+     right. */
+  .navbar {
+    height: auto;
+    min-height: var(--navbar-height);
+    padding-block: 0.5rem;
+  }
+  .navbar__brand {
+    white-space: normal;
+    line-height: var(--lh-tight);
+  }
+
   .navbar__links {
     position: absolute;
     top: 100%; left: 0; right: 0;
