@@ -74,7 +74,7 @@ faculty:
   - name: Dr. Jacky C. K. Chow
     role: Adjunct Associate Professor, Diagnostic Radiologist (AHS)
     photo: assets/img/team/jacky.jpg
-    short: Bridging geomatics and medicine, sensor fusion, SLAM, and biomedical imaging.
+    short: Photogrammetric computer vision, sensor fusion, SLAM, and medical imaging.
     bio: >-
       Jacky C. K. Chow, P.Eng., is a diagnostic radiologist with Alberta Health
       Services and an Adjunct Associate Professor in Geomatics Engineering at the
@@ -104,6 +104,9 @@ faculty:
       - label: Scholar
         href: "https://scholar.google.com/citations?user=ZQvSJPYAAAAJ&hl=en"
         icon: fa-solid fa-graduation-cap
+      - label: UCalgary
+        href: "https://profiles.ucalgary.ca/jacky-chow"
+        icon: fa-solid fa-up-right-from-square
 
   - name: Dr. Ivan Detchev
     role: Associate Professor (Teaching), Associate Head (Undergraduate)
