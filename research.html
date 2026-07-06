@@ -40,13 +40,35 @@ description: >-
     <!-- ===== Gallery ===== -->
     <div class="tabs__panel" data-panel="gallery" role="tabpanel" hidden>
       <p class="hint">Click any image to view it full size.</p>
+      {%- comment -%}
+        Masonry via real flexbox columns (not CSS multi-column): items are split
+        into balanced column-major chunks at build time so no browser can leave a
+        sliver of a card fragmented across a column break (a WebKit/Safari bug).
+        Chunking is column-major, so the columns concatenate back to source order
+        — which is what the single-column phone layout collapses to.
+      {%- endcomment -%}
       <div class="gallery-grid">
-        {%- for img in site.data.gallery -%}
-          <button class="gallery-item" type="button" data-lightbox
-                  data-full="{{ img.src | relative_url }}" data-caption="{{ img.caption | escape }}">
-            <img src="{{ img.src | relative_url }}" alt="{{ img.caption | escape }}" loading="lazy">
-            <span class="gallery-item__cap">{{ img.caption }}</span>
-          </button>
+        {%- assign gallery = site.data.gallery -%}
+        {%- assign total = gallery | size -%}
+        {%- assign ncols = 3 -%}
+        {%- assign per = total | plus: ncols | minus: 1 | divided_by: ncols -%}
+        {%- assign lastcol = ncols | minus: 1 -%}
+        {%- for c in (0..lastcol) -%}
+          {%- assign lo = c | times: per -%}
+          {%- assign hi = lo | plus: per -%}
+          {%- if lo < total -%}
+            <div class="gallery-col">
+              {%- for img in gallery -%}
+                {%- if forloop.index0 >= lo and forloop.index0 < hi -%}
+                  <button class="gallery-item" type="button" data-lightbox
+                          data-full="{{ img.src | relative_url }}" data-caption="{{ img.caption | escape }}">
+                    <img src="{{ img.src | relative_url }}" alt="{{ img.caption | escape }}" loading="lazy">
+                    <span class="gallery-item__cap">{{ img.caption }}</span>
+                  </button>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
         {%- endfor -%}
       </div>
     </div>

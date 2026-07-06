@@ -83,4 +83,9 @@
   .site-footer__inner { flex-direction: column; gap: 0.5rem; }
 
   .map-card__foot { flex-direction: column; align-items: flex-start; }
+
+  /* Collapse the gallery's flex columns into a single column; display:contents
+     drops the column wrappers so cards flow in their original source order. */
+  .gallery-grid { flex-direction: column; align-items: stretch; }
+  .gallery-col { display: contents; }
 }

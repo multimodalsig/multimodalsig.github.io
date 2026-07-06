@@ -55,14 +55,15 @@
 .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; align-items: start; }
 
 /* ---- Gallery (masonry grid + lightbox) ------------------------------------
-   CSS columns keep every image at its natural shape (no cropping). */
-.gallery-grid { columns: 260px; column-gap: 1rem; }
+   Flexbox columns (items pre-distributed into .gallery-col in research.html)
+   keep every image at its natural shape with no cropping. Unlike CSS multi-
+   column, real flex columns can't fragment a card across a column break — the
+   cause of stray card slivers in Safari/WebKit. On phones the columns collapse
+   to one (see _responsive.scss). */
+.gallery-grid { display: flex; gap: 1rem; align-items: flex-start; }
+.gallery-col { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 1rem; }
 .gallery-item {
-  /* inline-block makes each card atomic in the multi-column flow so Safari/
-     Firefox can't leave a sliver of a card fragmented across a column break
-     (break-inside: avoid alone isn't honoured reliably there). */
-  break-inside: avoid; -webkit-column-break-inside: avoid;
-  display: inline-block; vertical-align: top; width: 100%; margin: 0 0 1rem; padding: 0;
+  display: block; width: 100%; margin: 0; padding: 0;
   border: 0; text-align: left; cursor: zoom-in;
   background: var(--surface-card); border-radius: var(--radius);
   overflow: hidden; box-shadow: var(--shadow-1);
