@@ -2,5 +2,7 @@
 # `date` is free text (e.g. "Jun 2026"); keep it short, it sits in a fixed
 # column. Add a new item at the TOP of the list.
 
+- date: Jul 2026
+  text: The XXV ISPRS Congress opened in Toronto (4–11 July 2026).
 - date: Jun 2026
   text: Launched the new MSIG website.
