@@ -3,11 +3,11 @@
 # Images display at their natural shape (no cropping); click opens a lightbox.
 
 - src: assets/img/gallery/brock-gold-medal-award.jpg
-  caption: Brock Gold Medal Award
+  caption: Derek Lichti with the recipients of the Brock Gold Medal
 - src: assets/img/gallery/isprs-honorary-member.jpg
-  caption: ISPRS Honorary Member
+  caption: Derek Lichti with the recipients of ISPRS Honorary Membership
 - src: assets/img/gallery/val-shaw-memorial-award.jpg
-  caption: Val Shaw Memorial Award
+  caption: Derek Lichti with the recipients of the Val Shaw Memorial Award
 - src: assets/img/gallery/field-scanner-river.jpg
   caption: A terrestrial laser scanner captures terrain beside a mountain reservoir.
 - src: assets/img/gallery/uc3d-digital-twin.png
