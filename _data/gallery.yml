@@ -9,7 +9,7 @@
 - src: assets/img/gallery/val-shaw-memorial-award.jpg
   caption: Derek Lichti with the recipients of the Val Shaw Memorial Award
 - src: assets/img/gallery/field-scanner-river.jpg
-  caption: A terrestrial laser scanner captures terrain beside a mountain reservoir.
+  caption: A total station used in educational deformation monitoring.
 - src: assets/img/gallery/uc3d-digital-twin.png
   caption: UC3D digital twin, HBIM, and structural model from a single smartphone capture.
 - src: assets/img/gallery/dual-fluoroscopy-system.jpg
@@ -25,7 +25,7 @@
 - src: assets/img/gallery/calibration-rig.jpg
   caption: A custom target frame used for sensor calibration experiments.
 - src: assets/img/gallery/indoor-survey.jpg
-  caption: Setting up a survey instrument for indoor mobile mapping.
+  caption: Setting up a terrestrial laser scanner for indoor mapping.
 - src: assets/img/gallery/antler-pointcloud.jpg
   caption: Reconstructed antler point cloud from the multi-camera rig.
 - src: assets/img/gallery/uc3d-hbim.png
