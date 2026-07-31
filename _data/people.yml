@@ -381,3 +381,16 @@ alumni:
       - { name: "Ivan Detchev", degree: "PhD", year: "2016", thesis: "Image-based Fine-scale Infrastructure Monitoring" }
       - { name: "Reza Maalek", degree: "PhD", year: "2017", thesis: "Development of an Automated Monitoring and Control System for Construction Projects" }
       - { name: "Samuel Rondeel", degree: "MSc", year: "2017", thesis: "Calibration, Validation, and Verification of Static Terrestrial Laser Scanning for Professional Land Surveying" }
+  - id: postdoc
+    title: Post-Doctoral Associates
+    members:
+      # Year = the postdoc term, not a degree year, so no thesis titles here.
+      - { name: "Changjae Kim", year: "2009" }
+      - { name: "Mehdi Ben Hassen", year: "2014" }
+      - { name: "Jacky Chow", year: "2014" }
+      - { name: "Hervé Lahamy", year: "2015" }
+      - { name: "Ting On Chan", year: "2015, 2018" }
+      - { name: "Kaleel Al-Durgham", year: "2019" }
+      - { name: "Reza Maalek", year: "2020" }
+      - { name: "Fengman Jia", year: "2021" }
+      - { name: "Shu Cheng", year: "2025" }
