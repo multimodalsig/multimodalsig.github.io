@@ -8,8 +8,9 @@ lab:
   name: Geo-Spatial Vision Metrology (GeoVM) Laboratory
   image: assets/img/facilities/geovm-panorama.jpg
   # Set for panoramas and other very wide shots: the image spans the full width
-  # of the card with the text underneath, instead of sitting in a narrow column
-  # beside it where a wide image would be cropped to its middle third.
+  # of the viewport with the text underneath, instead of sitting in a 300px
+  # column beside it where a wide image gets cropped to its middle third.
+  # Unset it and the photo goes back in the card, side by side with the text.
   image_wide: true
   description: >-
     The walls and ceiling contain some 500 signalized targets of different sizes
@@ -25,6 +26,8 @@ lab:
 # ---- Facility gallery (carousel) --------------------------------------------
 # Add more lab photos to assets/img/facilities/ and list them here.
 gallery:
+  - src: assets/img/facilities/geovm-primary.jpg
+    caption: A corner of the laboratory, showing the labelled target field across two walls and the ceiling.
   - src: assets/img/facilities/geovm-lab.jpg
     caption: The GeoVM laboratory, with roughly 500 signalized targets across the walls and ceiling.
   - src: assets/img/facilities/geovm-walls.jpg

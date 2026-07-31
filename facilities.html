@@ -9,22 +9,40 @@ description: >-
 
 {%- assign f = site.data.facilities -%}
 
-<div class="container page">
+<div class="container page-top">
   {% include section-heading.html eyebrow="Facilities" title="Equipment &amp; facilities" as="h1" subtitle="A multi-purpose imaging-metrology laboratory supporting research and teaching across diverse sensors." %}
+</div>
 
-  <!-- ===== Feature: core lab ===== -->
-  <div class="card">
-    <div class="lab-feature__grid{% if f.lab.image_wide %} lab-feature__grid--wide{% endif %}">
-      <div class="lab-feature__media">
-        <img src="{{ f.lab.image | relative_url }}" alt="{{ f.lab.name }}">
-      </div>
-      <div class="lab-feature__body">
-        <div style="margin-bottom: 8px;"><span class="tag">{{ f.lab.tag }}</span></div>
-        <h3 class="lab-feature__title">{{ f.lab.name }}</h3>
-        <p class="lab-feature__desc">{{ f.lab.description }}</p>
+<!-- ===== Feature: core lab =====
+     When the photo is a panorama it spans the viewport, with the text beneath.
+     It sits outside .container deliberately: a full-width element *inside* the
+     container would need width:100vw, which overshoots by the scrollbar width
+     and puts a horizontal scrollbar on the page. -->
+{%- if f.lab.image_wide -%}
+  <img class="lab-pano" src="{{ f.lab.image | relative_url }}" alt="{{ f.lab.name }}">
+{%- endif -%}
+
+<div class="container page-bottom">
+  {%- if f.lab.image_wide -%}
+    <div class="lab-pano__body">
+      <div style="margin-bottom: 8px;"><span class="tag">{{ f.lab.tag }}</span></div>
+      <h3 class="lab-feature__title">{{ f.lab.name }}</h3>
+      <p class="lab-feature__desc">{{ f.lab.description }}</p>
+    </div>
+  {%- else -%}
+    <div class="card">
+      <div class="lab-feature__grid">
+        <div class="lab-feature__media">
+          <img src="{{ f.lab.image | relative_url }}" alt="{{ f.lab.name }}">
+        </div>
+        <div class="lab-feature__body">
+          <div style="margin-bottom: 8px;"><span class="tag">{{ f.lab.tag }}</span></div>
+          <h3 class="lab-feature__title">{{ f.lab.name }}</h3>
+          <p class="lab-feature__desc">{{ f.lab.description }}</p>
+        </div>
       </div>
     </div>
-  </div>
+  {%- endif -%}
 
   <!-- ===== Facility gallery ===== -->
   {%- if f.gallery and f.gallery.size > 0 -%}
