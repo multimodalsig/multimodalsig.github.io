@@ -209,11 +209,14 @@
 }
 .navbar-wrap { position: relative; background: var(--bg); border-bottom: var(--border); }
 .navbar__brand {
+  display: inline-flex; align-items: center; gap: 0.6rem;
   font-family: var(--font-serif); font-weight: var(--fw-medium);
   font-size: var(--fs-h5); color: var(--text);
   text-decoration: none; letter-spacing: var(--ls-tight);
   white-space: nowrap;
 }
+/* Group mark. flex: none so it keeps its size when the name wraps on mobile. */
+.logo-mark { width: 34px; height: 34px; flex: none; display: block; }
 .navbar__brand:hover { color: var(--text); text-decoration: none; }
 .navbar__right { display: flex; align-items: center; gap: 1.1rem; }
 .navbar__links { display: flex; align-items: center; gap: 1.1rem; }

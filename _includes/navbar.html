@@ -1,6 +1,9 @@
 <div class="navbar-wrap site-nav">
   <nav class="navbar" aria-label="Primary">
-    <a class="navbar__brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <a class="navbar__brand" href="{{ '/' | relative_url }}">
+      {%- include logo.svg -%}
+      <span>{{ site.title }}</span>
+    </a>
 
     <div class="navbar__right">
       <div class="navbar__links" id="nav-links">

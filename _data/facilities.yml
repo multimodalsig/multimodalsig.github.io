@@ -32,8 +32,6 @@ gallery:
     caption: The GeoVM laboratory, with roughly 500 signalized targets across the walls and ceiling.
   - src: assets/img/facilities/geovm-walls.jpg
     caption: Dense signalized targets covering the laboratory walls and ceiling.
-  - src: assets/img/facilities/geovm-room.jpg
-    caption: Targets of varying size distributed throughout the room for multi-scale calibration.
   - src: assets/img/facilities/geovm-calibration.jpg
     caption: Instrument stands and a calibration board set up among the reference targets.
   - src: assets/img/facilities/geovm-experiment.jpg

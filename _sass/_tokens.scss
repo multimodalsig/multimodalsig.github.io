@@ -51,6 +51,10 @@
   --footer-text: var(--grey-light);
   --footer-link: var(--white);
 
+  /* ---- Group mark (see _includes/logo.svg) ------------------------------- */
+  --logo-ink: #0F4A54;                /* brand teal: ring, nodes, sight lines */
+  --logo-accent: #C1802B;             /* brand ochre: the surface profile */
+
   /* ---- Status blocks ---------------------------------------------------- */
   --tip: #42b983;       --tip-bg: #e2f5ec;     --tip-text: #215d42;
   --warning: #e7c000;   --warning-bg: #fff8d8; --warning-text: #6b5900;
@@ -143,4 +147,8 @@ html[data-theme="dark"] {
   --footer-bg: var(--grey-light);
   --footer-text: var(--grey-dark);
   --footer-link: var(--black);
+  /* The brand teal is only 1.73:1 on the dark navbar — effectively invisible.
+     This is the same hue lightened to 5.4:1. The ochre already passes, so it
+     is unchanged and the mark keeps its two-colour reading. */
+  --logo-ink: #3E9DB0;
 }

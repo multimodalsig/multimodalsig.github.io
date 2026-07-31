@@ -1,0 +1,28 @@
+{%- comment -%}
+  The group mark, inlined so the site's dark-mode toggle can recolour it.
+  An <img> would load the SVG into its own document, where --logo-ink is not
+  visible, and the brand teal is unreadable on the dark navbar.
+
+  Decorative here: the brand name sits next to it in the navbar, so it is
+  aria-hidden rather than announced twice.
+
+  Keep the artwork in step with assets/img/logo.svg — that standalone file is
+  the favicon and the SEO publisher logo, and carries the literal colours.
+{%- endcomment -%}
+<svg class="logo-mark" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+  <circle cx="100" cy="100" r="88" fill="none" stroke="var(--logo-ink)" stroke-width="7"/>
+  <g stroke="var(--logo-ink)" stroke-width="2.5" opacity="0.85">
+    <line x1="52" y1="58" x2="82" y2="135"/>
+    <line x1="52" y1="58" x2="126" y2="146"/>
+    <line x1="100" y1="45" x2="82" y2="135"/>
+    <line x1="100" y1="45" x2="126" y2="146"/>
+    <line x1="148" y1="58" x2="82" y2="135"/>
+    <line x1="148" y1="58" x2="126" y2="146"/>
+  </g>
+  <polyline points="34,152 78,133 122,148 166,127" fill="none" stroke="var(--logo-accent)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="var(--logo-ink)">
+    <circle cx="52" cy="58" r="9"/>
+    <circle cx="100" cy="45" r="9"/>
+    <circle cx="148" cy="58" r="9"/>
+  </g>
+</svg>
