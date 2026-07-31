@@ -172,8 +172,12 @@
 .pub-year { font-family: var(--font-serif); font-size: var(--fs-h3); color: var(--text-muted); margin: 1.25rem 0 0.5rem; }
 .pub-item { padding: 0.85rem 0; border-bottom: var(--border); }
 .pub-item__title { font-weight: var(--fw-medium); margin-bottom: 2px; }
-.pub-item__authors { color: var(--text-muted); font-size: var(--fs-sm); }
+/* Authors and source line are filled in from Crossref after first paint; both
+   collapse to nothing while empty, so the list doesn't jump as they arrive. */
+.pub-item__authors { color: var(--text-muted); font-size: var(--fs-xs); line-height: var(--lh-snug); }
+.pub-item__authors:empty { display: none; }
 .pub-item__venue { font-size: var(--fs-sm); font-style: italic; color: var(--text); }
+.pub-item__venue:empty { display: none; }
 .pub-item__actions { display: flex; gap: 6px; margin-top: 8px; align-items: center; flex-wrap: wrap; }
 .pub-item.is-hidden { display: none; }
 
