@@ -206,6 +206,72 @@
       return names.slice(0, -1).join(", ") + ", & " + names[names.length - 1];
     }
 
+    /* Curated entries carry a ready-made author string; ORCID ones get theirs
+       from the Crossref lookup. */
+    function authorsOf(w) {
+      return w.authors || formatAuthors((w.meta || {}).author);
+    }
+
+    /* Papers missing from ORCID, hand-maintained in _data/publications.yml.
+       They are never sent to Crossref — the YAML is the record. */
+    function curatedWorks() {
+      var el = document.querySelector("[data-extra-publications]");
+      if (!el) return [];
+      var list;
+      try { list = JSON.parse(el.textContent); } catch (e) { return []; }
+      if (!list || !list.length) return [];
+      return list.map(function (p) {
+        return {
+          title: p.title || "Untitled",
+          journal: p.journal || "",
+          year: p.year ? String(p.year) : "",
+          month: p.month ? parseInt(p.month, 10) : 0,
+          type: p.type || "journal-article",
+          url: p.doi ? "https://doi.org/" + p.doi : (p.url || ""),
+          doi: p.doi || "",
+          curated: true,
+          authors: p.authors || "",
+          meta: { volume: p.volume || "", issue: p.issue || "", page: p.pages || "" }
+        };
+      });
+    }
+
+    function titleKey(s) { return (s || "").toLowerCase().replace(/[^a-z0-9]+/g, ""); }
+
+    /* ORCID lists editorials and errata alongside research papers; the ones we
+       don't want on the page are named in _data/publications_hidden.yml. */
+    function dropHidden(works) {
+      var el = document.querySelector("[data-hidden-publications]");
+      if (!el) return works;
+      var list;
+      try { list = JSON.parse(el.textContent); } catch (e) { return works; }
+      if (!list || !list.length) return works;
+      var doiSeen = {}, titleSeen = {};
+      list.forEach(function (h) {
+        if (h.doi) doiSeen[h.doi.toLowerCase()] = true;
+        if (h.title) titleSeen[titleKey(h.title)] = true;
+      });
+      return works.filter(function (w) {
+        if (w.doi && doiSeen[w.doi.toLowerCase()]) return false;
+        return !titleSeen[titleKey(w.title)];
+      });
+    }
+
+    /* Curated entries win: if one of them also shows up in ORCID later, the
+       ORCID copy is dropped rather than listed twice. */
+    function merge(orcidWorks, curated) {
+      if (!curated.length) return orcidWorks;
+      var doiSeen = {}, titleSeen = {};
+      curated.forEach(function (w) {
+        if (w.doi) doiSeen[w.doi.toLowerCase()] = true;
+        titleSeen[titleKey(w.title)] = true;
+      });
+      return orcidWorks.filter(function (w) {
+        if (w.doi && doiSeen[w.doi.toLowerCase()]) return false;
+        return !titleSeen[titleKey(w.title)];
+      }).concat(curated);
+    }
+
     /* Crossref gives proceedings both a series and a volume title, and some
        journals both a full and an abbreviated name. The longest entry is
        reliably the specific, spelled-out one. */
@@ -226,7 +292,7 @@
     }
 
     function citation(w) {
-      var authors = formatAuthors((w.meta || {}).author);
+      var authors = authorsOf(w);
       var title = w.title.replace(/\s*\.\s*$/, "");
       var src = sourceLine(w);
       var out;
@@ -275,7 +341,7 @@
     function enrich(works) {
       var byDoi = {}, dois = [];
       works.forEach(function (w) {
-        if (!w.doi) return;
+        if (!w.doi || w.curated) return;
         byDoi[w.doi.toLowerCase()] = w;
         dois.push(w.doi);
       });
@@ -307,7 +373,7 @@
       works.forEach(function (w, i) {
         var el = listEl.querySelector('[data-pub="' + i + '"]');
         if (!el) return;
-        var authors = formatAuthors((w.meta || {}).author);
+        var authors = authorsOf(w);
         if (authors) el.querySelector("[data-pub-authors]").textContent = authors;
         var src = sourceLine(w);
         if (src) el.querySelector("[data-pub-venue]").textContent = src;
@@ -381,46 +447,58 @@
           };
         }).filter(Boolean);
 
-        works.sort(function (a, b) {
-          var d = (parseInt(b.year || "0", 10)) - (parseInt(a.year || "0", 10));
-          return d !== 0 ? d : (b.month - a.month);
-        });
-
-        if (!works.length) { if (statusEl) statusEl.textContent = "No publications found."; return; }
-
-        // One accordion group per year. `works` is already newest-first, so the
-        // groups come out in that order too.
-        var groups = [], byYear = {};
-        works.forEach(function (w, i) {
-          var yr = w.year || "Undated";
-          if (!byYear[yr]) { byYear[yr] = { year: yr, entries: [] }; groups.push(byYear[yr]); }
-          byYear[yr].entries.push({ work: w, index: i });
-        });
-
-        var html = '<div class="accordion">';
-        groups.forEach(function (g, gi) {
-          var open = gi < OPEN_YEARS;
-          html += '<div class="accordion__item">' +
-            '<button class="accordion__header" type="button" aria-expanded="' + (open ? "true" : "false") + '">' +
-            '<span class="accordion__icon" aria-hidden="true">&#9654;</span>' +
-            '<span class="accordion__title"><span class="accordion__title-text">' + esc(g.year) + "</span></span>" +
-            '<span class="accordion__count">' + g.entries.length + "</span></button>" +
-            '<div class="accordion__panel"' + (open ? ' data-open="1" style="max-height: none;"' : "") + ">" +
-            '<div class="accordion__panel-inner">';
-          g.entries.forEach(function (e) { html += renderPub(e.work, e.index); });
-          html += "</div></div></div>";
-        });
-        listEl.innerHTML = html + "</div>";
-        if (countEl) countEl.textContent = works.length + (works.length === 1 ? " publication" : " publications");
-
-        // On screen now; the bibliographic detail arrives a moment later.
-        paintDetails(works);
-        enrich(works).then(function () { paintDetails(works); });
+        render(merge(dropHidden(works), curatedWorks()));
       })
       .catch(function () {
+        // ORCID is unreachable, but the curated papers are already in the page
+        // and don't need it — show those rather than nothing.
+        var curated = curatedWorks();
+        if (curated.length) {
+          render(curated);
+          if (statusEl) statusEl.remove();
+          return;
+        }
         if (statusEl) statusEl.innerHTML = 'Could not load publications automatically. View the full list on <a href="https://orcid.org/' + id + '" target="_blank" rel="noopener">ORCID</a>.';
         if (countEl) countEl.textContent = "";
       });
+
+    function render(works) {
+      works.sort(function (a, b) {
+        var d = (parseInt(b.year || "0", 10)) - (parseInt(a.year || "0", 10));
+        return d !== 0 ? d : (b.month - a.month);
+      });
+
+      if (!works.length) { if (statusEl) statusEl.textContent = "No publications found."; return; }
+
+      // One accordion group per year. `works` is sorted newest-first, so the
+      // groups come out in that order too.
+      var groups = [], byYear = {};
+      works.forEach(function (w, i) {
+        var yr = w.year || "Undated";
+        if (!byYear[yr]) { byYear[yr] = { year: yr, entries: [] }; groups.push(byYear[yr]); }
+        byYear[yr].entries.push({ work: w, index: i });
+      });
+
+      var html = '<div class="accordion">';
+      groups.forEach(function (g, gi) {
+        var open = gi < OPEN_YEARS;
+        html += '<div class="accordion__item">' +
+          '<button class="accordion__header" type="button" aria-expanded="' + (open ? "true" : "false") + '">' +
+          '<span class="accordion__icon" aria-hidden="true">&#9654;</span>' +
+          '<span class="accordion__title"><span class="accordion__title-text">' + esc(g.year) + "</span></span>" +
+          '<span class="accordion__count">' + g.entries.length + "</span></button>" +
+          '<div class="accordion__panel"' + (open ? ' data-open="1" style="max-height: none;"' : "") + ">" +
+          '<div class="accordion__panel-inner">';
+        g.entries.forEach(function (e) { html += renderPub(e.work, e.index); });
+        html += "</div></div></div>";
+      });
+      listEl.innerHTML = html + "</div>";
+      if (countEl) countEl.textContent = works.length + (works.length === 1 ? " publication" : " publications");
+
+      // On screen now; the bibliographic detail arrives a moment later.
+      paintDetails(works);
+      enrich(works).then(function () { paintDetails(works); });
+    }
   }
 
   /* ---- Gallery lightbox --------------------------------------------------- */

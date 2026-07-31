@@ -26,5 +26,10 @@ description: Peer-reviewed publications from the Multimodal Spatial Imaging Grou
     <div data-pub-list>
       <p class="muted" data-pub-status>Fetching the latest publications...</p>
     </div>
+
+    <!-- Papers missing from ORCID, merged into the list above, and ORCID works
+         to leave out of it. Edit the _data/*.yml files, not these tags. -->
+    <script type="application/json" data-extra-publications>{{ site.data.publications | jsonify }}</script>
+    <script type="application/json" data-hidden-publications>{{ site.data.publications_hidden | jsonify }}</script>
   </div>
 </div>

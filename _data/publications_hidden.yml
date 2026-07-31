@@ -1,0 +1,18 @@
+# Works that are in the PI's ORCID record but should NOT appear on the
+# Publications page — editorials, errata, duplicate ORCID entries and the like.
+#
+# Match on `doi` (preferred — exact and stable) or on `title` (compared
+# case- and punctuation-insensitively). `note` is for whoever reads this next;
+# the site ignores it.
+#
+# This only filters what comes from ORCID. To remove a hand-entered paper,
+# delete it from _data/publications.yml instead.
+
+- doi: "10.1016/j.isprsjprs.2020.08.022"
+  note: "Editorial, not a research paper — 'Thanks to outgoing Associate Editor', ISPRS J. 169, 109 (2020)"
+
+- doi: "10.1016/j.isprsjprs.2019.01.001"
+  note: "Editorial, not a research paper — 'Thanks to outgoing Associate Editors', ISPRS J. 148, 156 (2019)"
+
+- doi: "10.1016/j.isprsjprs.2018.01.015"
+  note: "Editorial, not a research paper — 'Thanks to outgoing Associate Editors', ISPRS J. 138, A1 (2018)"
