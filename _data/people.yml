@@ -328,6 +328,9 @@ collaborators:
   - name: Dr. Peter Dawson
     affiliation: Anthropology and Archaeology, University of Calgary
     note: cultural heritage
+  - name: Dr. Shabnam Jabari
+    affiliation: Geodesy and Geomatics Engineering, University of New Brunswick
+    note: University of Calgary Adjunct; co-supervision
 
 # ---- Alumni -----------------------------------------------------------------
 # Grouped accordions. `id` must be unique. Add `open: true` to a group to make it
@@ -340,8 +343,6 @@ alumni:
   - id: phd
     title: PhD
     members:
-      - { name: "Kwang-Ho Bae", year: "2006", thesis: "Automated Registration of Unorganised Point Clouds from Terrestrial Laser Scanners" }
-      - { name: "Andrew Hansen", year: "2007", thesis: "Semi-automated Geomorphological Mapping Applied to Landslide Hazard Analysis" }
       - { name: "Herve Lahamy", year: "2013", thesis: "Real-Time Hand Posture Recognition Using a Range Camera" }
       - { name: "Sherif Ibrahim", year: "2013", thesis: "Detection of Road Furniture from Mobile Terrestrial Laser Scanning Point Clouds" }
       - { name: "Jacky Chow", year: "2014", thesis: "Multi-Sensor Integration for Indoor 3D Reconstruction" }
