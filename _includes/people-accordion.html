@@ -1,11 +1,12 @@
 {%- comment -%}
-  Grouped accordion list of past students (Alumni, Other Students).
+  Grouped accordion list of past students (the Alumni section).
 
   Params:
     groups  list of { id, title, open, members: [ { year, name, degree, thesis } ] }
 
-  `degree` and `thesis` are optional. When `degree` is set it renders as a badge
-  beside the name (used by Other Students, where a group mixes PhD/MSc/MEng).
+  `year`, `thesis` and `degree` are optional; blank ones are not rendered. When
+  `degree` is set it renders as a badge beside the name — used by Co-Supervised,
+  where the group mixes PhD/MSc and the group title alone doesn't say which.
 {%- endcomment -%}
 <div class="accordion">
   {%- for g in include.groups -%}

@@ -92,10 +92,4 @@ description: >-
     {% include people-accordion.html groups=site.data.people.alumni %}
   {%- endif -%}
 
-  <!-- ===== Other students ===== -->
-  {%- if site.data.people.other_students and site.data.people.other_students.size > 0 -%}
-    <div class="divider-labeled"><span class="divider-labeled__label">Other Students</span></div>
-    {% include people-accordion.html groups=site.data.people.other_students %}
-  {%- endif -%}
-
 </div>

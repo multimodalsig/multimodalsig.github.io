@@ -329,9 +329,12 @@ collaborators:
     note: cultural heritage
 
 # ---- Alumni -----------------------------------------------------------------
-# Grouped accordions by degree. `id` must be unique. Add `open: true` to a group
-# to make it start expanded (none are expanded by default).
-# Source: Dr. Lichti's students he supervised as first advisor (PhD and MSc).
+# Grouped accordions. `id` must be unique. Add `open: true` to a group to make it
+# start expanded (none are expanded by default).
+# The PhD / MSc / MEng groups are students Dr. Lichti supervised as first advisor;
+# Co-Supervised are those he co-supervised (committee member). Members may carry
+# `degree`, which renders as a badge — used only in Co-Supervised, where the group
+# mixes degree levels and the group title alone doesn't say which.
 alumni:
   - id: phd
     title: PhD
@@ -366,18 +369,11 @@ alumni:
       - { name: "Katherine Pexman", year: "2021", thesis: "Automated Floor Plan and Building Model Creation for Cultural Heritage Buildings from Laser Scanner Data" }
       - { name: "Chavisa Sornsakul", year: "2024", thesis: "Improving Sidewalk Maintenance through Smartphone Citizen Reporting of Pothole Damage" }
       - { name: "Faith Larissa Nayko", year: "2026", thesis: "Validation of a Commercial Ultrasonic Real-Time Location System for Providing Position Constraints" }
-
-# ---- Other students ---------------------------------------------------------
-# Students outside the first-advisor list above. Same accordion structure as
-# `alumni`, but each member also carries `degree` (PhD / MSc / MEng), which
-# renders as a badge next to the name since these groups mix degree levels.
-# Source: co-supervised = the students Dr. Lichti co-supervised (committee).
-other_students:
   - id: meng
     title: MEng
     members:
       # `year` and `thesis` are optional — blank ones are simply not rendered.
-      - { name: "Iftikhar Farooqi", degree: "MEng", year: "", thesis: "" }
+      - { name: "Iftikhar Farooqi", year: "", thesis: "" }
   - id: co-supervised
     title: Co-Supervised
     members:
