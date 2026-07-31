@@ -1,0 +1,44 @@
+{%- comment -%}
+  Grouped accordion list of past students (Alumni, Other Students).
+
+  Params:
+    groups  list of { id, title, open, members: [ { year, name, degree, thesis } ] }
+
+  `degree` and `thesis` are optional. When `degree` is set it renders as a badge
+  beside the name (used by Other Students, where a group mixes PhD/MSc/MEng).
+{%- endcomment -%}
+<div class="accordion">
+  {%- for g in include.groups -%}
+    <div class="accordion__item">
+      <button class="accordion__header" type="button" aria-expanded="{% if g.open %}true{% else %}false{% endif %}">
+        <span class="accordion__icon" aria-hidden="true">&#9654;</span>
+        <span class="accordion__title"><span class="accordion__title-text">{{ g.title }}</span></span>
+        <span class="accordion__count">{{ g.members.size }}</span>
+      </button>
+      <div class="accordion__panel"{% if g.open %} data-open="1" style="max-height: none;"{% endif %}>
+        <div class="accordion__panel-inner">
+          {%- for r in g.members -%}
+            <div class="alumni-row">
+              <span class="alumni-row__year">{{ r.year }}</span>
+              <div>
+                <div class="alumni-row__name">{{ r.name }}
+                  {%- if r.degree and r.degree != "" -%}
+                    {%- case r.degree -%}
+                      {%- when "PhD" -%}{%- assign degree_colour = "badge--blue" -%}
+                      {%- when "MSc" -%}{%- assign degree_colour = "badge--cyan" -%}
+                      {%- else -%}{%- assign degree_colour = "badge--purple" -%}
+                    {%- endcase -%}
+                    <span class="badge badge--subtle {{ degree_colour }} alumni-row__degree">{{ r.degree }}</span>
+                  {%- endif -%}
+                </div>
+                {%- if r.thesis and r.thesis != "" -%}
+                  <div class="alumni-row__thesis">{{ r.thesis }}</div>
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  {%- endfor -%}
+</div>

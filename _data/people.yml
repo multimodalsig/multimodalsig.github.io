@@ -366,3 +366,22 @@ alumni:
       - { name: "Katherine Pexman", year: "2021", thesis: "Automated Floor Plan and Building Model Creation for Cultural Heritage Buildings from Laser Scanner Data" }
       - { name: "Chavisa Sornsakul", year: "2024", thesis: "Improving Sidewalk Maintenance through Smartphone Citizen Reporting of Pothole Damage" }
       - { name: "Faith Larissa Nayko", year: "2026", thesis: "Validation of a Commercial Ultrasonic Real-Time Location System for Providing Position Constraints" }
+
+# ---- Other students ---------------------------------------------------------
+# Students outside the first-advisor list above. Same accordion structure as
+# `alumni`, but each member also carries `degree` (PhD / MSc / MEng), which
+# renders as a badge next to the name since these groups mix degree levels.
+# Source: co-supervised = the students Dr. Lichti co-supervised (committee).
+other_students:
+  - id: meng
+    title: MEng
+    members:
+      # `year` and `thesis` are optional — blank ones are simply not rendered.
+      - { name: "Iftikhar Farooqi", degree: "MEng", year: "", thesis: "" }
+  - id: co-supervised
+    title: Co-Supervised
+    members:
+      - { name: "Wesley Teskey", degree: "PhD", year: "2011", thesis: "Assessment and Attenuation of Movement Disorder Motion Using Inertial Sensors" }
+      - { name: "Ivan Detchev", degree: "PhD", year: "2016", thesis: "Image-based Fine-scale Infrastructure Monitoring" }
+      - { name: "Reza Maalek", degree: "PhD", year: "2017", thesis: "Development of an Automated Monitoring and Control System for Construction Projects" }
+      - { name: "Samuel Rondeel", degree: "MSc", year: "2017", thesis: "Calibration, Validation, and Verification of Static Terrestrial Laser Scanning for Professional Land Surveying" }

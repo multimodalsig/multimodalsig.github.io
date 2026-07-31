@@ -157,6 +157,8 @@
 .alumni-row__name { font-weight: var(--fw-medium); font-size: var(--fs-sm); }
 .alumni-row__thesis { color: var(--text-muted); font-size: var(--fs-sm); font-style: italic; line-height: var(--lh-snug); }
 .alumni-row__pos { font-size: var(--fs-xs); color: var(--text-muted); margin-top: 2px; }
+/* Degree pill beside the name (Other Students, where a group mixes degrees). */
+.alumni-row__degree { margin-left: 0.5rem; padding: 2px 7px; vertical-align: 1px; }
 
 /* ---- Detailed project layout (optional full-width list, kept for reference) - */
 .project-full__grid { display: grid; grid-template-columns: minmax(0, 320px) 1fr; gap: 0; }
