@@ -35,9 +35,10 @@ author:
 twitter:
   card: summary_large_image
 logo: /assets/img/main_logo.svg
-# NOTE: social_image is the og:image used when a link is shared. It still points
-# at /assets/img/1.jpg, which does not exist — see the README/TODO. It wants a
-# wide raster (~1200x630), so the SVG logo is not a substitute.
+# NOTE: this key is inert — jekyll-seo-tag reads `image`, not `social_image`, so
+# no og:image is emitted and shared links get no thumbnail. The path below does
+# not exist either. To fix, add a wide raster (~1200x630) and set `image:` to it;
+# the SVG logo is not a substitute. See "Known gaps" in the README.
 social_image: /assets/img/1.jpg
 
 # ---- Plugins (all on the GitHub Pages allow-list — native build, no Actions) ----
