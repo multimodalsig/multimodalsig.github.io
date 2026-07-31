@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Broken ring favicon reduced">
+  <rect x="0" y="0" width="64" height="64" rx="14" fill="#0F4A54"/>
+  <g transform="translate(32 32) scale(1.18) translate(-32 -32)">
+  <g stroke="#F7F5EF" stroke-width="2.6" stroke-linecap="round" opacity="0.9">
+    <line x1="15.8" y1="18.0" x2="32.0" y2="47.5"/>
+    <line x1="32.0" y1="14.2" x2="32.0" y2="47.5"/>
+    <line x1="48.2" y1="18.0" x2="32.0" y2="47.5"/>
+  </g>
+  <polyline points="0.8,49.9 18.5,42.9 33.4,48.0 63.2,37.1" fill="none" stroke="#C1802B" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#F7F5EF">
+    <circle cx="15.8" cy="18.0" r="4.2"/>
+    <circle cx="32.0" cy="14.2" r="4.2"/>
+    <circle cx="48.2" cy="18.0" r="4.2"/>
+  </g>
+  </g>
+</svg>

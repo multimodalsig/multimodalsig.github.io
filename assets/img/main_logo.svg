@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Broken ring bundle mark">
+  <path d="M 182.2 131.5 A 88 88 0 0 1 34.8 159.1" fill="none" stroke="#0F4A54" stroke-width="7" stroke-linecap="round"/>
+  <path d="M 19.8 136.1 A 88 88 0 1 1 187.9 104.6" fill="none" stroke="#0F4A54" stroke-width="7" stroke-linecap="round"/>
+  <g stroke="#0F4A54" stroke-width="2.5" opacity="0.85">
+    <line x1="54.0" y1="60.0" x2="72.0" y2="138.4"/>
+    <line x1="54.0" y1="60.0" x2="128.0" y2="140.7"/>
+    <line x1="100.0" y1="46.0" x2="72.0" y2="138.4"/>
+    <line x1="100.0" y1="46.0" x2="128.0" y2="140.7"/>
+    <line x1="146.0" y1="60.0" x2="72.0" y2="138.4"/>
+    <line x1="146.0" y1="60.0" x2="128.0" y2="140.7"/>
+  </g>
+  <polyline points="8.0,156.0 60.0,134.0 104.0,150.0 192.0,116.0" fill="none" stroke="#C1802B" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#0F4A54">
+    <circle cx="54.0" cy="60.0" r="9"/>
+    <circle cx="100.0" cy="46.0" r="9"/>
+    <circle cx="146.0" cy="60.0" r="9"/>
+  </g>
+</svg>
