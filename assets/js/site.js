@@ -104,16 +104,18 @@
     });
   }
 
-  /* ---- Accordion (alumni) ------------------------------------------------- */
+  /* ---- Accordion (alumni, publications) ----------------------------------
+     Delegated from the document so it also drives accordions built after boot
+     — the publications list is rendered once ORCID answers. */
   function initAccordion() {
-    document.querySelectorAll(".accordion__header").forEach(function (header) {
-      header.addEventListener("click", function () {
-        var item = header.closest(".accordion__item");
-        var panel = item.querySelector(".accordion__panel");
-        var open = header.getAttribute("aria-expanded") !== "true";
-        header.setAttribute("aria-expanded", open ? "true" : "false");
-        setPanel(panel, open);
-      });
+    document.addEventListener("click", function (e) {
+      var header = e.target.closest ? e.target.closest(".accordion__header") : null;
+      if (!header) return;
+      var item = header.closest(".accordion__item");
+      var panel = item && item.querySelector(".accordion__panel");
+      var open = header.getAttribute("aria-expanded") !== "true";
+      header.setAttribute("aria-expanded", open ? "true" : "false");
+      setPanel(panel, open);
     });
   }
 
@@ -164,6 +166,8 @@
      few batched lookups keyed on DOI. That runs *after* the list is on screen,
      so a slow or unreachable Crossref costs nothing but the extra detail. */
   function initPublications() {
+    var OPEN_YEARS = 2;   // how many of the most recent years start expanded
+
     var root = document.querySelector("[data-orcid]");
     if (!root) return;
     var id = root.getAttribute("data-orcid");
@@ -383,13 +387,30 @@
         });
 
         if (!works.length) { if (statusEl) statusEl.textContent = "No publications found."; return; }
-        var html = "", lastYear = null;
+
+        // One accordion group per year. `works` is already newest-first, so the
+        // groups come out in that order too.
+        var groups = [], byYear = {};
         works.forEach(function (w, i) {
           var yr = w.year || "Undated";
-          if (yr !== lastYear) { html += '<div class="pub-year">' + esc(yr) + "</div>"; lastYear = yr; }
-          html += renderPub(w, i);
+          if (!byYear[yr]) { byYear[yr] = { year: yr, entries: [] }; groups.push(byYear[yr]); }
+          byYear[yr].entries.push({ work: w, index: i });
         });
-        listEl.innerHTML = html;
+
+        var html = '<div class="accordion">';
+        groups.forEach(function (g, gi) {
+          var open = gi < OPEN_YEARS;
+          html += '<div class="accordion__item">' +
+            '<button class="accordion__header" type="button" aria-expanded="' + (open ? "true" : "false") + '">' +
+            '<span class="accordion__icon" aria-hidden="true">&#9654;</span>' +
+            '<span class="accordion__title"><span class="accordion__title-text">' + esc(g.year) + "</span></span>" +
+            '<span class="accordion__count">' + g.entries.length + "</span></button>" +
+            '<div class="accordion__panel"' + (open ? ' data-open="1" style="max-height: none;"' : "") + ">" +
+            '<div class="accordion__panel-inner">';
+          g.entries.forEach(function (e) { html += renderPub(e.work, e.index); });
+          html += "</div></div></div>";
+        });
+        listEl.innerHTML = html + "</div>";
         if (countEl) countEl.textContent = works.length + (works.length === 1 ? " publication" : " publications");
 
         // On screen now; the bibliographic detail arrives a moment later.

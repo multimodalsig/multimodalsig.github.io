@@ -169,16 +169,19 @@
 /* ---- Publications ---------------------------------------------------------- */
 .pub-controls { display: flex; gap: 10px; align-items: center; margin-bottom: 1.25rem; flex-wrap: wrap; }
 .pub-controls__count { color: var(--text-muted); font-size: var(--fs-sm); margin-left: auto; }
-.pub-year { font-family: var(--font-serif); font-size: var(--fs-h3); color: var(--text-muted); margin: 1.25rem 0 0.5rem; }
-.pub-item { padding: 0.85rem 0; border-bottom: var(--border); }
-.pub-item__title { font-weight: var(--fw-medium); margin-bottom: 2px; }
+/* Years are accordion headers now — see the .accordion rules in _components. */
+/* One entry = a block of three text lines then the action row. Keep the text
+   lines on an even 4px rhythm at a single step down in size from the title, and
+   give the buttons a wider, deliberate gap so they read as separate. */
+.pub-item { padding: 1rem 0; border-bottom: var(--border); }
+.pub-item__title { font-weight: var(--fw-medium); line-height: var(--lh-snug); margin-bottom: 4px; }
 /* Authors and source line are filled in from Crossref after first paint; both
    collapse to nothing while empty, so the list doesn't jump as they arrive. */
-.pub-item__authors { color: var(--text-muted); font-size: var(--fs-xs); line-height: var(--lh-snug); }
+.pub-item__authors { color: var(--text-muted); font-size: var(--fs-sm); line-height: var(--lh-snug); margin-bottom: 4px; }
 .pub-item__authors:empty { display: none; }
-.pub-item__venue { font-size: var(--fs-sm); font-style: italic; color: var(--text); }
+.pub-item__venue { font-size: var(--fs-sm); font-style: italic; line-height: var(--lh-snug); color: var(--text); }
 .pub-item__venue:empty { display: none; }
-.pub-item__actions { display: flex; gap: 6px; margin-top: 8px; align-items: center; flex-wrap: wrap; }
+.pub-item__actions { display: flex; gap: 6px; margin-top: 12px; align-items: center; flex-wrap: wrap; }
 .pub-item.is-hidden { display: none; }
 
 /* ---- Facilities ------------------------------------------------------------ */
