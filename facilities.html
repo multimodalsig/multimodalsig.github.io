@@ -14,7 +14,7 @@ description: >-
 
   <!-- ===== Feature: core lab ===== -->
   <div class="card">
-    <div class="lab-feature__grid">
+    <div class="lab-feature__grid{% if f.lab.image_wide %} lab-feature__grid--wide{% endif %}">
       <div class="lab-feature__media">
         <img src="{{ f.lab.image | relative_url }}" alt="{{ f.lab.name }}">
       </div>

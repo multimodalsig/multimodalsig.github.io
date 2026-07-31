@@ -34,7 +34,10 @@ author:
   name: Multimodal Spatial Imaging Group
 twitter:
   card: summary_large_image
-logo: /assets/img/1.jpg
+logo: /assets/img/logo.svg
+# NOTE: social_image is the og:image used when a link is shared. It still points
+# at /assets/img/1.jpg, which does not exist — see the README/TODO. It wants a
+# wide raster (~1200x630), so the SVG logo is not a substitute.
 social_image: /assets/img/1.jpg
 
 # ---- Plugins (all on the GitHub Pages allow-list — native build, no Actions) ----

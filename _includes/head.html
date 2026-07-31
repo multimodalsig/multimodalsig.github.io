@@ -31,8 +31,11 @@
   <!-- Site styles (compiled from _sass/ by Jekyll). -->
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
-  <!-- Inline SVG favicon: a little camera on the UCalgary-red mark. -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23b5121b'/><rect x='10.5' y='7.5' width='7' height='5' rx='1.5' fill='white'/><rect x='4.5' y='11' width='23' height='14' rx='2.5' fill='white'/><circle cx='16' cy='18' r='4.4' fill='%23b5121b'/><circle cx='16' cy='18' r='2.1' fill='white'/><circle cx='23' cy='14.4' r='1.1' fill='%23b5121b'/></svg>">
+  <!-- Favicon: the group mark (assets/img/logo.svg), redrawn for tab sizes —
+       strokes and dots are thickened and the faint triangulation lines dropped,
+       since at 16-32px they render as grey mush. The white disc keeps the dark
+       teal legible on a dark browser tab strip. Keep this in step with logo.svg. -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><circle cx='100' cy='100' r='96' fill='white'/><circle cx='100' cy='100' r='86' fill='none' stroke='%230F4A54' stroke-width='12'/><polyline points='34,152 78,133 122,148 166,127' fill='none' stroke='%23C1802B' stroke-width='14' stroke-linecap='round' stroke-linejoin='round'/><g fill='%230F4A54'><circle cx='52' cy='58' r='13'/><circle cx='100' cy='45' r='13'/><circle cx='148' cy='58' r='13'/></g></svg>">
 
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
 </head>

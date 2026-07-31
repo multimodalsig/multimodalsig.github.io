@@ -6,7 +6,11 @@
 lab:
   tag: Core facility
   name: Geo-Spatial Vision Metrology (GeoVM) Laboratory
-  image: assets/img/facilities/geovm-primary.jpg
+  image: assets/img/facilities/geovm-panorama.jpg
+  # Set for panoramas and other very wide shots: the image spans the full width
+  # of the card with the text underneath, instead of sitting in a narrow column
+  # beside it where a wide image would be cropped to its middle third.
+  image_wide: true
   description: >-
     The walls and ceiling contain some 500 signalized targets of different sizes
     used for instrument calibration, orientation, and performance evaluation.

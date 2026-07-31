@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Multimodal Spatial Imaging Group">
+  <circle cx="100" cy="100" r="88" fill="none" stroke="#0F4A54" stroke-width="7"/>
+  <g stroke="#0F4A54" stroke-width="2.5" opacity="0.85">
+    <line x1="52" y1="58" x2="82" y2="135"/>
+    <line x1="52" y1="58" x2="126" y2="146"/>
+    <line x1="100" y1="45" x2="82" y2="135"/>
+    <line x1="100" y1="45" x2="126" y2="146"/>
+    <line x1="148" y1="58" x2="82" y2="135"/>
+    <line x1="148" y1="58" x2="126" y2="146"/>
+  </g>
+  <polyline points="34,152 78,133 122,148 166,127" fill="none" stroke="#C1802B" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#0F4A54">
+    <circle cx="52" cy="58" r="9"/>
+    <circle cx="100" cy="45" r="9"/>
+    <circle cx="148" cy="58" r="9"/>
+  </g>
+</svg>
