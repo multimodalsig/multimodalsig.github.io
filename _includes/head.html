@@ -31,10 +31,27 @@
   <!-- Site styles (compiled from _sass/ by Jekyll). -->
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
-  <!-- Favicon: tab_logo.svg — the mark drawn for tab sizes, cream on a teal
-       chip. The chip is what keeps it legible on both light and dark tab
-       strips; the plain mark is dark teal and vanishes against a dark one. -->
-  <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/tab_logo.svg' | relative_url }}">
+  <!-- Favicons. The mark appears in three places, and only the first is drawn
+       by this site's own CSS:
+         1. navbar, top left — _includes/logo.svg, inlined so the dark-mode
+            toggle can recolour it. See "Replace the logo" in the README.
+         2. browser tab, and tab groups in Firefox — favicon-192.png.
+         3. beside the site name in search results — Google chooses from the
+            tags below, and falls back to /favicon.ico at the domain root.
+       2 and 3 are rasterised from main_logo_background.svg: the full mark, in
+       cream on a teal chip. The chip is what makes it legible on a dark tab
+       strip, where the mark's dark teal measures only 1.7:1.
+
+       No SVG icon is declared here on purpose. Browsers prefer an SVG over the
+       PNG when both are offered, which would take slot 2 away from
+       favicon-192.png, and an SVG-only favicon is what left slot 3 showing the
+       generic globe. Regenerate the rasters with tools/render_favicons.py
+       whenever the mark changes. -->
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/img/favicon-192.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="96x96" href="{{ '/assets/img/favicon-96.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="48x48" href="{{ '/assets/img/favicon-48.png' | relative_url }}">
+  <link rel="icon" sizes="32x32" href="{{ '/favicon.ico' | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
 
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
 </head>

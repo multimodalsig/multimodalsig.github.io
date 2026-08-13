@@ -15,11 +15,15 @@ description: >-
   cameras, range cameras, LiDAR, and fluoroscopic imagers.
 tagline: Department of Geomatics Engineering · Schulich School of Engineering · University of Calgary
 
-# ---- Deployment (https://multimodalsig.github.io) ----
-# url    = the protocol + domain your site is served from.
-# baseurl = subpath, e.g. "/repo-name". Leave EMPTY for a user/org page
-#           served at the domain root (multimodalsig.github.io).
-url: https://multimodalsig.github.io
+# ---- Deployment (https://www.msig.ca) ----
+# url    = the protocol + domain your site is served from. This MUST be the
+#          custom domain: multimodalsig.github.io 301-redirects here, so
+#          pointing it at the old address made every page declare a canonical
+#          URL that redirects away from itself. Google resolves the favicon
+#          from whichever home page it treats as canonical.
+# baseurl = subpath, e.g. "/repo-name". Leave EMPTY for a site served at the
+#           domain root.
+url: https://www.msig.ca
 baseurl: ""
 
 # ---- Branding ----
@@ -63,3 +67,5 @@ exclude:
   - vendor
   - .gitignore
   - LICENSE
+  - tools
+  - node_modules

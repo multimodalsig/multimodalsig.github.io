@@ -172,10 +172,11 @@ There are three pieces of artwork, each doing a different job:
 
 | File | Used for |
 |---|---|
-| [`assets/img/tab_logo.svg`](assets/img/tab_logo.svg) | The browser-tab favicon. Simplified for 16–32 px, cream on a teal chip. |
+| [`assets/img/main_logo_background.svg`](assets/img/main_logo_background.svg) | The full mark on a teal chip. **The favicon**, in tabs and in search results. |
 | [`assets/img/main_logo.svg`](assets/img/main_logo.svg) | The canonical mark, on transparent. The SEO publisher logo. |
-| [`assets/img/main_logo_background.svg`](assets/img/main_logo_background.svg) | The full mark on a teal chip, for placing over busy or dark backgrounds. Not currently used anywhere. |
+| [`assets/img/tab_logo.svg`](assets/img/tab_logo.svg) | A reduced mark (no ring) that reads better at 16 px. Kept as an alternative; not currently used. |
 | [`_includes/logo.svg`](_includes/logo.svg) | **A copy of `main_logo.svg`** that gets inlined into the navbar. |
+| `favicon.ico`, `assets/img/favicon-*.png`, `assets/img/apple-touch-icon.png` | Rasterised from `main_logo_background.svg` for search engines — see below. |
 
 ⚠️ **`_includes/logo.svg` must be updated by hand whenever `main_logo.svg`
 changes.** It is a separate copy on purpose: it swaps the two brand colours for
@@ -188,6 +189,26 @@ hue at 5.4:1.
 
 The favicon needs no such treatment: its teal chip supplies its own contrast on
 both light and dark tab strips.
+
+**The favicon is rasterised, not linked as SVG.** Browsers prefer an SVG icon
+over a PNG when both are offered, and an SVG-only favicon is what left Google
+showing a generic globe beside the site name. So the tab icon, the Firefox
+tab-group icon and the search-result icon are all served from PNG/ICO files
+generated from `main_logo_background.svg`. After changing the mark, re-run:
+
+```bash
+python tools/render_favicons.py
+```
+
+That rewrites `favicon.ico`, `assets/img/favicon-{48,96,192,512}.png` and
+`assets/img/apple-touch-icon.png`. It needs only Pillow (`pip install pillow`) —
+it redraws the mark's geometry directly rather than rasterising the SVG, so if
+you edit `main_logo_background.svg` you must mirror the change in the script's
+coordinates. `favicon.ico` belongs at the repo root: crawlers that ignore the
+`<link>` tags still probe `/favicon.ico` at the domain root.
+
+Search engines take **days to weeks** to pick up a new favicon, and Google does
+not guarantee showing one even when every guideline is met.
 
 ### Change contact details / address / map
 Edit [`_data/contact.yml`](_data/contact.yml). It feeds the Contact page, the
