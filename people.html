@@ -67,14 +67,14 @@ description: >-
 
   <!-- ===== Affiliated faculty ===== -->
   {%- if site.data.people.faculty and site.data.people.faculty.size > 0 -%}
-    <div class="divider-labeled"><span class="divider-labeled__label">Adjunct &amp; Affiliated Faculty</span></div>
+    <div class="divider-labeled"><h2 class="divider-labeled__label">Adjunct &amp; Affiliated Faculty</h2></div>
     <div class="people-grid">
       {%- for m in site.data.people.faculty -%}{% include member-card.html member=m %}{%- endfor -%}
     </div>
   {%- endif -%}
 
   <!-- ===== Researchers & students ===== -->
-  <div class="divider-labeled"><span class="divider-labeled__label">Researchers &amp; Students</span></div>
+  <div class="divider-labeled"><h2 class="divider-labeled__label">Researchers &amp; Students</h2></div>
   <p class="hint">Click a profile to expand the full bio, research interests, projects, and links.</p>
   <div class="people-grid">
     {%- for m in site.data.people.team -%}{% include member-card.html member=m %}{%- endfor -%}
@@ -82,7 +82,7 @@ description: >-
 
   <!-- ===== Collaborators ===== -->
   {%- if site.data.people.collaborators and site.data.people.collaborators.size > 0 -%}
-    <div class="divider-labeled"><span class="divider-labeled__label">Collaborators</span></div>
+    <div class="divider-labeled"><h2 class="divider-labeled__label">Collaborators</h2></div>
     <ul class="collab-list">
       {%- for c in site.data.people.collaborators -%}
         <li><strong>{{ c.name }}</strong>{% if c.affiliation and c.affiliation != "" %}, {{ c.affiliation }}{% endif %}{% if c.note %} ({{ c.note }}){% endif %}</li>
@@ -92,7 +92,7 @@ description: >-
 
   <!-- ===== Alumni ===== -->
   {%- if site.data.people.alumni and site.data.people.alumni.size > 0 -%}
-    <div class="divider-labeled"><span class="divider-labeled__label">Alumni</span></div>
+    <div class="divider-labeled"><h2 class="divider-labeled__label">Alumni</h2></div>
     {% include people-accordion.html groups=site.data.people.alumni %}
   {%- endif -%}
 

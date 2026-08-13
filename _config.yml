@@ -36,8 +36,6 @@ faculty: Schulich School of Engineering
 # ---- SEO / social ----
 author:
   name: Multimodal Spatial Imaging Group
-twitter:
-  card: summary_large_image
 logo: /assets/img/main_logo.svg
 
 # og:image / twitter:image — the thumbnail on shared links. This has to go
@@ -46,7 +44,13 @@ logo: /assets/img/main_logo.svg
 # nothing. That is the same trap the old `social_image:` key fell into, and a
 # plain `image:` key is not the way out of it.
 #
-# Regenerate the file with tools/render_social_card.py. Keep it 1200x630, the
+# `twitter.card` rides along for a different reason. There is deliberately no
+# site-level `twitter:` block: the plugin emits twitter:site and twitter:creator
+# whenever `site.twitter` exists at all, and with no account to name those came
+# out as a bare "@" and as the group's name mangled into a handle. Set per page
+# instead, the large-image card survives without either tag.
+#
+# Regenerate the image with tools/render_social_card.py. Keep it 1200x630, the
 # size Slack, Teams, LinkedIn and X all crop from; an SVG is not a substitute,
 # as none of them will render one.
 defaults:
@@ -54,6 +58,8 @@ defaults:
       path: ""
     values:
       image: /assets/img/social-card.png
+      twitter:
+        card: summary_large_image
 
 # ---- Plugins (all on the GitHub Pages allow-list — native build, no Actions) ----
 plugins:

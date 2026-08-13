@@ -156,12 +156,19 @@
 .divider-labeled::before, .divider-labeled::after {
   content: ""; flex: 1; height: 1px; background: var(--divider);
 }
+/* The label is an <h2> on the People page, so that the sections it divides
+   appear in the document outline, and a <span> where it is only decorative.
+   font-family and margin are reset for the heading case: the base h1–h6 rule
+   sets the slab face, and a heading would otherwise bring a UA bottom margin
+   into this flex row and sit off-centre between the two rules. */
 .divider-labeled__label {
   font-size: var(--fs-xs);
   text-transform: uppercase;
   letter-spacing: var(--ls-eyebrow);
   color: var(--text-muted);
   font-weight: var(--fw-medium);
+  font-family: var(--font-sans);
+  margin: 0;
 }
 
 /* ---- Callout --------------------------------------------------------------- */
