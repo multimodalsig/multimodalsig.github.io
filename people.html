@@ -13,8 +13,12 @@ description: >-
 
 <div class="container page">
 
-  <!-- ===== Principal Investigator ===== -->
-  <h3 style="font-size: var(--fs-h4); margin-bottom: 1rem;">Principal Investigator</h3>
+  {% include section-heading.html eyebrow="People" title="Our people" as="h1" subtitle="The principal investigator, affiliated faculty, researchers and students, collaborators, and alumni of the group." %}
+
+  <!-- ===== Principal Investigator =====
+       h2, not h3: this is the first section under the page h1. The inline
+       font-size keeps it looking as it did when it was an h3. -->
+  <h2 style="font-size: var(--fs-h4); margin-bottom: 1rem;">Principal Investigator</h2>
   <div class="card" data-expandable>
     <div class="card__body">
       <div class="pi-card__grid pi-card__trigger" data-expand aria-expanded="false" title="Click to show details">

@@ -177,6 +177,7 @@ There are three pieces of artwork, each doing a different job:
 | [`assets/img/tab_logo.svg`](assets/img/tab_logo.svg) | A reduced mark (no ring) that reads better at 16 px. Kept as an alternative; not currently used. |
 | [`_includes/logo.svg`](_includes/logo.svg) | **A copy of `main_logo.svg`** that gets inlined into the navbar. |
 | `favicon.ico`, `assets/img/favicon-*.png`, `assets/img/apple-touch-icon.png` | Rasterised from `main_logo_background.svg` for search engines — see below. |
+| [`assets/img/social-card.png`](assets/img/social-card.png) | The 1200×630 `og:image` thumbnail for shared links. Run `python tools/render_social_card.py` to regenerate. |
 
 ⚠️ **`_includes/logo.svg` must be updated by hand whenever `main_logo.svg`
 changes.** It is a separate copy on purpose: it swaps the two brand colours for
@@ -362,16 +363,15 @@ sun/moon button in the navbar toggles the theme and remembers the choice.
 
 ## 🕳 Known gaps
 
-- **No social preview image.** Links shared to Slack, Teams or social media get
-  no thumbnail, because no `og:image` is emitted. `social_image` in
-  [`_config.yml`](_config.yml) looks like it sets one but is inert —
-  `jekyll-seo-tag` reads `site.image`, not `social_image`, and the path it holds
-  (`/assets/img/1.jpg`) doesn't exist in the repo either. To fix: add a wide
-  raster (~1200×630) and set `image: /assets/img/<that file>`.
-- **HTTPS is not enforced** on the custom domain, so the site is served over
-  plain `http://`. That also means `navigator.clipboard` is unavailable and the
-  Publications **Cite** button falls back to a deprecated copy path. Fix under
-  **Settings → Pages** once the certificate finishes provisioning.
+- **The Publications page is invisible to search engines.** The list is fetched
+  in the browser from the ORCID API and enriched from Crossref, so the HTML that
+  crawlers receive contains only "Fetching the latest publications…". The
+  `_data/publications.yml` entries do reach the page, but only inside a
+  `<script type="application/json">` tag, which is not indexable content. For a
+  research group this is the highest-value content on the site — paper titles
+  are how people find the lab. Fixing it means rendering the list at build time
+  (sync ORCID into `_data/publications.yml` on a schedule, then loop over it in
+  Liquid) and keeping the live fetch only as a top-up.
 - `geovm-room.jpg` is the same shot as `geovm-primary.jpg` (same 1600×747 frame,
   re-encoded). It was dropped from the carousel as a duplicate and is now
   unreferenced — safe to delete.

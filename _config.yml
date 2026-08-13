@@ -39,11 +39,12 @@ author:
 twitter:
   card: summary_large_image
 logo: /assets/img/main_logo.svg
-# NOTE: this key is inert — jekyll-seo-tag reads `image`, not `social_image`, so
-# no og:image is emitted and shared links get no thumbnail. The path below does
-# not exist either. To fix, add a wide raster (~1200x630) and set `image:` to it;
-# the SVG logo is not a substitute. See "Known gaps" in the README.
-social_image: /assets/img/1.jpg
+# og:image / twitter:image, used for the thumbnail on shared links. The key must
+# be `image` — a `social_image` key sat here for a while and is what jekyll-seo-
+# tag ignores, which is why shared links had no thumbnail. Regenerate with
+# tools/render_social_card.py; keep it 1200x630, the size Slack, Teams, LinkedIn
+# and X all crop from. An SVG is not a substitute: none of them will render one.
+image: /assets/img/social-card.png
 
 # ---- Plugins (all on the GitHub Pages allow-list — native build, no Actions) ----
 plugins:
