@@ -9,6 +9,10 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # Called by "Sync publications" after it commits a new publication list. A
+  # push made with the default GITHUB_TOKEN does not start other workflows, so
+  # that job cannot rely on its own push landing here.
+  workflow_call:
 
 permissions:
   contents: read
@@ -26,6 +30,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Always build main's current head. When this workflow is *called* by
+          # "Sync publications", the default ref is the SHA that triggered the
+          # caller — main as it was before the sync commit — so we would deploy
+          # the very data the sync just replaced.
+          ref: main
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1

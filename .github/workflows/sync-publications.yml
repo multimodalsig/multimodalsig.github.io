@@ -1,8 +1,8 @@
 name: Sync publications
 
 # Refresh _data/publications_generated.yml from the PI's ORCID record and
-# Crossref, and commit it if anything changed. The push then triggers the normal
-# "Deploy site" workflow, so the new list goes live on its own.
+# Crossref, commit it if anything changed, and then deploy. The deploy has to be
+# called explicitly — see the note on the deploy job below.
 #
 # The fetch deliberately does NOT happen during the site build. The build runs
 # on every push, and if it depended on these two APIs, then any deploy while
@@ -31,6 +31,8 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -49,9 +51,11 @@ jobs:
         run: python tools/sync_publications.py
 
       - name: Commit if changed
+        id: commit
         run: |
           if git diff --quiet -- _data/publications_generated.yml; then
             echo "No change — nothing to commit."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name "github-actions[bot]"
@@ -59,3 +63,17 @@ jobs:
           git add _data/publications_generated.yml
           git commit -m "Sync publications from ORCID"
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+  # The commit above will NOT start the Deploy site workflow on its own: GitHub
+  # suppresses workflow triggers for pushes made with the default GITHUB_TOKEN,
+  # to stop workflows setting each other off in a loop. So call the deploy
+  # explicitly, and only when there was actually something new to publish.
+  deploy:
+    needs: sync
+    if: needs.sync.outputs.changed == 'true'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/deploy.yml

@@ -92,9 +92,11 @@ means the page needs no network round trip to show anything, and survives ORCID
 or Crossref being down.
 
 The [Sync publications](.github/workflows/sync-publications.yml) workflow re-runs
-it weekly and commits any change, which triggers a deploy. Add a paper to ORCID
-and it appears within a week, or immediately if you hit **Run workflow**. To
-refresh it by hand:
+it weekly, commits any change, and then calls the deploy itself — GitHub
+suppresses workflow triggers for pushes made with the built-in token, so a
+committed change does *not* deploy on its own. Add a paper to ORCID and it
+appears within a week, or immediately if you hit **Run workflow**. To refresh it
+by hand:
 
 ```bash
 python tools/sync_publications.py
