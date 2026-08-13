@@ -156,233 +156,23 @@
     });
   }
 
-  /* ---- Publications, fetched live from ORCID ------------------------------
-     The list is always current: it reads the PI's public ORCID record at load
-     time, groups by year, and links each entry to its DOI. If ORCID can't be
-     reached, it falls back to a link to the ORCID profile.
+  /* ---- Publications ------------------------------------------------------
+     The list is rendered at build time from _data/publications_generated.yml
+     (written by tools/sync_publications.py), so crawlers receive the paper
+     titles instead of a loading message, and the page needs no network round
+     trip to show anything.
 
-     ORCID only carries title / journal / year, so the full bibliographic detail
-     (authors, volume, issue, pages) is filled in from Crossref afterwards, in a
-     few batched lookups keyed on DOI. That runs *after* the list is on screen,
-     so a slow or unreachable Crossref costs nothing but the extra detail. */
+     Nothing is fetched here any more. The only behaviour left is the Cite
+     button, which copies the citation string already sitting in each button's
+     data-citation attribute. The year accordion needs no code of its own --
+     initAccordion is delegated from the document and picks up the
+     server-rendered markup. */
   function initPublications() {
-    var OPEN_YEARS = 2;   // how many of the most recent years start expanded
-
-    var root = document.querySelector("[data-orcid]");
-    if (!root) return;
-    var id = root.getAttribute("data-orcid");
-    var listEl = root.querySelector("[data-pub-list]");
-    var countEl = root.querySelector("[data-pub-count]");
-    var statusEl = root.querySelector("[data-pub-status]");
-
-    function esc(s) { var d = document.createElement("div"); d.textContent = s == null ? "" : s; return d.innerHTML; }
-    function typeLabel(t) {
-      t = (t || "").toLowerCase();
-      if (t.indexOf("conference") >= 0) return { label: "Conference", cls: "badge--blue" };
-      if (t.indexOf("book") >= 0) return { label: "Book", cls: "badge--purple" };
-      if (t.indexOf("journal") >= 0) return { label: "Journal", cls: "badge--green" };
-      if (!t) return { label: "Other", cls: "badge--grey" };
-      return { label: t.replace(/-/g, " ").replace(/\b\w/g, function (c) { return c.toUpperCase(); }), cls: "badge--grey" };
-    }
-
-    /* "Derek D." -> "D. D."; "Faith" -> "F." */
-    function initials(given) {
-      if (!given) return "";
-      return given.split(/[\s.\-]+/).filter(Boolean).map(function (part) {
-        return part.charAt(0).toUpperCase() + ".";
-      }).join(" ");
-    }
-
-    /* "Nayko, F., & Lichti, D. D." */
-    function formatAuthors(list) {
-      if (!list || !list.length) return "";
-      var names = list.map(function (a) {
-        if (a.name) return a.name;                     // corporate authors have no given/family
-        var ini = initials(a.given);
-        return a.family ? (ini ? a.family + ", " + ini : a.family) : ini;
-      }).filter(Boolean);
-      if (!names.length) return "";
-      if (names.length === 1) return names[0];
-      return names.slice(0, -1).join(", ") + ", & " + names[names.length - 1];
-    }
-
-    /* Curated entries carry a ready-made author string; ORCID ones get theirs
-       from the Crossref lookup. */
-    function authorsOf(w) {
-      return w.authors || formatAuthors((w.meta || {}).author);
-    }
-
-    /* Papers missing from ORCID, hand-maintained in _data/publications.yml.
-       They are never sent to Crossref — the YAML is the record. */
-    function curatedWorks() {
-      var el = document.querySelector("[data-extra-publications]");
-      if (!el) return [];
-      var list;
-      try { list = JSON.parse(el.textContent); } catch (e) { return []; }
-      if (!list || !list.length) return [];
-      return list.map(function (p) {
-        return {
-          title: p.title || "Untitled",
-          journal: p.journal || "",
-          year: p.year ? String(p.year) : "",
-          month: p.month ? parseInt(p.month, 10) : 0,
-          type: p.type || "journal-article",
-          url: p.doi ? "https://doi.org/" + p.doi : (p.url || ""),
-          doi: p.doi || "",
-          curated: true,
-          authors: p.authors || "",
-          meta: { volume: p.volume || "", issue: p.issue || "", page: p.pages || "" }
-        };
-      });
-    }
-
-    function titleKey(s) { return (s || "").toLowerCase().replace(/[^a-z0-9]+/g, ""); }
-
-    /* ORCID lists editorials and errata alongside research papers; the ones we
-       don't want on the page are named in _data/publications_hidden.yml. */
-    function dropHidden(works) {
-      var el = document.querySelector("[data-hidden-publications]");
-      if (!el) return works;
-      var list;
-      try { list = JSON.parse(el.textContent); } catch (e) { return works; }
-      if (!list || !list.length) return works;
-      var doiSeen = {}, titleSeen = {};
-      list.forEach(function (h) {
-        if (h.doi) doiSeen[h.doi.toLowerCase()] = true;
-        if (h.title) titleSeen[titleKey(h.title)] = true;
-      });
-      return works.filter(function (w) {
-        if (w.doi && doiSeen[w.doi.toLowerCase()]) return false;
-        return !titleSeen[titleKey(w.title)];
-      });
-    }
-
-    /* Curated entries win: if one of them also shows up in ORCID later, the
-       ORCID copy is dropped rather than listed twice. */
-    function merge(orcidWorks, curated) {
-      if (!curated.length) return orcidWorks;
-      var doiSeen = {}, titleSeen = {};
-      curated.forEach(function (w) {
-        if (w.doi) doiSeen[w.doi.toLowerCase()] = true;
-        titleSeen[titleKey(w.title)] = true;
-      });
-      return orcidWorks.filter(function (w) {
-        if (w.doi && doiSeen[w.doi.toLowerCase()]) return false;
-        return !titleSeen[titleKey(w.title)];
-      }).concat(curated);
-    }
-
-    /* Crossref gives proceedings both a series and a volume title, and some
-       journals both a full and an abbreviated name. The longest entry is
-       reliably the specific, spelled-out one. */
-    function pickContainer(list) {
-      if (!list || !list.length) return "";
-      return list.slice().sort(function (a, b) {
-        return (b || "").length - (a || "").length;
-      })[0];
-    }
-
-    /* "Sensors, 26(1), 319" — whichever parts we actually have. */
-    function sourceLine(w) {
-      var m = w.meta || {};
-      var out = pickContainer(m["container-title"]) || w.journal || "";
-      if (m.volume) out += (out ? ", " : "") + m.volume + (m.issue ? "(" + m.issue + ")" : "");
-      if (m.page) out += (out ? ", " : "") + m.page;
-      return out;
-    }
-
-    function citation(w) {
-      var authors = authorsOf(w);
-      var title = w.title.replace(/\s*\.\s*$/, "");
-      var src = sourceLine(w);
-      var out;
-      if (authors) {
-        out = authors + (w.year ? " (" + w.year + ")" : "") + ". " + title + ".";
-        if (src) out += " " + src + ".";
-      } else {
-        // Works ORCID lists without a DOI have no author data, so lead with the
-        // title rather than a bare "(2016)." and put the year at the end.
-        out = title + ".";
-        if (src) out += " " + src;
-        if (w.year) out += (src ? ", " : " ") + w.year;
-        out += ".";
-      }
-      if (w.url) out += " " + w.url;
-      return out;
-    }
-
-    function renderPub(w, i) {
-      var t = typeLabel(w.type);
-      var link = w.url
-        ? '<a class="btn btn--sm btn--ghost" href="' + esc(w.url) + '" target="_blank" rel="noopener"><i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i>View</a>'
-        : "";
-      return '<div class="pub-item" data-pub="' + i + '">' +
-        '<div class="pub-item__title">' + esc(w.title) + "</div>" +
-        '<div class="pub-item__authors" data-pub-authors></div>' +
-        '<div class="pub-item__venue" data-pub-venue>' + esc(w.journal) + "</div>" +
-        '<div class="pub-item__actions"><span class="badge ' + t.cls + ' badge--subtle">' + t.label + "</span>" + link +
-        '<button class="btn btn--sm btn--ghost" type="button" data-pub-cite aria-label="Copy the full citation">' +
-        '<i class="fa-regular fa-copy" aria-hidden="true"></i><span data-pub-cite-label>Cite</span></button>' +
-        "</div></div>";
-    }
-
-    function fetchJson(url, retries) {
-      return fetch(url)
-        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-        .catch(function (err) {
-          if (retries <= 0) throw err;
-          return new Promise(function (resolve) { setTimeout(resolve, 700); })
-            .then(function () { return fetchJson(url, retries - 1); });
-        });
-    }
-
-    /* Look the DOIs up at Crossref in batches and hang the result on each work.
-       Any chunk that fails just leaves those entries with their ORCID detail. */
-    function enrich(works) {
-      var byDoi = {}, dois = [];
-      works.forEach(function (w) {
-        if (!w.doi || w.curated) return;
-        byDoi[w.doi.toLowerCase()] = w;
-        dois.push(w.doi);
-      });
-      if (!dois.length) return Promise.resolve();
-
-      var mailto = root.getAttribute("data-crossref-mailto") || "";
-      var chunks = [];
-      for (var i = 0; i < dois.length; i += 40) chunks.push(dois.slice(i, i + 40));
-
-      return Promise.all(chunks.map(function (chunk) {
-        var url = "https://api.crossref.org/works?rows=100" +
-          "&select=DOI,author,container-title,volume,issue,page" +
-          (mailto ? "&mailto=" + encodeURIComponent(mailto) : "") +
-          "&filter=" + chunk.map(function (d) { return "doi:" + d; }).join(",");
-        return fetchJson(url, 1)
-          .then(function (j) {
-            ((j && j.message && j.message.items) || []).forEach(function (item) {
-              var w = byDoi[(item.DOI || "").toLowerCase()];
-              if (w) w.meta = item;
-            });
-          })
-          .catch(function () { /* leave this chunk with ORCID detail only */ });
-      }));
-    }
-
-    /* Fill in the authors line, upgrade the venue line, and arm the Cite
-       buttons. Safe to run whether or not Crossref answered. */
-    function paintDetails(works) {
-      works.forEach(function (w, i) {
-        var el = listEl.querySelector('[data-pub="' + i + '"]');
-        if (!el) return;
-        var authors = authorsOf(w);
-        if (authors) el.querySelector("[data-pub-authors]").textContent = authors;
-        var src = sourceLine(w);
-        if (src) el.querySelector("[data-pub-venue]").textContent = src;
-        el.querySelector("[data-pub-cite]").setAttribute("data-citation", citation(w));
-      });
-    }
+    var list = document.querySelector("[data-pub-list]");
+    if (!list) return;
 
     /* navigator.clipboard needs a secure context, so keep the old execCommand
-       path for pages served over plain http. */
+       path as a fallback. */
     function copyText(text) {
       if (navigator.clipboard && navigator.clipboard.writeText) {
         return navigator.clipboard.writeText(text);
@@ -408,7 +198,7 @@
       setTimeout(function () { label.textContent = "Cite"; }, ms);
     }
 
-    listEl.addEventListener("click", function (e) {
+    list.addEventListener("click", function (e) {
       var btn = e.target.closest ? e.target.closest("[data-pub-cite]") : null;
       if (!btn) return;
       var text = btn.getAttribute("data-citation");
@@ -419,86 +209,6 @@
         function () { flash(label, "Copy failed", 2400); }
       );
     });
-
-    fetch("https://pub.orcid.org/v3.0/" + id + "/works", { headers: { Accept: "application/json" } })
-      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(function (data) {
-        var works = (data.group || []).map(function (g) {
-          var s = (g["work-summary"] || [])[0];
-          if (!s) return null;
-          var pd = s["publication-date"] || {};
-          var doiUrl = "", doi = "";
-          var ids = (s["external-ids"] && s["external-ids"]["external-id"]) || [];
-          ids.forEach(function (x) {
-            if (x["external-id-type"] === "doi") {
-              doi = x["external-id-value"] || "";
-              doiUrl = (x["external-id-url"] && x["external-id-url"].value) || ("https://doi.org/" + doi);
-            }
-          });
-          if (!doiUrl && ids[0] && ids[0]["external-id-url"]) doiUrl = ids[0]["external-id-url"].value;
-          return {
-            title: s.title && s.title.title ? s.title.title.value : "Untitled",
-            journal: s["journal-title"] ? s["journal-title"].value : "",
-            year: pd.year ? pd.year.value : "",
-            month: pd.month ? parseInt(pd.month.value, 10) : 0,
-            type: s.type || "",
-            url: doiUrl,
-            doi: doi
-          };
-        }).filter(Boolean);
-
-        render(merge(dropHidden(works), curatedWorks()));
-      })
-      .catch(function () {
-        // ORCID is unreachable, but the curated papers are already in the page
-        // and don't need it — show those rather than nothing.
-        var curated = curatedWorks();
-        if (curated.length) {
-          render(curated);
-          if (statusEl) statusEl.remove();
-          return;
-        }
-        if (statusEl) statusEl.innerHTML = 'Could not load publications automatically. View the full list on <a href="https://orcid.org/' + id + '" target="_blank" rel="noopener">ORCID</a>.';
-        if (countEl) countEl.textContent = "";
-      });
-
-    function render(works) {
-      works.sort(function (a, b) {
-        var d = (parseInt(b.year || "0", 10)) - (parseInt(a.year || "0", 10));
-        return d !== 0 ? d : (b.month - a.month);
-      });
-
-      if (!works.length) { if (statusEl) statusEl.textContent = "No publications found."; return; }
-
-      // One accordion group per year. `works` is sorted newest-first, so the
-      // groups come out in that order too.
-      var groups = [], byYear = {};
-      works.forEach(function (w, i) {
-        var yr = w.year || "Undated";
-        if (!byYear[yr]) { byYear[yr] = { year: yr, entries: [] }; groups.push(byYear[yr]); }
-        byYear[yr].entries.push({ work: w, index: i });
-      });
-
-      var html = '<div class="accordion">';
-      groups.forEach(function (g, gi) {
-        var open = gi < OPEN_YEARS;
-        html += '<div class="accordion__item">' +
-          '<button class="accordion__header" type="button" aria-expanded="' + (open ? "true" : "false") + '">' +
-          '<span class="accordion__icon" aria-hidden="true">&#9654;</span>' +
-          '<span class="accordion__title"><span class="accordion__title-text">' + esc(g.year) + "</span></span>" +
-          '<span class="accordion__count">' + g.entries.length + "</span></button>" +
-          '<div class="accordion__panel"' + (open ? ' data-open="1" style="max-height: none;"' : "") + ">" +
-          '<div class="accordion__panel-inner">';
-        g.entries.forEach(function (e) { html += renderPub(e.work, e.index); });
-        html += "</div></div></div>";
-      });
-      listEl.innerHTML = html + "</div>";
-      if (countEl) countEl.textContent = works.length + (works.length === 1 ? " publication" : " publications");
-
-      // On screen now; the bibliographic detail arrives a moment later.
-      paintDetails(works);
-      enrich(works).then(function () { paintDetails(works); });
-    }
   }
 
   /* ---- Gallery lightbox --------------------------------------------------- */

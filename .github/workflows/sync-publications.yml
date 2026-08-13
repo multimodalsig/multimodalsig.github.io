@@ -1,0 +1,61 @@
+name: Sync publications
+
+# Refresh _data/publications_generated.yml from the PI's ORCID record and
+# Crossref, and commit it if anything changed. The push then triggers the normal
+# "Deploy site" workflow, so the new list goes live on its own.
+#
+# The fetch deliberately does NOT happen during the site build. The build runs
+# on every push, and if it depended on these two APIs, then any deploy while
+# ORCID or Crossref was down would ship an empty publication list — you could
+# not fix a typo on the Contact page without collateral damage. Keeping the data
+# committed means the build never touches the network, a failed sync is loud and
+# harmless, and Crossref regressions show up in a commit diff instead of
+# silently changing what visitors see.
+#
+# Weekly is deliberate: ORCID records change a handful of times a year, and a
+# daily run would only add bot commits. Use "Run workflow" for a paper that
+# needs to appear now.
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"   # Mondays, 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-publications
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      # Exits non-zero if ORCID returns nothing, or if the list would lose more
+      # than 20% of its entries, rather than committing a truncated page.
+      - name: Sync from ORCID and Crossref
+        run: python tools/sync_publications.py
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- _data/publications_generated.yml; then
+            echo "No change — nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _data/publications_generated.yml
+          git commit -m "Sync publications from ORCID"
+          git push

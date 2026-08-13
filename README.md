@@ -72,7 +72,7 @@ regenerate the section from the xlsx without carrying them across.
 > `.alumni-row__pos` style existing — adding one has no effect today.
 
 ### Publications
-The Publications page builds itself when it loads, from two sources:
+The Publications page is **generated ahead of time**, from two sources:
 
 1. **ORCID** supplies the list — every paper on the PI's ORCID record, grouped
    into a collapsible section per year (the two most recent open on arrival).
@@ -80,8 +80,31 @@ The Publications page builds itself when it loads, from two sources:
    volume, issue and pages — looked up by DOI. Each entry gets a **Cite** button
    that copies a formatted citation.
 
-Add a paper to ORCID and it appears here on the next page load. **Most of the
-time there is nothing to edit.** The two cases that need you:
+[`tools/sync_publications.py`](tools/sync_publications.py) does that merge and
+writes [`_data/publications_generated.yml`](_data/publications_generated.yml),
+which the page then loops over in Liquid. **Never edit the generated file** —
+edit the inputs below and re-run the script.
+
+It used to run in the browser instead, which meant search engines received a
+page whose only text was "Fetching the latest publications…" — for a research
+group, the most valuable content on the site was invisible. Generating it also
+means the page needs no network round trip to show anything, and survives ORCID
+or Crossref being down.
+
+The [Sync publications](.github/workflows/sync-publications.yml) workflow re-runs
+it weekly and commits any change, which triggers a deploy. Add a paper to ORCID
+and it appears within a week, or immediately if you hit **Run workflow**. To
+refresh it by hand:
+
+```bash
+python tools/sync_publications.py
+```
+
+That needs PyYAML (`pip install pyyaml`). The script refuses to write if ORCID
+returns nothing, or if the list would lose more than 20% of its entries — one bad
+API response should not silently empty the page.
+
+**Most of the time there is nothing to edit.** The two cases that need you:
 
 #### A paper that isn't in ORCID
 Add it to [`_data/publications.yml`](_data/publications.yml). These entries are
@@ -121,15 +144,17 @@ Match on `doi` where you can (exact and stable) or on `title` where there is no
 DOI. `note` is a comment for humans; the site ignores it.
 
 #### Two things not to break
-- `data-crossref-mailto` in [`publications.html`](publications.html) carries the
-  contact address from `_data/contact.yml`. It puts the Crossref lookups in
-  their **"polite pool"** — without it the anonymous pool rate-limits us hard
-  enough that most of the detail silently fails to load. Don't remove it.
-- To point the page at a different researcher, change `data-orcid` in the same
-  file. The logic is `initPublications()` in
-  [`assets/js/site.js`](assets/js/site.js).
+- The script sends `_data/contact.yml`'s email to Crossref as its `mailto`. That
+  puts the lookups in Crossref's **"polite pool"** — without it the anonymous
+  pool rate-limits hard enough that most of the detail silently fails to load.
+  Don't remove the email.
+- To point the page at a different researcher, change `ORCID` at the top of
+  [`tools/sync_publications.py`](tools/sync_publications.py) and the ORCID
+  profile link in [`publications.html`](publications.html).
 
-If ORCID is unreachable, the hand-entered papers still render on their own.
+The citation formatting lives in that script and **only** there. It used to live
+in `initPublications()` in [`assets/js/site.js`](assets/js/site.js); what remains
+there is just the Cite button's copy-to-clipboard handler.
 
 ### Post a news item
 Add to the **top** of [`_data/news.yml`](_data/news.yml):
@@ -234,9 +259,11 @@ server restart if you're previewing locally** (GitHub rebuilds it fine on push).
 ```
 _data/            ← ALL editable content
   people.yml         PI, faculty, team, collaborators, alumni groups
-  publications.yml   papers missing from ORCID (merged into the live list)
+  publications.yml   papers missing from ORCID (merged into the generated list)
   publications_hidden.yml
                      ORCID entries to leave off the page
+  publications_generated.yml
+                     GENERATED — the rendered list. Do not edit by hand.
   facilities.yml     lead photo + carousel + instrument lists
   projects.yml  themes.yml  news.yml  gallery.yml  positions.yml
   contact.yml        address, email, map centre — also feeds the footer
@@ -363,15 +390,10 @@ sun/moon button in the navbar toggles the theme and remembers the choice.
 
 ## 🕳 Known gaps
 
-- **The Publications page is invisible to search engines.** The list is fetched
-  in the browser from the ORCID API and enriched from Crossref, so the HTML that
-  crawlers receive contains only "Fetching the latest publications…". The
-  `_data/publications.yml` entries do reach the page, but only inside a
-  `<script type="application/json">` tag, which is not indexable content. For a
-  research group this is the highest-value content on the site — paper titles
-  are how people find the lab. Fixing it means rendering the list at build time
-  (sync ORCID into `_data/publications.yml` on a schedule, then loop over it in
-  Liquid) and keeping the live fetch only as a top-up.
+- **`tools/sync_publications.py` redraws no data, but it does re-derive the
+  citation format.** If you change how citations read, that is the only place to
+  change it — and there is no test guarding the output, so eyeball the diff in
+  `_data/publications_generated.yml` before committing.
 - `geovm-room.jpg` is the same shot as `geovm-primary.jpg` (same 1600×747 frame,
   re-encoded). It was dropped from the carousel as a duplicate and is now
   unreferenced — safe to delete.

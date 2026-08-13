@@ -5,31 +5,68 @@ title: Publications
 description: Peer-reviewed publications from the Multimodal Spatial Imaging Group, sourced from ORCID.
 ---
 
+{%- assign pubs = site.data.publications_generated -%}
+
 <div class="container page">
-  {% include section-heading.html eyebrow="Publications" title="Publications" as="h1" subtitle="Peer-reviewed work from the group, sourced live from the PI's ORCID record and grouped by year." %}
+  {% include section-heading.html eyebrow="Publications" title="Publications" as="h1" subtitle="Peer-reviewed work from the group, sourced from the PI's ORCID record and grouped by year." %}
 
-  <!-- The list is populated at load time from the public ORCID API, then the
-       full bibliographic detail is filled in from Crossref (see
-       assets/js/site.js → initPublications). To point it at a different
-       researcher, change the data-orcid value below.
+  <!-- This list is generated at build time, NOT fetched in the browser. The
+       page used to assemble itself from the ORCID and Crossref APIs on load,
+       which meant search engines received nothing but a loading message — for a
+       research group, the most valuable content on the site was invisible.
 
-       data-crossref-mailto puts those Crossref lookups in its "polite pool";
-       without a contact address the anonymous pool rate-limits us and most of
-       the detail silently fails to load. -->
-  <div data-orcid="0000-0001-7038-073X" data-crossref-mailto="{{ site.data.contact.email }}">
+       tools/sync_publications.py merges the ORCID record with the extra papers
+       in _data/publications.yml, drops the ones named in
+       _data/publications_hidden.yml, fills in bibliographic detail from
+       Crossref, and writes _data/publications_generated.yml with every display
+       string pre-formatted. Edit those inputs and re-run the script; never edit
+       the generated file, and never put formatting logic back in here.
+
+       The year accordion is driven by initAccordion in assets/js/site.js, which
+       is delegated from the document and so needs nothing from this markup
+       beyond the class names. -->
+  <div>
     <div class="pub-controls">
-      <span class="pub-controls__count" data-pub-count>Loading from ORCID...</span>
+      <span class="pub-controls__count" data-pub-count>{{ pubs.total }} publication{% if pubs.total != 1 %}s{% endif %}</span>
       <a class="btn btn--sm btn--outline" href="https://orcid.org/0000-0001-7038-073X" target="_blank" rel="noopener" style="margin-left:auto;">
         <i class="fa-brands fa-orcid" aria-hidden="true"></i> ORCID profile
       </a>
     </div>
-    <div data-pub-list>
-      <p class="muted" data-pub-status>Fetching the latest publications...</p>
-    </div>
 
-    <!-- Papers missing from ORCID, merged into the list above, and ORCID works
-         to leave out of it. Edit the _data/*.yml files, not these tags. -->
-    <script type="application/json" data-extra-publications>{{ site.data.publications | jsonify }}</script>
-    <script type="application/json" data-hidden-publications>{{ site.data.publications_hidden | jsonify }}</script>
+    <div data-pub-list>
+      {%- if pubs and pubs.years -%}
+      <div class="accordion">
+        {%- for g in pubs.years -%}
+        <div class="accordion__item">
+          <button class="accordion__header" type="button" aria-expanded="{% if forloop.index0 < 2 %}true{% else %}false{% endif %}">
+            <span class="accordion__icon" aria-hidden="true">&#9654;</span>
+            <span class="accordion__title"><span class="accordion__title-text">{{ g.year }}</span></span>
+            <span class="accordion__count">{{ g.count }}</span>
+          </button>
+          <div class="accordion__panel"{% if forloop.index0 < 2 %} data-open="1" style="max-height: none;"{% endif %}>
+            <div class="accordion__panel-inner">
+              {%- for e in g.entries -%}
+              <div class="pub-item">
+                <div class="pub-item__title">{{ e.title | escape }}</div>
+                <div class="pub-item__authors">{{ e.authors | escape }}</div>
+                <div class="pub-item__venue">{{ e.venue | escape }}</div>
+                <div class="pub-item__actions">
+                  <span class="badge {{ e.type_class }} badge--subtle">{{ e.type_label }}</span>
+                  {%- if e.url != "" %}
+                  <a class="btn btn--sm btn--ghost" href="{{ e.url }}" target="_blank" rel="noopener"><i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i>View</a>
+                  {%- endif %}
+                  <button class="btn btn--sm btn--ghost" type="button" data-pub-cite data-citation="{{ e.citation | escape }}" aria-label="Copy the full citation"><i class="fa-regular fa-copy" aria-hidden="true"></i><span data-pub-cite-label>Cite</span></button>
+                </div>
+              </div>
+              {%- endfor -%}
+            </div>
+          </div>
+        </div>
+        {%- endfor -%}
+      </div>
+      {%- else -%}
+      <p class="muted">The publication list has not been generated yet. Run <code>python tools/sync_publications.py</code>.</p>
+      {%- endif -%}
+    </div>
   </div>
 </div>
