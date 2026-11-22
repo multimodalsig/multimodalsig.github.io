@@ -326,16 +326,16 @@ team:
       - label: ORCID
         href: "https://orcid.org/0009-0007-3784-5292"
         icon: fa-brands fa-orcid
-  - name: Hunter collapse
+  - name: Hunter Coles
     role: MSc Student
     photo: assets/img/team/hunter.jpg
-    short: Time-of-flight range imaging for SLAM; lightweight, real-time neural networks on edge hardware.
+    short: Time-of-flight range imaging for SLAM; lightweight, real-time neural networks.
     bio: >-
       Hunter is a graduate student in Geomatics Engineering at the University of Calgary,
       where he also completed his BSc in Software Engineering. He came to SLAM through
       industry, first as an intern at Leica Geosystems and now as a SLAM engineer at
       XYZ Reality. His thesis develops a real-time pre-processing stage for time-of-flight
-      camera data in SLAM. He is particularly interested in lightweight neural networks 
+      camera data in SLAM. He is particularly interested in lightweight neural networks
       and machine learning that run fast on edge hardware.
     interests:
       - Time-of-flight Cameras
